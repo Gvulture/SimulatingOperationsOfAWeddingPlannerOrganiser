@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="488.0" prefWidth="714.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.weddingBudgetController">
+   <children>
+      <Label layoutX="254.0" layoutY="20.0" text="Wedding Budget">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="81.0" prefHeight="18.0" prefWidth="78.0" text=" Total Budget" />
+      <Label layoutX="30.0" layoutY="119.0" text="Total Spent" />
+      <Label layoutX="30.0" layoutY="156.0" text="Remaining Balance" />
+      <Label layoutX="396.0" layoutY="82.0" text="Category" />
+      <Label layoutX="398.0" layoutY="156.0" text="Description" />
+      <Label layoutX="346.0" layoutY="331.0" text="Show Message" />
+      <Label layoutX="398.0" layoutY="119.0" text="Amount" />
+      <Label layoutX="131.0" layoutY="82.0" prefHeight="18.0" prefWidth="167.0" style="-fx-background-color: yellow;" />
+      <Label layoutX="131.0" layoutY="119.0" prefHeight="18.0" prefWidth="167.0" style="-fx-background-color: yellow;" />
+      <Label layoutX="144.0" layoutY="156.0" prefHeight="18.0" prefWidth="161.0" style="-fx-background-color: yellow;" />
+      <ComboBox layoutX="472.0" layoutY="78.0" prefWidth="150.0" />
+      <TextField layoutX="472.0" layoutY="115.0" />
+      <TextField layoutX="472.0" layoutY="151.0" prefHeight="46.0" prefWidth="226.0" />
+      <Button layoutX="280.0" layoutY="197.0" mnemonicParsing="false" style="-fx-background-color: blue;" text="Add Expense" textFill="WHITE" />
+      <TableView layoutX="-1.0" layoutY="274.0" prefHeight="214.0" prefWidth="324.0">
+        <columns>
+          <TableColumn prefWidth="88.00000154972076" text="Category" />
+          <TableColumn prefWidth="115.99999237060547" text="Amount" />
+            <TableColumn prefWidth="120.79998779296875" text="Description" />
+        </columns>
+      </TableView>
+      <Label layoutX="445.0" layoutY="300.0" prefHeight="78.0" prefWidth="238.0" style="-fx-background-color: yellow;" />
+      <Button layoutX="564.0" layoutY="448.0" mnemonicParsing="false" text="Back to DashBoard" />
+   </children>
+</AnchorPane>
