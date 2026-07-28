@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="336.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.sendInvitationController">
+   <children>
+      <Label layoutX="195.0" layoutY="14.0" text="Send Wedding Invitation ">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="79.0" text="Guest Name" />
+      <Label layoutX="27.0" layoutY="116.0" prefHeight="18.0" prefWidth="35.0" text="Email" />
+      <Label layoutX="330.0" layoutY="79.0" text="Phone Number" />
+      <Label layoutX="332.0" layoutY="117.0" text="Table Number" />
+      <TextField layoutX="107.0" layoutY="75.0" />
+      <TextField layoutX="107.0" layoutY="112.0" />
+      <TextField layoutX="422.0" layoutY="75.0" />
+      <TextField layoutX="422.0" layoutY="113.0" />
+      <Button layoutX="263.0" layoutY="162.0" mnemonicParsing="false" style="-fx-background-color: blue;" text="Send Invitation" textFill="#fff9f9" />
+      <Label layoutX="169.0" layoutY="210.0" prefHeight="51.0" prefWidth="270.0" style="-fx-background-color: yellow;" text="Show Message" />
+      <Button layoutX="472.0" layoutY="296.0" mnemonicParsing="false" text="Back to Dashboard" />
+   </children>
+</AnchorPane>
