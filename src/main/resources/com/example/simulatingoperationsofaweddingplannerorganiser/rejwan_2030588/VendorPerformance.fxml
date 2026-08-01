@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_2030588.VendorPerformance">
+   <children>
+      <Label layoutX="188.0" layoutY="14.0" text="Vendor Performance.">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="VendorComboBox" layoutX="113.0" layoutY="77.0" prefWidth="150.0" />
+      <Label layoutX="58.0" layoutY="81.0" text="Vendor" />
+      <Button layoutX="120.0" layoutY="111.0" mnemonicParsing="false" text="Button" />
+      <Label layoutX="69.0" layoutY="115.0" text="Search" />
+      <TableView layoutX="227.0" layoutY="124.0" prefHeight="200.0" prefWidth="357.0">
+        <columns>
+          <TableColumn fx:id="VendorTC" prefWidth="75.0" text="Vendor" />
+          <TableColumn fx:id="RatingTC" prefWidth="75.0" text="Rating" />
+            <TableColumn fx:id="CompletedJobsTC" prefWidth="110.4000244140625" text="Completed Jobs" />
+            <TableColumn fx:id="IncomeTC" prefWidth="96.0" text="Income" />
+        </columns>
+      </TableView>
+      <Button layoutX="515.0" layoutY="354.0" mnemonicParsing="false" text="Back" />
+   </children>
+</AnchorPane>
