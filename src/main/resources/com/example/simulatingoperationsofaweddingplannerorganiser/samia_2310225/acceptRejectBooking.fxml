@@ -16,25 +16,25 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <TableView layoutY="62.0" prefHeight="147.0" prefWidth="686.0">
+      <TableView fx:id="acceptRejectTableView" layoutY="62.0" prefHeight="147.0" prefWidth="686.0">
         <columns>
-          <TableColumn prefWidth="130.40002751350403" text="Booking ID" />
-          <TableColumn prefWidth="131.19993591308594" text="Client Name" />
-            <TableColumn prefWidth="135.99993896484375" text="Wedding Date" />
-            <TableColumn prefWidth="146.4000244140625" text="Guests" />
-            <TableColumn prefWidth="143.20001220703125" text="Total Price" />
+          <TableColumn fx:id="bookingIdTableColumn" prefWidth="130.40002751350403" text="Booking ID" />
+          <TableColumn fx:id="clientNameTableColumn" prefWidth="131.19993591308594" text="Client Name" />
+            <TableColumn fx:id="weddingDateTableColumn" prefWidth="135.99993896484375" text="Wedding Date" />
+            <TableColumn fx:id="guestsTableColumn" prefWidth="146.4000244140625" text="Guests" />
+            <TableColumn fx:id="totalPriceTableColumn" prefWidth="143.20001220703125" text="Total Price" />
         </columns>
       </TableView>
       <HBox layoutX="419.0" layoutY="224.0" prefHeight="50.0" prefWidth="166.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="86.0" text="Accept " />
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="92.0" text="Reject" />
+            <Button mnemonicParsing="false" onAction="#handleAcceptOnAction" prefHeight="100.0" prefWidth="86.0" text="Accept " />
+            <Button mnemonicParsing="false" onAction="#handleRejectOnAction" prefHeight="100.0" prefWidth="92.0" text="Reject" />
          </children>
       </HBox>
       <Label layoutX="28.0" layoutY="351.0" text="Show Message" />
-      <Label layoutX="123.0" layoutY="322.0" prefHeight="75.0" prefWidth="258.0" style="-fx-background-color: yellow;" />
-      <Button layoutX="520.0" layoutY="423.0" mnemonicParsing="false" text="Back to Dashboard" />
+      <Label fx:id="showMessageLabel" layoutX="123.0" layoutY="322.0" prefHeight="75.0" prefWidth="258.0" style="-fx-background-color: yellow;" />
+      <Button layoutX="520.0" layoutY="423.0" mnemonicParsing="false" onAction="#handleBackToDashboardOnAction" text="Back to Dashboard" />
       <Label layoutX="28.0" layoutY="233.0" text="Select Bookings" />
-      <ComboBox layoutX="123.0" layoutY="229.0" prefWidth="150.0" />
+      <ComboBox fx:id="selectsBookingComboBox" layoutX="123.0" layoutY="229.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

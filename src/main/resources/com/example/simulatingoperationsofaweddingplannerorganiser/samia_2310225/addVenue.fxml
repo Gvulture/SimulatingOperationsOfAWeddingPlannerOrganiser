@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="478.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225.addVenueController">
    <children>
       <Label layoutX="251.0" layoutY="14.0" text="Add New Venue">
@@ -21,14 +20,14 @@
       <Label layoutX="339.0" layoutY="72.0" text="Capacity" />
       <Label layoutX="326.0" layoutY="125.0" text="Price Per Day" />
       <Label layoutX="128.0" layoutY="206.0" text="Facilities" />
-      <Button layoutX="267.0" layoutY="276.0" mnemonicParsing="false" style="-fx-background-color: blue;" text="Add Venue" textFill="#fff9f9" />
-      <Button layoutX="473.0" layoutY="426.0" mnemonicParsing="false" text="Back to Dashboard" />
-      <TextField layoutX="117.0" layoutY="68.0" />
-      <TextField layoutX="414.0" layoutY="68.0" />
-      <TextField layoutX="414.0" layoutY="121.0" />
-      <TextArea layoutX="194.0" layoutY="175.0" prefHeight="79.0" prefWidth="251.0" />
+      <Button layoutX="267.0" layoutY="276.0" mnemonicParsing="false" onAction="#handleAddVenueOnAction" style="-fx-background-color: blue;" text="Add Venue" textFill="#fff9f9" />
+      <Button layoutX="473.0" layoutY="426.0" mnemonicParsing="false" onAction="#handleBackToDashboardOnAction" text="Back to Dashboard" />
+      <TextField fx:id="venueNameTextField" layoutX="117.0" layoutY="68.0" />
+      <TextField fx:id="capacityTextField" layoutX="414.0" layoutY="68.0" />
+      <TextField fx:id="pricePerDayTextField" layoutX="414.0" layoutY="121.0" />
+      <TextArea fx:id="facilitiesTextArea" layoutX="194.0" layoutY="175.0" prefHeight="79.0" prefWidth="251.0" />
       <Label layoutX="51.0" layoutY="408.0" text="Show " />
-      <Label layoutX="99.0" layoutY="377.0" prefHeight="79.0" prefWidth="198.0" style="-fx-background-color: yellow;" />
-      <ComboBox layoutX="116.0" layoutY="121.0" prefWidth="150.0" />
+      <Label fx:id="showMessageLabel" layoutX="99.0" layoutY="377.0" prefHeight="79.0" prefWidth="198.0" style="-fx-background-color: yellow;" />
+      <ComboBox fx:id="locationComboBox" layoutX="116.0" layoutY="121.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

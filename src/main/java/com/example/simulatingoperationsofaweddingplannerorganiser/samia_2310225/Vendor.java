@@ -1,7 +1,7 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225;
 
 public class Vendor {
-    private  int vendorId;
+    private final int vendorId;
     private String vendorName, serviceType, contact, bookingStatus;
     private double price;
 

@@ -17,23 +17,23 @@
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <TableView layoutX="-1.0" layoutY="60.0" prefHeight="150.0" prefWidth="638.0">
+      <TableView fx:id="bookVenueTableView" layoutX="-1.0" layoutY="60.0" prefHeight="150.0" prefWidth="638.0">
         <columns>
-          <TableColumn prefWidth="143.9999634027481" text="Venue Name" />
-          <TableColumn prefWidth="150.4000244140625" text="Location" />
-            <TableColumn prefWidth="184.0" text="Capacity" />
-            <TableColumn prefWidth="161.60006713867188" text="Price per Day" />
+          <TableColumn fx:id="venueNameTableColumn" prefWidth="143.9999634027481" text="Venue Name" />
+          <TableColumn fx:id="loactionTableColumn" prefWidth="150.4000244140625" text="Location" />
+            <TableColumn fx:id="capacityTableColumn" prefWidth="184.0" text="Capacity" />
+            <TableColumn fx:id="pricePerDayTableColumn" prefWidth="161.60006713867188" text="Price per Day" />
         </columns>
       </TableView>
       <Label layoutX="20.0" layoutY="220.0" text="Select Wedding Venue" />
       <Label layoutX="20.0" layoutY="257.0" prefHeight="18.0" prefWidth="107.0" text="Number of Guests" />
-      <ComboBox layoutX="151.0" layoutY="216.0" prefWidth="150.0" />
-      <TextField layoutX="151.0" layoutY="253.0" />
-      <Button layoutX="357.0" layoutY="229.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: blue;" text="Book Now" textFill="WHITE" />
+      <ComboBox fx:id="selectWeddingVenueComboBox" layoutX="151.0" layoutY="216.0" prefWidth="150.0" />
+      <TextField fx:id="numOfGuestsTextField" layoutX="151.0" layoutY="253.0" />
+      <Button layoutX="357.0" layoutY="229.0" mnemonicParsing="false" onAction="#handleBookNowOnAction" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: blue;" text="Book Now" textFill="WHITE" />
       <Label layoutX="14.0" layoutY="373.0" prefHeight="18.0" prefWidth="83.0" text="Show Message" />
-      <Label layoutX="113.0" layoutY="335.0" prefHeight="94.0" prefWidth="262.0" style="-fx-background-color: yellow;" />
-      <Button layoutX="507.0" layoutY="369.0" mnemonicParsing="false" text="Back to Dashboard" />
+      <Label fx:id="showMessageLabel" layoutX="113.0" layoutY="335.0" prefHeight="94.0" prefWidth="262.0" style="-fx-background-color: yellow;" />
+      <Button layoutX="507.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleBackToDashboardOnAction" text="Back to Dashboard" />
       <Label layoutX="20.0" layoutY="290.0" text="Wedding Date" />
-      <DatePicker layoutX="145.0" layoutY="286.0" />
+      <DatePicker fx:id="weddingDateDatePicker" layoutX="145.0" layoutY="286.0" />
    </children>
 </AnchorPane>

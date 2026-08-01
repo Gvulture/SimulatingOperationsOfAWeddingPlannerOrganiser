@@ -1,7 +1,7 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225;
 
 public class Expense {
-        private int expenseId;
+        private final int expenseId;
         private String category;
         private double amount;
 
