@@ -2,12 +2,12 @@ package com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_203058
 
 import javafx.scene.control.TextField;
 
-public class ManageGuest
+public class ManageGuestController
 {
     @javafx.fxml.FXML
-    private TextField GuestNameTextfield;
-    @javafx.fxml.FXML
     private TextField PhoneTextField;
+    @javafx.fxml.FXML
+    private TextField GuestNameTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
