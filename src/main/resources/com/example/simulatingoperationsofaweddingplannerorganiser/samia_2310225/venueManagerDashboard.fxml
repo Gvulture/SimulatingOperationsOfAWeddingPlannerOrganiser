@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="445.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.venueManagerDashboardController">
+<AnchorPane prefHeight="445.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225.venueManagerDashboardController">
    <children>
       <Label layoutX="186.0" layoutY="24.0" text="Welcome, Venue Manager">
          <font>
