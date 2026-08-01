@@ -3,7 +3,7 @@ package com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_203058
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 
-public class VendorPerformance
+public class VendorPerformanceController
 {
     @javafx.fxml.FXML
     private TableColumn VendorTC;
