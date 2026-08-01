@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <TableView layoutX="200.0" layoutY="93.0" prefHeight="200.0" prefWidth="225.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Community Center" />
+          <TableColumn prefWidth="75.0" text="Resort" />
+            <TableColumn prefWidth="75.0" text="Hotel" />
+        </columns>
+      </TableView>
+      <Text layoutX="238.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Booking Bookinf Requests">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

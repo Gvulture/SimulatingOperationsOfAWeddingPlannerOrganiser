@@ -1,5 +1,7 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser;
 
+import javafx.event.ActionEvent;
+
 public class PasswordChangeController
 {
     @javafx.fxml.FXML
