@@ -4,7 +4,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
 
-public class UpdateVendor
+public class UpdateVendorController
 {
     @javafx.fxml.FXML
     private TextField PriceTextField;
