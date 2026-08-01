@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="516.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.clientDashboardController">
+<AnchorPane prefHeight="516.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225.clientDashboardController">
    <children>
       <Label layoutX="272.0" layoutY="26.0" style="-fx-background-color: yellow;" text="Welcome Client! ">
          <font>

@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="478.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.addVenueController">
+<AnchorPane prefHeight="478.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225.addVenueController">
    <children>
       <Label layoutX="251.0" layoutY="14.0" text="Add New Venue">
          <font>
