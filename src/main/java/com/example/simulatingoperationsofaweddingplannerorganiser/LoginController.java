@@ -61,6 +61,24 @@ public class LoginController
             case "Photographer":
                 SceneSwitcher.switchTo(event,"Jhalok_2411777/Photographer_Dashboard_view.fxml");
                 break;
+
+            case "Guest":
+                SceneSwitcher.switchTo(event,"Jhalok_2411777/Guest_Dashboard.fxml");
+                break;
+
+            case "Client":
+                SceneSwitcher.switchTo(event,"saima_2310225/clientDashboard.fxml");
+                break;
+
+            case "Venue Manager":
+                SceneSwitcher.switchTo(event,"saima_2310225/venueManagerDashboard,fxml");
+                break;
+
+
+
+            default:
+                displaysErrorLabel.setText("Dashboard not found for this user");
+                displaysErrorLabel.setVisible(true);
         }
 
     }
