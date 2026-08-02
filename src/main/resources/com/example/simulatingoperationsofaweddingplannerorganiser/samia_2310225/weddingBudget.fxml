@@ -23,21 +23,21 @@
       <Label layoutX="398.0" layoutY="156.0" text="Description" />
       <Label layoutX="346.0" layoutY="331.0" text="Show Message" />
       <Label layoutX="398.0" layoutY="119.0" text="Amount" />
-      <Label layoutX="131.0" layoutY="82.0" prefHeight="18.0" prefWidth="167.0" style="-fx-background-color: yellow;" />
-      <Label layoutX="131.0" layoutY="119.0" prefHeight="18.0" prefWidth="167.0" style="-fx-background-color: yellow;" />
-      <Label layoutX="144.0" layoutY="156.0" prefHeight="18.0" prefWidth="161.0" style="-fx-background-color: yellow;" />
-      <ComboBox layoutX="472.0" layoutY="78.0" prefWidth="150.0" />
-      <TextField layoutX="472.0" layoutY="115.0" />
-      <TextField layoutX="472.0" layoutY="151.0" prefHeight="46.0" prefWidth="226.0" />
-      <Button layoutX="280.0" layoutY="197.0" mnemonicParsing="false" style="-fx-background-color: blue;" text="Add Expense" textFill="WHITE" />
-      <TableView layoutX="-1.0" layoutY="274.0" prefHeight="214.0" prefWidth="324.0">
+      <Label fx:id="totalBudgetTextField" layoutX="131.0" layoutY="82.0" prefHeight="18.0" prefWidth="167.0" style="-fx-background-color: yellow;" />
+      <Label fx:id="totalSpentTextField" layoutX="131.0" layoutY="119.0" prefHeight="18.0" prefWidth="167.0" style="-fx-background-color: yellow;" />
+      <Label fx:id="remainingBalanceTextField" layoutX="144.0" layoutY="156.0" prefHeight="18.0" prefWidth="161.0" style="-fx-background-color: yellow;" />
+      <ComboBox fx:id="categoryComboBox" layoutX="472.0" layoutY="78.0" prefWidth="150.0" />
+      <TextField fx:id="amountTextField" layoutX="472.0" layoutY="115.0" />
+      <TextField fx:id="descriptionTextField" layoutX="472.0" layoutY="151.0" prefHeight="46.0" prefWidth="226.0" />
+      <Button layoutX="280.0" layoutY="197.0" mnemonicParsing="false" onAction="#handleAddExpenseOnAction" style="-fx-background-color: blue;" text="Add Expense" textFill="WHITE" />
+      <TableView fx:id="weddingBudgetTableView" layoutX="-1.0" layoutY="274.0" prefHeight="214.0" prefWidth="324.0">
         <columns>
-          <TableColumn prefWidth="88.00000154972076" text="Category" />
-          <TableColumn prefWidth="115.99999237060547" text="Amount" />
-            <TableColumn prefWidth="120.79998779296875" text="Description" />
+          <TableColumn fx:id="categoryTableColumn" prefWidth="88.00000154972076" text="Category" />
+          <TableColumn fx:id="amountTableColumn" prefWidth="115.99999237060547" text="Amount" />
+            <TableColumn fx:id="descriptionTableColumn" prefWidth="120.79998779296875" text="Description" />
         </columns>
       </TableView>
-      <Label layoutX="445.0" layoutY="300.0" prefHeight="78.0" prefWidth="238.0" style="-fx-background-color: yellow;" />
-      <Button layoutX="564.0" layoutY="448.0" mnemonicParsing="false" text="Back to DashBoard" />
+      <Label fx:id="showMessageLabel" layoutX="445.0" layoutY="300.0" prefHeight="78.0" prefWidth="238.0" style="-fx-background-color: yellow;" />
+      <Button layoutX="564.0" layoutY="448.0" mnemonicParsing="false" onAction="#handleBackToDashboardOnAction" text="Back to DashBoard" />
    </children>
 </AnchorPane>

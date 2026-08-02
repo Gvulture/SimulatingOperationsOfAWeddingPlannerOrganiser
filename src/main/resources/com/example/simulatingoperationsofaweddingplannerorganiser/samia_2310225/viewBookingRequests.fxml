@@ -15,21 +15,21 @@
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <TableView layoutX="2.0" layoutY="76.0" prefHeight="157.0" prefWidth="600.0">
+      <TableView fx:id="viewBookingsTableView" layoutX="2.0" layoutY="76.0" prefHeight="157.0" prefWidth="600.0">
         <columns>
-          <TableColumn prefWidth="104.79998469352722" text="Booking ID" />
-          <TableColumn prefWidth="89.60000610351562" text="Client Name" />
-            <TableColumn prefWidth="105.59999084472656" text="Wedding Date" />
-            <TableColumn prefWidth="107.20001220703125" text="Number of Guests" />
-            <TableColumn prefWidth="98.4000244140625" text="Total Price" />
-            <TableColumn prefWidth="98.4000244140625" text="Status" />
+          <TableColumn fx:id="bookingIdTableColumn" prefWidth="104.79998469352722" text="Booking ID" />
+          <TableColumn fx:id="clientNameTableColumn" prefWidth="89.60000610351562" text="Client Name" />
+            <TableColumn fx:id="weddingDateTableColumn" prefWidth="105.59999084472656" text="Wedding Date" />
+            <TableColumn fx:id="numOfGuestsTableColumn" prefWidth="107.20001220703125" text="Number of Guests" />
+            <TableColumn fx:id="totalPriceTableColumn" prefWidth="98.4000244140625" text="Total Price" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="98.4000244140625" text="Status" />
         </columns>
       </TableView>
       <Label layoutX="14.0" layoutY="246.0" text="Select Booking" />
       <Label layoutX="13.0" layoutY="308.0" text="Show Message" />
-      <Label layoutX="107.0" layoutY="290.0" prefHeight="70.0" prefWidth="242.0" style="-fx-background-color: yellow;" />
-      <ComboBox layoutX="107.0" layoutY="242.0" prefWidth="150.0" />
-      <Button layoutX="485.0" layoutY="352.0" mnemonicParsing="false" text="Back to Dashboard" />
-      <Button layoutX="423.0" layoutY="242.0" mnemonicParsing="false" style="-fx-background-color: blue;" text="View Details" textFill="#fffefe" />
+      <Label fx:id="showMessageLabel" layoutX="107.0" layoutY="290.0" prefHeight="70.0" prefWidth="242.0" style="-fx-background-color: yellow;" />
+      <ComboBox fx:id="selectBookingComboBox" layoutX="107.0" layoutY="242.0" prefWidth="150.0" />
+      <Button layoutX="485.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleBackToDashboardOnAction" text="Back to Dashboard" />
+      <Button layoutX="423.0" layoutY="242.0" mnemonicParsing="false" onAction="#handleViewDetailsOnAction" style="-fx-background-color: blue;" text="View Details" textFill="#fffefe" />
    </children>
 </AnchorPane>

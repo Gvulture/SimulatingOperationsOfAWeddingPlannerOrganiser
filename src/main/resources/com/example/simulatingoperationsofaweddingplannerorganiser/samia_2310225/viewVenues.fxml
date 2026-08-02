@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="484.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225.viewVenuesController">
    <children>
       <Label layoutX="280.0" layoutY="14.0" text="View Venues">
@@ -21,22 +20,22 @@
       <Label layoutX="60.0" layoutY="112.0" text="Capacity" />
       <Label layoutX="440.0" layoutY="76.0" text="Min Price" />
       <Label layoutX="440.0" layoutY="103.0" text="Max Price" />
-      <Button layoutX="311.0" layoutY="142.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: blue;" text="Search Venue" textFill="WHITE" />
-      <TableView layoutY="242.0" prefHeight="234.0" prefWidth="454.0">
+      <Button layoutX="311.0" layoutY="142.0" mnemonicParsing="false" onAction="#handleSearchVenueOnAction" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: blue;" text="Search Venue" textFill="WHITE" />
+      <TableView fx:id="viewVenuesTableView" layoutY="242.0" prefHeight="234.0" prefWidth="454.0">
         <columns>
-          <TableColumn prefWidth="84.00000303983688" text="Venue Name" />
-          <TableColumn prefWidth="80.79998779296875" text="Location" />
-            <TableColumn prefWidth="83.20001220703125" text="Capacity" />
-            <TableColumn prefWidth="106.40000915527344" text="Price per Day" />
-            <TableColumn prefWidth="100.0" text="Status" />
+          <TableColumn fx:id="venueNameTableColumn" prefWidth="84.00000303983688" text="Venue Name" />
+          <TableColumn fx:id="locationTableColumn" prefWidth="80.79998779296875" text="Location" />
+            <TableColumn fx:id="capacityTableColumn" prefWidth="83.20001220703125" text="Capacity" />
+            <TableColumn fx:id="pricePerDayTableColumn" prefWidth="106.40000915527344" text="Price per Day" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="100.0" text="Status" />
         </columns>
       </TableView>
-      <ComboBox layoutX="123.0" layoutY="72.0" prefWidth="150.0" />
-      <TextField layoutX="124.0" layoutY="108.0" />
-      <TextField layoutX="520.0" layoutY="72.0" />
-      <TextField layoutX="521.0" layoutY="99.0" />
+      <ComboBox fx:id="locationComboBox" layoutX="123.0" layoutY="72.0" prefWidth="150.0" />
+      <TextField fx:id="capacityTextField" layoutX="124.0" layoutY="108.0" />
+      <TextField fx:id="minPriceTextField" layoutX="520.0" layoutY="72.0" />
+      <TextField fx:id="maxPriceTextField" layoutX="521.0" layoutY="99.0" />
       <Label layoutX="577.0" layoutY="242.0" prefHeight="18.0" prefWidth="35.0" text="Status" />
-      <Label layoutX="487.0" layoutY="266.0" prefHeight="74.0" prefWidth="231.0" style="-fx-background-color: yellow;" />
-      <Button layoutX="557.0" layoutY="426.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="150.0" text="Back to DashBoard" />
+      <Label fx:id="statusShowingLabel" layoutX="487.0" layoutY="266.0" prefHeight="74.0" prefWidth="231.0" style="-fx-background-color: yellow;" />
+      <Button layoutX="557.0" layoutY="426.0" mnemonicParsing="false" onAction="#handleBackToDashboardOnAction" prefHeight="43.0" prefWidth="150.0" text="Back to DashBoard" />
    </children>
 </AnchorPane>

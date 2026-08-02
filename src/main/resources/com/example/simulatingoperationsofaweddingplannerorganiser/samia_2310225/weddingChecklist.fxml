@@ -15,22 +15,22 @@
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <TableView layoutY="114.0" prefHeight="187.0" prefWidth="731.0">
+      <TableView fx:id="weddingChecklistTableView" layoutY="114.0" prefHeight="187.0" prefWidth="731.0">
         <columns>
-          <TableColumn prefWidth="218.39996945858002" text="Task Name" />
-          <TableColumn prefWidth="248.00006103515625" text="Deadline" />
-            <TableColumn prefWidth="260.7999572753906" text="Status" />
+          <TableColumn fx:id="taskNameTableColumn" prefWidth="218.39996945858002" text="Task Name" />
+          <TableColumn fx:id="deadlineTableColumn" prefWidth="248.00006103515625" text="Deadline" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="260.7999572753906" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="522.0" layoutY="317.0" mnemonicParsing="false" style="-fx-background-color: blue;" text="Mark as Done" textFill="#efeaea" />
-      <Label layoutX="135.0" layoutY="423.0" prefHeight="43.0" prefWidth="273.0" text="No tasks Found!">
+      <Button layoutX="522.0" layoutY="317.0" mnemonicParsing="false" onAction="#handleMarkAsDoneOnAction" style="-fx-background-color: blue;" text="Mark as Done" textFill="#efeaea" />
+      <Label fx:id="showMessageLabel" layoutX="135.0" layoutY="423.0" prefHeight="43.0" prefWidth="273.0" text="No tasks Found!">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="604.0" layoutY="444.0" mnemonicParsing="false" text="Back to Dashboard" />
+      <Button layoutX="604.0" layoutY="444.0" mnemonicParsing="false" onAction="#handleBackToDashboard" text="Back to Dashboard" />
       <Label layoutX="27.0" layoutY="317.0" text="Select Task " />
-      <ComboBox layoutX="106.0" layoutY="313.0" prefWidth="150.0" />
+      <ComboBox fx:id="selectTaskComboBox" layoutX="106.0" layoutY="313.0" prefWidth="150.0" />
       <Label layoutX="36.0" layoutY="436.0" text="Show Message" />
    </children>
 </AnchorPane>
