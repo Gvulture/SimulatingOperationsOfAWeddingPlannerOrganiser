@@ -59,7 +59,7 @@ public class LoginController
                 break;
 
             case "Photographer":
-                SceneSwitcher.switchTo(event"Jhalok_2411777/Photographer_Dashboard_view.fxml");
+                SceneSwitcher.switchTo(event,"Jhalok_2411777/Photographer_Dashboard_view.fxml");
                 break;
         }
 
