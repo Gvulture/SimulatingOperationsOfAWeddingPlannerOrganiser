@@ -2,6 +2,7 @@ module com.example.simulatingoperationsofaweddingplannerorganiser {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;
+    requires com.example.simulatingoperationsofaweddingplannerorganiser;
 
 
     opens com.example.simulatingoperationsofaweddingplannerorganiser to javafx.fxml;
