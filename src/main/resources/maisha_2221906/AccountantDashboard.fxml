@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.AccountantDashboardController">
+   <children>
+      <Button layoutX="46.0" layoutY="76.0" mnemonicParsing="false" text="Transactions" />
+      <Button layoutX="46.0" layoutY="119.0" mnemonicParsing="false" text="Invoices" />
+      <Button layoutX="46.0" layoutY="164.0" mnemonicParsing="false" text="Payments" />
+      <Button layoutX="46.0" layoutY="208.0" mnemonicParsing="false" text="Budget Management" />
+      <Text layoutX="161.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ACCOUNTANT DASHBOARD " textAlignment="CENTER" wrappingWidth="244.37237548828125">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Button layoutX="46.0" layoutY="247.0" mnemonicParsing="false" text="Financial Reports" />
+      <Button layoutX="46.0" layoutY="287.0" mnemonicParsing="false" text="Profile" />
+      <Button layoutX="46.0" layoutY="326.0" mnemonicParsing="false" text="Logout" />
+   </children>
+</AnchorPane>
