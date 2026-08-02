@@ -9,9 +9,9 @@ public class updateBookingStatusController
     @javafx.fxml.FXML
     private Label showMessageLabel;
     @javafx.fxml.FXML
-    private ComboBox newStatusComboBox;
+    private ComboBox<String> newStatusComboBox;
     @javafx.fxml.FXML
-    private ComboBox selectBookingComboBox;
+    private ComboBox<String> selectBookingComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {

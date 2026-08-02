@@ -1,27 +1,24 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 
 public class venueScheduleController
 {
     @javafx.fxml.FXML
-    private TableColumn statusTableColumn;
+    private TableColumn<Booking,String> statusTableColumn;
     @javafx.fxml.FXML
     private Label showMessageLabel;
     @javafx.fxml.FXML
-    private ComboBox selectDateComboBox;
+    private ComboBox<String> selectDateComboBox;
     @javafx.fxml.FXML
-    private TableColumn dateTableColumn;
+    private TableColumn<Booking, DatePicker> dateTableColumn;
     @javafx.fxml.FXML
-    private TableView venueScheduleTableView;
+    private TableView<Booking> venueScheduleTableView;
     @javafx.fxml.FXML
-    private TableColumn clientNameTableColumn;
+    private TableColumn<Booking, String> clientNameTableColumn;
     @javafx.fxml.FXML
-    private TableColumn timeSlotTableColumn;
+    private TableColumn<Booking, DatePicker> timeSlotTableColumn;
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -9,23 +9,23 @@ import javafx.scene.control.TableView;
 public class paymentStatusController
 {
     @javafx.fxml.FXML
-    private TableView paymentStatusTableView;
+    private TableView<Booking> paymentStatusTableView;
     @javafx.fxml.FXML
     private Label showMessageLabel;
     @javafx.fxml.FXML
-    private ComboBox selectBookingsComboBox;
+    private ComboBox<String> selectBookingsComboBox;
     @javafx.fxml.FXML
-    private TableColumn paymentStatusTableColumn;
+    private TableColumn<Booking,String> paymentStatusTableColumn;
     @javafx.fxml.FXML
-    private TableColumn totalAmountTableColumn;
+    private TableColumn<Booking,Double> totalAmountTableColumn;
     @javafx.fxml.FXML
-    private TableColumn amountPaidTableColumn;
+    private TableColumn<Booking,Double> amountPaidTableColumn;
     @javafx.fxml.FXML
-    private TableColumn bookingIdTableColumn;
+    private TableColumn<Booking,Integer> bookingIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn amountDueTableColumn;
+    private TableColumn<Booking,Double> amountDueTableColumn;
     @javafx.fxml.FXML
-    private TableColumn clientNameTableColumn;
+    private TableColumn<Booking,String> clientNameTableColumn;
 
     @javafx.fxml.FXML
     public void initialize() {

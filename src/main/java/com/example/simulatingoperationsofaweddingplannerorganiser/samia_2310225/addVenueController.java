@@ -17,7 +17,7 @@ public class addVenueController
     @javafx.fxml.FXML
     private TextField pricePerDayTextField;
     @javafx.fxml.FXML
-    private ComboBox locationComboBox;
+    private ComboBox<String> locationComboBox;
     @javafx.fxml.FXML
     private TextArea facilitiesTextArea;
 

@@ -9,19 +9,19 @@ import javafx.scene.control.TableView;
 public class bookedVendorsController
 {
     @javafx.fxml.FXML
-    private TableColumn vendorIdTableColumn;
+    private TableColumn<Venue,Integer> vendorIdTableColumn;
     @javafx.fxml.FXML
     private Label showMessageLabel;
     @javafx.fxml.FXML
-    private TableColumn priceTableColumn;
+    private TableColumn<Venue, Double> priceTableColumn;
     @javafx.fxml.FXML
-    private TableView bookedVendorsTableView;
+    private TableView<Venue> bookedVendorsTableView;
     @javafx.fxml.FXML
-    private TableColumn vendorNameTableColumn;
+    private TableColumn<Venue, String> vendorNameTableColumn;
     @javafx.fxml.FXML
-    private TableColumn serviceTypeTableColumn;
+    private TableColumn<Venue, String> serviceTypeTableColumn;
     @javafx.fxml.FXML
-    private ComboBox selectVendorsComboBox;
+    private ComboBox<String> selectVendorsComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {

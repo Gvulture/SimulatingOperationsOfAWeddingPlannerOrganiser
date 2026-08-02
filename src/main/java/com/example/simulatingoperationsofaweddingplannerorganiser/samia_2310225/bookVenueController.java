@@ -10,17 +10,17 @@ public class bookVenueController
     @javafx.fxml.FXML
     private DatePicker weddingDateDatePicker;
     @javafx.fxml.FXML
-    private TableColumn loactionTableColumn;
+    private TableColumn<Venue,String> loactionTableColumn;
     @javafx.fxml.FXML
-    private TableColumn pricePerDayTableColumn;
+    private TableColumn<Venue,Double> pricePerDayTableColumn;
     @javafx.fxml.FXML
-    private ComboBox selectWeddingVenueComboBox;
+    private ComboBox<String> selectWeddingVenueComboBox;
     @javafx.fxml.FXML
-    private TableView bookVenueTableView;
+    private TableView<Venue> bookVenueTableView;
     @javafx.fxml.FXML
-    private TableColumn venueNameTableColumn;
+    private TableColumn<Venue, String> venueNameTableColumn;
     @javafx.fxml.FXML
-    private TableColumn capacityTableColumn;
+    private TableColumn<Venue,Integer> capacityTableColumn;
     @javafx.fxml.FXML
     private TextField numOfGuestsTextField;
 

@@ -14,11 +14,11 @@ public class updateVenueController
     @javafx.fxml.FXML
     private TextField capacityTextField;
     @javafx.fxml.FXML
-    private ComboBox selectVenueComboBox;
+    private ComboBox<String> selectVenueComboBox;
     @javafx.fxml.FXML
     private TextField pricePerDayTextField;
     @javafx.fxml.FXML
-    private ComboBox locationComboBox;
+    private ComboBox<String> locationComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
