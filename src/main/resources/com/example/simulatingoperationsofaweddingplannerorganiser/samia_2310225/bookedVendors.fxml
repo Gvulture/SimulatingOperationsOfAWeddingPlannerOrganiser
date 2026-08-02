@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="462.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225.bookedVendorsController">
+   <children>
+      <Label layoutX="238.0" layoutY="14.0" prefHeight="39.0" prefWidth="214.0" text="Booked Vendors">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <TableView fx:id="bookedVendorsTableView" layoutX="-1.0" layoutY="81.0" prefHeight="200.0" prefWidth="724.0">
+        <columns>
+          <TableColumn fx:id="vendorIdTableColumn" prefWidth="167.19994813203812" text="Vendor ID" />
+          <TableColumn fx:id="vendorNameTableColumn" prefWidth="155.20005798339844" text="Vendor Name" />
+            <TableColumn fx:id="serviceTypeTableColumn" prefWidth="199.20001220703125" text="Service Type" />
+            <TableColumn fx:id="priceTableColumn" prefWidth="202.39996337890625" text="Price" />
+        </columns>
+      </TableView>
+      <Button layoutX="467.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleViewDetailsOnAction" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: blue;" text="View Details" textFill="WHITE" />
+      <Label fx:id="showMessageLabel" layoutX="126.0" layoutY="393.0" prefHeight="26.0" prefWidth="286.0" text="No Vendors Booked yet!">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="578.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleBackToDashboardOnAction" text="Back to Dashboard" />
+      <Label layoutX="24.0" layoutY="295.0" text="Select Vendors" />
+      <ComboBox fx:id="selectVendorsComboBox" layoutX="126.0" layoutY="291.0" prefWidth="150.0" />
+      <Label layoutX="24.0" layoutY="398.0" text="Show Message" />
+   </children>
+</AnchorPane>

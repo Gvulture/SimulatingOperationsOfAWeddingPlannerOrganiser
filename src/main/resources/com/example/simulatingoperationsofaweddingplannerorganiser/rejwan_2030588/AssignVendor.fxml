@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_2030588.AssignVendorController">
+   <children>
+      <Label layoutX="223.0" layoutY="14.0" text="Assign Vendor">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="87.0" text="Wedding Plan" />
+      <Label layoutX="41.0" layoutY="142.0" text="Vendor" />
+      <ComboBox fx:id="WeddingPlanComboBox" layoutX="107.0" layoutY="83.0" prefWidth="150.0" />
+      <ComboBox fx:id="VendorComboBox" layoutX="107.0" layoutY="138.0" prefWidth="150.0" />
+      <ComboBox fx:id="ServiceTypeComboBox" layoutX="107.0" layoutY="200.0" prefWidth="150.0" />
+      <Label layoutX="27.0" layoutY="204.0" text="Service Type" />
+      <Button layoutX="67.0" layoutY="285.0" mnemonicParsing="false" text="Assign" />
+      <Button layoutX="285.0" layoutY="285.0" mnemonicParsing="false" text="Clear" />
+      <Button layoutX="515.0" layoutY="346.0" mnemonicParsing="false" text="Back" />
+      <TableView layoutX="328.0" layoutY="64.0" prefHeight="200.0" prefWidth="222.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Vendor" />
+          <TableColumn prefWidth="75.0" text="Service" />
+            <TableColumn prefWidth="75.0" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

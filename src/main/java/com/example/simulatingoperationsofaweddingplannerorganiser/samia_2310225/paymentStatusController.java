@@ -1,0 +1,41 @@
+package com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225;
+
+import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
+public class paymentStatusController
+{
+    @javafx.fxml.FXML
+    private TableView<Booking> paymentStatusTableView;
+    @javafx.fxml.FXML
+    private Label showMessageLabel;
+    @javafx.fxml.FXML
+    private ComboBox<String> selectBookingsComboBox;
+    @javafx.fxml.FXML
+    private TableColumn<Booking,String> paymentStatusTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<Booking,Double> totalAmountTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<Booking,Double> amountPaidTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<Booking,Integer> bookingIdTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<Booking,Double> amountDueTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<Booking,String> clientNameTableColumn;
+
+    @javafx.fxml.FXML
+    public void initialize() {
+    }
+
+    @javafx.fxml.FXML
+    public void handleBackToDashboardOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleViewDetailsOnAction(ActionEvent actionEvent) {
+    }
+}

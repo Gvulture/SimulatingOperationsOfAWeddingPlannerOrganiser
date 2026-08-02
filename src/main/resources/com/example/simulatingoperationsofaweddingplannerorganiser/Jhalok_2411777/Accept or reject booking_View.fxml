@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <Text layoutX="228.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accept or Reject Booking">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <TableView layoutX="223.0" layoutY="78.0" prefHeight="200.0" prefWidth="153.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Accept Booking" />
+          <TableColumn prefWidth="75.0" text="Reject Booking" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

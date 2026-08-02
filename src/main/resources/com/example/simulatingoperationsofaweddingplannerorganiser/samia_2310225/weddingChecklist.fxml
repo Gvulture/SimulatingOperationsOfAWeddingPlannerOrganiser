@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="496.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225.weddingChecklistController">
+   <children>
+      <Label layoutX="249.0" layoutY="30.0" text="Wedding Checklist">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <TableView fx:id="weddingChecklistTableView" layoutY="114.0" prefHeight="187.0" prefWidth="731.0">
+        <columns>
+          <TableColumn fx:id="taskNameTableColumn" prefWidth="218.39996945858002" text="Task Name" />
+          <TableColumn fx:id="deadlineTableColumn" prefWidth="248.00006103515625" text="Deadline" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="260.7999572753906" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="522.0" layoutY="317.0" mnemonicParsing="false" onAction="#handleMarkAsDoneOnAction" style="-fx-background-color: blue;" text="Mark as Done" textFill="#efeaea" />
+      <Label fx:id="showMessageLabel" layoutX="135.0" layoutY="423.0" prefHeight="43.0" prefWidth="273.0" text="No tasks Found!">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="604.0" layoutY="444.0" mnemonicParsing="false" onAction="#handleBackToDashboard" text="Back to Dashboard" />
+      <Label layoutX="27.0" layoutY="317.0" text="Select Task " />
+      <ComboBox fx:id="selectTaskComboBox" layoutX="106.0" layoutY="313.0" prefWidth="150.0" />
+      <Label layoutX="36.0" layoutY="436.0" text="Show Message" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_2030588.UpdateVendorController">
+   <children>
+      <Label layoutX="219.0" layoutY="14.0" text="Update Vendor">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="76.0" text="Vendor" />
+      <Label layoutX="61.0" layoutY="123.0" text="Phone" />
+      <Label layoutX="65.0" layoutY="165.0" text="Price" />
+      <TextField fx:id="PhoneTextField" layoutX="106.0" layoutY="119.0" />
+      <TextField fx:id="PriceTextField" layoutX="106.0" layoutY="161.0" />
+      <ComboBox fx:id="VendorComboBox" layoutX="106.0" layoutY="72.0" prefWidth="150.0" />
+      <Button layoutX="80.0" layoutY="241.0" mnemonicParsing="false" text="Update" />
+      <Button layoutX="165.0" layoutY="241.0" mnemonicParsing="false" text="Clear" />
+      <TableView layoutX="274.0" layoutY="74.0" prefHeight="272.0" prefWidth="228.0">
+        <columns>
+          <TableColumn fx:id="VendorTC" prefWidth="75.0" text="Vendor" />
+          <TableColumn fx:id="PhoneTC" prefWidth="75.0" text="Phone" />
+            <TableColumn fx:id="PriceTC" prefWidth="75.0" text="Price" />
+        </columns>
+      </TableView>
+      <Button layoutX="520.0" layoutY="353.0" mnemonicParsing="false" text="Back" />
+   </children>
+</AnchorPane>

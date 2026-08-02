@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="457.0" prefWidth="627.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225.bookVenueController">
+   <children>
+      <Label layoutX="251.0" layoutY="14.0" text="Book Venue">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="bookVenueTableView" layoutX="-1.0" layoutY="60.0" prefHeight="150.0" prefWidth="638.0">
+        <columns>
+          <TableColumn fx:id="venueNameTableColumn" prefWidth="143.9999634027481" text="Venue Name" />
+          <TableColumn fx:id="loactionTableColumn" prefWidth="150.4000244140625" text="Location" />
+            <TableColumn fx:id="capacityTableColumn" prefWidth="184.0" text="Capacity" />
+            <TableColumn fx:id="pricePerDayTableColumn" prefWidth="161.60006713867188" text="Price per Day" />
+        </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="220.0" text="Select Wedding Venue" />
+      <Label layoutX="20.0" layoutY="257.0" prefHeight="18.0" prefWidth="107.0" text="Number of Guests" />
+      <ComboBox fx:id="selectWeddingVenueComboBox" layoutX="151.0" layoutY="216.0" prefWidth="150.0" />
+      <TextField fx:id="numOfGuestsTextField" layoutX="151.0" layoutY="253.0" />
+      <Button layoutX="357.0" layoutY="229.0" mnemonicParsing="false" onAction="#handleBookNowOnAction" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: blue;" text="Book Now" textFill="WHITE" />
+      <Label layoutX="14.0" layoutY="373.0" prefHeight="18.0" prefWidth="83.0" text="Show Message" />
+      <Label fx:id="showMessageLabel" layoutX="113.0" layoutY="335.0" prefHeight="94.0" prefWidth="262.0" style="-fx-background-color: yellow;" />
+      <Button layoutX="507.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleBackToDashboardOnAction" text="Back to Dashboard" />
+      <Label layoutX="20.0" layoutY="290.0" text="Wedding Date" />
+      <DatePicker fx:id="weddingDateDatePicker" layoutX="145.0" layoutY="286.0" />
+   </children>
+</AnchorPane>
