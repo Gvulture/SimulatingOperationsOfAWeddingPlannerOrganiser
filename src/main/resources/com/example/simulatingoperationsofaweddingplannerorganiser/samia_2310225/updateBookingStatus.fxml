@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="298.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225.updateBookingStatusController">
    <children>
       <Label layoutX="76.0" layoutY="14.0" text="Update Booking Status">
@@ -16,11 +15,11 @@
       </Label>
       <Label layoutX="28.0" layoutY="68.0" text="Select Booking" />
       <Label layoutX="28.0" layoutY="100.0" text="New Status" />
-      <Button layoutX="126.0" layoutY="149.0" mnemonicParsing="false" style="-fx-background-color: blue;" text="Update Booking Status" textFill="#fffafa" />
+      <Button layoutX="128.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleUpdateBookingStatusOnAction" style="-fx-background-color: blue;" text="Update Booking Status" textFill="#fffafa" />
       <Label layoutX="9.0" layoutY="229.0" text="Show message" />
-      <Label layoutX="96.0" layoutY="222.0" prefHeight="30.0" prefWidth="217.0" style="-fx-background-color: yellow;" />
-      <Button layoutX="264.0" layoutY="258.0" mnemonicParsing="false" text="Back to Dashboard" />
-      <ComboBox layoutX="120.0" layoutY="64.0" prefWidth="150.0" />
-      <ComboBox layoutX="120.0" layoutY="96.0" prefWidth="150.0" />
+      <Label fx:id="showMessageLabel" layoutX="96.0" layoutY="222.0" prefHeight="30.0" prefWidth="217.0" style="-fx-background-color: yellow;" />
+      <Button layoutX="264.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleBackToDashboardOnAction" text="Back to Dashboard" />
+      <ComboBox fx:id="selectBookingComboBox" layoutX="120.0" layoutY="64.0" prefWidth="150.0" />
+      <ComboBox fx:id="newStatusComboBox" layoutX="120.0" layoutY="96.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

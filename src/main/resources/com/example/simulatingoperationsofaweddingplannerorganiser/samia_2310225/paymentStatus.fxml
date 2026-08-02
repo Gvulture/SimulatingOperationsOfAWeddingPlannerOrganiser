@@ -14,21 +14,21 @@
          <font>
             <Font name="System Bold" size="19.0" />
          </font></Label>
-      <TableView layoutY="74.0" prefHeight="142.0" prefWidth="602.0">
+      <TableView fx:id="paymentStatusTableView" layoutY="74.0" prefHeight="142.0" prefWidth="602.0">
         <columns>
-          <TableColumn prefWidth="80.00000303983688" text="Booking ID" />
-          <TableColumn prefWidth="89.5999755859375" text="Client Name" />
-            <TableColumn prefWidth="90.39994812011719" text="Total Amount" />
-            <TableColumn prefWidth="108.79998779296875" text="Amount Paid" />
-            <TableColumn prefWidth="112.0" text="Amount Due" />
-            <TableColumn prefWidth="124.800048828125" text="Payment Status" />
+          <TableColumn fx:id="bookingIdTableColumn" prefWidth="80.00000303983688" text="Booking ID" />
+          <TableColumn fx:id="clientNameTableColumn" prefWidth="89.5999755859375" text="Client Name" />
+            <TableColumn fx:id="totalAmountTableColumn" prefWidth="90.39994812011719" text="Total Amount" />
+            <TableColumn fx:id="amountPaidTableColumn" prefWidth="108.79998779296875" text="Amount Paid" />
+            <TableColumn fx:id="amountDueTableColumn" prefWidth="112.0" text="Amount Due" />
+            <TableColumn fx:id="paymentStatusTableColumn" prefWidth="124.800048828125" text="Payment Status" />
         </columns>
       </TableView>
       <Label layoutX="24.0" layoutY="234.0" text="Select Booking" />
-      <ComboBox layoutX="113.0" layoutY="230.0" prefWidth="150.0" />
-      <Button layoutX="372.0" layoutY="230.0" mnemonicParsing="false" style="-fx-background-color: blue;" text="View Details" textFill="#fffbfb" />
-      <Button layoutX="460.0" layoutY="345.0" mnemonicParsing="false" text="Back to Dashboard" />
+      <ComboBox fx:id="selectBookingsComboBox" layoutX="113.0" layoutY="230.0" prefWidth="150.0" />
+      <Button layoutX="372.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleViewDetailsOnAction" style="-fx-background-color: blue;" text="View Details" textFill="#fffbfb" />
+      <Button layoutX="460.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleBackToDashboardOnAction" text="Back to Dashboard" />
       <Label layoutX="33.0" layoutY="339.0" text="Show Message" />
-      <Label layoutX="138.0" layoutY="314.0" prefHeight="68.0" prefWidth="219.0" style="-fx-background-color: yellow;" />
+      <Label fx:id="showMessageLabel" layoutX="138.0" layoutY="314.0" prefHeight="68.0" prefWidth="219.0" style="-fx-background-color: yellow;" />
    </children>
 </AnchorPane>

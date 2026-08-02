@@ -15,25 +15,25 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <TableView layoutY="94.0" prefHeight="200.0" prefWidth="685.0">
+      <TableView fx:id="myBookingsTableView" layoutY="94.0" prefHeight="200.0" prefWidth="685.0">
         <columns>
-          <TableColumn prefWidth="98.39992982149124" text="Booking ID" />
-          <TableColumn minWidth="0.0" prefWidth="124.800048828125" text="Venue Name" />
-            <TableColumn prefWidth="99.20008850097656" text="Wedding Date" />
-            <TableColumn prefWidth="115.2000732421875" text="Guests" />
-            <TableColumn prefWidth="126.39996337890625" text="Total Price " />
-            <TableColumn prefWidth="122.4000244140625" text="Status" />
+          <TableColumn fx:id="bookingIdTableColumn" prefWidth="98.39992982149124" text="Booking ID" />
+          <TableColumn fx:id="venueNameTableColumn" minWidth="0.0" prefWidth="124.800048828125" text="Venue Name" />
+            <TableColumn fx:id="weddingDateTableColumn" prefWidth="99.20008850097656" text="Wedding Date" />
+            <TableColumn fx:id="guestsTableColumn" prefWidth="115.2000732421875" text="Guests" />
+            <TableColumn fx:id="totalPriceTableColumn" prefWidth="126.39996337890625" text="Total Price " />
+            <TableColumn fx:id="statusTableColumn" prefWidth="122.4000244140625" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="402.0" layoutY="305.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="115.0" style="-fx-background-color: blue;" text="View Details" textFill="#faf6f6" />
-      <Label layoutX="137.0" layoutY="385.0" prefHeight="40.0" prefWidth="246.0" text=" You have no bookings yet!" textAlignment="JUSTIFY">
+      <Button layoutX="402.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleViewDetailsOnAction" prefHeight="26.0" prefWidth="115.0" style="-fx-background-color: blue;" text="View Details" textFill="#faf6f6" />
+      <Label fx:id="showMessageLabel" layoutX="137.0" layoutY="385.0" prefHeight="40.0" prefWidth="246.0" text=" You have no bookings yet!" textAlignment="JUSTIFY">
          <font>
             <Font name="Bell MT Bold" size="13.0" />
          </font>
       </Label>
-      <Button layoutX="556.0" layoutY="411.0" mnemonicParsing="false" text="Back to Dashboard" />
+      <Button layoutX="556.0" layoutY="411.0" mnemonicParsing="false" onAction="#handleBackToDashboardOnAction" text="Back to Dashboard" />
       <Label layoutX="21.0" layoutY="310.0" text="Select Booking " />
-      <ComboBox layoutX="109.0" layoutY="306.0" prefWidth="150.0" />
+      <ComboBox fx:id="selectBookingComboBox" layoutX="109.0" layoutY="306.0" prefWidth="150.0" />
       <Label layoutX="48.0" layoutY="396.0" text="Show message" />
    </children>
 </AnchorPane>

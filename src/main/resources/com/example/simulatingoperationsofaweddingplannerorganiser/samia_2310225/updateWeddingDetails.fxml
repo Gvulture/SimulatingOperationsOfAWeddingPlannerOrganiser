@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225.updateWeddingDetailsController">
    <children>
       <Label layoutX="172.0" layoutY="21.0" prefHeight="36.0" prefWidth="236.0" text="Update Wedding Details ">
@@ -18,11 +17,11 @@
       <Label layoutX="42.0" layoutY="75.0" text="Wedding Date" />
       <Label layoutX="42.0" layoutY="107.0" text="Number of Guests" />
       <Label layoutX="338.0" layoutY="75.0" text="Wedding Theme" />
-      <Button layoutX="257.0" layoutY="168.0" mnemonicParsing="false" style="-fx-background-color: blue;" text="Save" textFill="#fffafa" />
-      <Label layoutX="67.0" layoutY="218.0" prefHeight="58.0" prefWidth="466.0" style="-fx-background-color: yellow;" text="Show Message" />
-      <Button layoutX="475.0" layoutY="354.0" mnemonicParsing="false" text="Back to Dashboard" />
-      <DatePicker layoutX="123.0" layoutY="71.0" />
-      <TextField layoutX="437.0" layoutY="71.0" />
-      <TextField layoutX="151.0" layoutY="103.0" />
+      <Button layoutX="257.0" layoutY="168.0" mnemonicParsing="false" onAction="#handleSaveOnAction" style="-fx-background-color: blue;" text="Save" textFill="#fffafa" />
+      <Label fx:id="showMessageLabel" layoutX="67.0" layoutY="218.0" prefHeight="58.0" prefWidth="466.0" style="-fx-background-color: yellow;" text="Show Message" />
+      <Button layoutX="475.0" layoutY="354.0" mnemonicParsing="false" onAction="#handleBackToDashboardOnAction" text="Back to Dashboard" />
+      <DatePicker fx:id="weddingDateDatePicker" layoutX="123.0" layoutY="71.0" />
+      <TextField fx:id="weddingThemeTextField" layoutX="437.0" layoutY="71.0" />
+      <TextField fx:id="numberOfGuestsTextField" layoutX="151.0" layoutY="103.0" />
    </children>
 </AnchorPane>

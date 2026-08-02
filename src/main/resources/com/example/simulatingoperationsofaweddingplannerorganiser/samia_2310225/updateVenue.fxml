@@ -7,10 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="396.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225.updateVenueController">
    <children>
-      <Label layoutX="255.0" layoutY="17.0" text="Update Venue Details">
+      <Label layoutX="180.0" layoutY="23.0" text="Update Venue Details">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
@@ -19,15 +18,15 @@
       <Label layoutX="337.0" layoutY="76.0" text="Capacity" />
       <Label layoutX="337.0" layoutY="110.0" text="Price per Day" />
       <Label layoutX="34.0" layoutY="76.0" prefHeight="18.0" prefWidth="80.0" text="Select Venue" />
-      <Label layoutX="121.0" layoutY="333.0" prefHeight="42.0" prefWidth="250.0" style="-fx-background-color: yellow;" />
+      <Label fx:id="showMessageLabel" layoutX="121.0" layoutY="333.0" prefHeight="42.0" prefWidth="250.0" style="-fx-background-color: yellow;" />
       <Label layoutX="34.0" layoutY="119.0" text="Venue Name" />
-      <Button layoutX="263.0" layoutY="232.0" mnemonicParsing="false" text="Save Changes" />
-      <Button layoutX="448.0" layoutY="342.0" mnemonicParsing="false" text="Back to Dashboard" />
+      <Button layoutX="263.0" layoutY="232.0" mnemonicParsing="false" onAction="#handleSaveChangesOnAction" text="Save Changes" />
+      <Button layoutX="448.0" layoutY="342.0" mnemonicParsing="false" onAction="#handleBackToDashboardOnAction" text="Back to Dashboard" />
       <Label layoutX="34.0" layoutY="345.0" text="Show Message" />
-      <ComboBox layoutX="120.0" layoutY="72.0" prefWidth="150.0" />
-      <ComboBox layoutX="120.0" layoutY="165.0" prefWidth="150.0" />
-      <TextField layoutX="121.0" layoutY="115.0" />
-      <TextField layoutX="408.0" layoutY="72.0" />
-      <TextField layoutX="414.0" layoutY="107.0" />
+      <ComboBox fx:id="selectVenueComboBox" layoutX="120.0" layoutY="72.0" prefWidth="150.0" />
+      <ComboBox fx:id="locationComboBox" layoutX="120.0" layoutY="165.0" prefWidth="150.0" />
+      <TextField fx:id="venueNameTextField" layoutX="121.0" layoutY="115.0" />
+      <TextField fx:id="capacityTextField" layoutX="408.0" layoutY="72.0" />
+      <TextField fx:id="pricePerDayTextField" layoutX="414.0" layoutY="107.0" />
    </children>
 </AnchorPane>
