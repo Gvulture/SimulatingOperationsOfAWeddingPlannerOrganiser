@@ -6,23 +6,23 @@ import javafx.scene.control.*;
 public class viewVenuesController
 {
     @javafx.fxml.FXML
-    private TableColumn statusTableColumn;
+    private TableColumn<Venue,String> statusTableColumn;
     @javafx.fxml.FXML
     private TextField capacityTextField;
     @javafx.fxml.FXML
-    private TableView viewVenuesTableView;
+    private TableView<Venue> viewVenuesTableView;
     @javafx.fxml.FXML
-    private TableColumn pricePerDayTableColumn;
+    private TableColumn<Venue, Double> pricePerDayTableColumn;
     @javafx.fxml.FXML
     private TextField minPriceTextField;
     @javafx.fxml.FXML
-    private TableColumn venueNameTableColumn;
+    private TableColumn<Venue, String> venueNameTableColumn;
     @javafx.fxml.FXML
-    private TableColumn locationTableColumn;
+    private TableColumn<Venue,String> locationTableColumn;
     @javafx.fxml.FXML
-    private TableColumn capacityTableColumn;
+    private TableColumn<Venue, Integer> capacityTableColumn;
     @javafx.fxml.FXML
-    private ComboBox locationComboBox;
+    private ComboBox<String> locationComboBox;
     @javafx.fxml.FXML
     private Label statusShowingLabel;
     @javafx.fxml.FXML

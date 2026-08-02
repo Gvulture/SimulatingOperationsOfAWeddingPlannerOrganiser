@@ -6,20 +6,22 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
+import java.time.LocalDate;
+
 public class weddingChecklistController
 {
     @javafx.fxml.FXML
-    private TableColumn statusTableColumn;
+    private TableColumn<WeddingCheckList,String> statusTableColumn;
     @javafx.fxml.FXML
     private Label showMessageLabel;
     @javafx.fxml.FXML
-    private TableColumn deadlineTableColumn;
+    private TableColumn<WeddingCheckList, LocalDate> deadlineTableColumn;
     @javafx.fxml.FXML
-    private TableColumn taskNameTableColumn;
+    private TableColumn<WeddingCheckList,String> taskNameTableColumn;
     @javafx.fxml.FXML
-    private TableView weddingChecklistTableView;
+    private TableView<WeddingCheckList> weddingChecklistTableView;
     @javafx.fxml.FXML
-    private ComboBox selectTaskComboBox;
+    private ComboBox<String> selectTaskComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -13,17 +13,17 @@
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <VBox layoutX="-1.0" layoutY="83.0" prefHeight="435.0" prefWidth="736.0">
+      <VBox layoutY="74.0" prefHeight="435.0" prefWidth="736.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="218.0" text="View Venues" />
-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="218.0" text="Wedding Budget" />
-            <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="218.0" text="Book Venue" />
-            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="218.0" text="My Bookings" />
-            <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="218.0" text="Wedding Checklist" />
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="219.0" text="Send Invitation" />
-            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="219.0" text="Update Wedding Details" />
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="219.0" text="Booked Vendors" />
-            <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="218.0" style="-fx-background-color: white;" text="LogOut" />
+            <Button mnemonicParsing="false" onAction="#handleViewVenuesOnAction" prefHeight="36.0" prefWidth="218.0" text="View Venues" />
+            <Button mnemonicParsing="false" onAction="#handleWeddingBudgetOnAction" prefHeight="39.0" prefWidth="218.0" text="Wedding Budget" />
+            <Button mnemonicParsing="false" onAction="#handleBookVenueOnAction" prefHeight="43.0" prefWidth="218.0" text="Book Venue" />
+            <Button mnemonicParsing="false" onAction="#handleMyBookingsOnAction" prefHeight="38.0" prefWidth="218.0" text="My Bookings" />
+            <Button mnemonicParsing="false" onAction="#handleWeddingCheckListOnAction" prefHeight="43.0" prefWidth="218.0" text="Wedding Checklist" />
+            <Button mnemonicParsing="false" onAction="#handleSendInvitationOnAction" prefHeight="42.0" prefWidth="219.0" text="Send Invitation" />
+            <Button mnemonicParsing="false" onAction="#handleUpdateWeddingDetailsOnAction" prefHeight="44.0" prefWidth="219.0" text="Update Wedding Details" />
+            <Button mnemonicParsing="false" onAction="#handleBookedVendorsOnAction" prefHeight="50.0" prefWidth="219.0" text="Booked Vendors" />
+            <Button mnemonicParsing="false" onAction="#handleLogOutOnAction" prefHeight="90.0" prefWidth="218.0" style="-fx-background-color: white;" text="LogOut" />
          </children>
       </VBox>
    </children>

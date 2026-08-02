@@ -6,26 +6,28 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
+import java.time.LocalDate;
+
 public class viewBookingRequestsController
 {
     @javafx.fxml.FXML
-    private TableColumn statusTableColumn;
+    private TableColumn<Booking,String> statusTableColumn;
     @javafx.fxml.FXML
     private Label showMessageLabel;
     @javafx.fxml.FXML
-    private TableColumn totalPriceTableColumn;
+    private TableColumn<Booking, Double> totalPriceTableColumn;
     @javafx.fxml.FXML
-    private TableColumn numOfGuestsTableColumn;
+    private TableColumn<Booking,Integer> numOfGuestsTableColumn;
     @javafx.fxml.FXML
-    private TableColumn bookingIdTableColumn;
+    private TableColumn<Booking,Integer> bookingIdTableColumn;
     @javafx.fxml.FXML
-    private TableView viewBookingsTableView;
+    private TableView<Booking> viewBookingsTableView;
     @javafx.fxml.FXML
-    private TableColumn weddingDateTableColumn;
+    private TableColumn<Booking, LocalDate> weddingDateTableColumn;
     @javafx.fxml.FXML
-    private TableColumn clientNameTableColumn;
+    private TableColumn<Booking,String> clientNameTableColumn;
     @javafx.fxml.FXML
-    private ComboBox selectBookingComboBox;
+    private ComboBox<String> selectBookingComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
