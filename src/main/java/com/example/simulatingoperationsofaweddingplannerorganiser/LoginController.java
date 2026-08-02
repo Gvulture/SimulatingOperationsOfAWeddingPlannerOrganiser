@@ -51,7 +51,16 @@ public class LoginController
 
         switch (selectedRole) {
             case "Wedding Planner":
-                SceneSwitcher.switchTo(event,"");
+                SceneSwitcher.switchTo(event,"rejwan_2030588/WPDashboard.fxml");
+                break;
+
+            case "Vendor Manager":
+                SceneSwitcher.switchTo(event,"rejwan_2030588/VendorDashboard.fxml");
+                break;
+
+            case "Photographer":
+                SceneSwitcher.switchTo(event"Jhalok_2411777/Photographer_Dashboard_view.fxml");
+                break;
         }
 
     }
