@@ -22,6 +22,7 @@ public class updateVenueController
 
     @javafx.fxml.FXML
     public void initialize() {
+        selectVenueComboBox.getItems().addAll("Dhaka", "Chittagong", "Sylhet", "Rajshahi", "Khulna", "Barishal");
     }
 
     @javafx.fxml.FXML
