@@ -5,6 +5,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class bookedVendorsController
 {
@@ -25,6 +26,13 @@ public class bookedVendorsController
 
     @javafx.fxml.FXML
     public void initialize() {
+        selectVendorsComboBox.getItems().addAll("VND-201","VND-202","VND-203","VND-204");
+
+        vendorIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("vendorId"));
+        vendorNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("vendorName"));
+        serviceTypeTableColumn.setCellValueFactory(new PropertyValueFactory<>("serviceType"));
+        priceTableColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+        
     }
 
     @javafx.fxml.FXML
