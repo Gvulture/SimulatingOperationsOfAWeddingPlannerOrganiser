@@ -5,6 +5,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 
@@ -25,6 +26,11 @@ public class weddingChecklistController
 
     @javafx.fxml.FXML
     public void initialize() {
+        selectTaskComboBox.getItems().addAll("Book Photographer","Confirm Catering Menu","Send Invitations");
+
+        taskNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("taskName"));
+        deadlineTableColumn.setCellValueFactory(new PropertyValueFactory<>("deadline"));
+        statusTableColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
     }
 
     @javafx.fxml.FXML

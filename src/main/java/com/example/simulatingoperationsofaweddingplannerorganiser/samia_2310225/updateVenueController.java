@@ -22,7 +22,8 @@ public class updateVenueController
 
     @javafx.fxml.FXML
     public void initialize() {
-        selectVenueComboBox.getItems().addAll("Dhaka", "Chittagong", "Sylhet", "Rajshahi", "Khulna", "Barishal");
+        selectVenueComboBox.getItems().addAll("Grand Palace Hall","Ocean View Convention","Royal Garden Centre");
+        locationComboBox.getItems().addAll("Dhaka","Chittagong","Sylhet","Rajshahi","Khulna");
     }
 
     @javafx.fxml.FXML
