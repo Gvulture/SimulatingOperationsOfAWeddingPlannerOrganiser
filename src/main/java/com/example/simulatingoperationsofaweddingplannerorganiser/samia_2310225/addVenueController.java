@@ -23,6 +23,7 @@ public class addVenueController
 
     @javafx.fxml.FXML
     public void initialize() {
+        locationComboBox.getItems().addAll("Dhaka","Chittagong","Sylhet","Rajshahi","Khulna");
 
     }
 
