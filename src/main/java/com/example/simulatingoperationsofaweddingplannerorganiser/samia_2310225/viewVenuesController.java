@@ -1,8 +1,13 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225;
 
+import com.example.simulatingoperationsofaweddingplannerorganiser.common.SceneSwitch;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.io.IOException;
 
 public class viewVenuesController
 {
@@ -46,5 +51,12 @@ public class viewVenuesController
 
     @javafx.fxml.FXML
     public void handleBackToDashboardOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("clientDashboard.fxml"));
+            Scene scene = new Scene(loader.load());
+            SceneSwitch.setScene(actionEvent, scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
