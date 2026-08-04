@@ -2,6 +2,7 @@ package com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class viewVenuesController
 {
@@ -30,6 +31,13 @@ public class viewVenuesController
 
     @javafx.fxml.FXML
     public void initialize() {
+        locationComboBox.getItems().addAll("Dhaka", "Chittagong", "Sylhet", "Rajshahi", "Khulna", "Barishal");
+
+        venueNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("venueName"));
+        locationTableColumn.setCellValueFactory(new PropertyValueFactory<>("location"));
+        capacityTableColumn.setCellValueFactory(new PropertyValueFactory<>("capacity"));
+        pricePerDayTableColumn.setCellValueFactory(new PropertyValueFactory<>("pricePerDay"));
+        statusTableColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
     }
 
     @javafx.fxml.FXML

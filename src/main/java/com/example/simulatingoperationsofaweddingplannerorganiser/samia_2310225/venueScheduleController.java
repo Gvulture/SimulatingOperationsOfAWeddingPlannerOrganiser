@@ -2,6 +2,7 @@ package com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class venueScheduleController
 {
@@ -22,6 +23,12 @@ public class venueScheduleController
 
     @javafx.fxml.FXML
     public void initialize() {
+        selectDateComboBox.getItems().addAll("2026-08-10", "2026-08-15", "2026-08-20", "2026-08-25","2026-08-12");
+
+        clientNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("clientName"));
+        dateTableColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
+        timeSlotTableColumn.setCellValueFactory(new PropertyValueFactory<>("timeSlot"));
+        statusTableColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
     }
 
     @javafx.fxml.FXML

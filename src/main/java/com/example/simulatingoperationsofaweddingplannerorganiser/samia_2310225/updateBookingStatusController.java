@@ -15,6 +15,8 @@ public class updateBookingStatusController
 
     @javafx.fxml.FXML
     public void initialize() {
+        newStatusComboBox.getItems().addAll("Confirmed", "Cancelled", "Completed");
+        selectBookingComboBox.getItems().addAll("B001", "B002", "B003", "B004");
     }
 
     @javafx.fxml.FXML

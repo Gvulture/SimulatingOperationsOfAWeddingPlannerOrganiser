@@ -5,6 +5,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class paymentStatusController
 {
@@ -29,6 +30,14 @@ public class paymentStatusController
 
     @javafx.fxml.FXML
     public void initialize() {
+        selectBookingsComboBox.getItems().addAll("B001", "B002", "B003", "B004");
+
+        bookingIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("bookingId"));
+        clientNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("clientName"));
+        paymentStatusTableColumn.setCellValueFactory(new PropertyValueFactory<>("paymentStatus"));
+        totalAmountTableColumn.setCellValueFactory(new PropertyValueFactory<>("totalAmount"));
+        amountPaidTableColumn.setCellValueFactory(new PropertyValueFactory<>("amountPaid"));
+        amountDueTableColumn.setCellValueFactory(new PropertyValueFactory<>("amountDue"));
     }
 
     @javafx.fxml.FXML

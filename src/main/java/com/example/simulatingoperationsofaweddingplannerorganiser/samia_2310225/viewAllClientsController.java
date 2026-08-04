@@ -5,6 +5,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 
@@ -31,6 +32,15 @@ public class viewAllClientsController
 
     @javafx.fxml.FXML
     public void initialize() {
+        selectClientComboBox.getItems().addAll("C001", "C002", "C003", "C004", "C005");
+
+        clientNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("clientName"));
+        clientIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("clientId"));
+        emailTableColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
+        phoneNumberTableColumn.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
+        weddingDateTableColumn.setCellValueFactory(new PropertyValueFactory<>("weddingDate"));
+        bookingStatusTableColumn.setCellValueFactory(new PropertyValueFactory<>("bookingStatus"));
+
     }
 
     @javafx.fxml.FXML
