@@ -30,8 +30,6 @@ public class viewVenuesController
     @javafx.fxml.FXML
     private ComboBox<String> locationComboBox;
     @javafx.fxml.FXML
-    private Label statusShowingLabel;
-    @javafx.fxml.FXML
     private TextField maxPriceTextField;
 
     @javafx.fxml.FXML

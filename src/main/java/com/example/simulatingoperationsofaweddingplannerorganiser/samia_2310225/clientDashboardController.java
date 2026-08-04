@@ -15,7 +15,7 @@ public class clientDashboardController {
     @javafx.fxml.FXML
     public void handleUpdateWeddingDetailsOnAction(ActionEvent actionEvent)  throws IOException{
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("updateWeddingDetails.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/updateWeddingDetails.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
         } catch (Exception e) {
@@ -26,7 +26,7 @@ public class clientDashboardController {
     @javafx.fxml.FXML
     public void handleWeddingBudgetOnAction(ActionEvent actionEvent) throws IOException {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("weddingBudget.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/weddingBudget.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
         } catch (Exception e) {
@@ -37,7 +37,7 @@ public class clientDashboardController {
     @javafx.fxml.FXML
     public void handleWeddingCheckListOnAction(ActionEvent actionEvent) throws IOException {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("weddingChecklist.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/weddingChecklist.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
         } catch (Exception e) {
@@ -48,7 +48,7 @@ public class clientDashboardController {
     @javafx.fxml.FXML
     public void handleBookVenueOnAction(ActionEvent actionEvent) throws IOException{
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("bookVenue.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/bookVenue.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
         }catch (IOException e) {
@@ -59,7 +59,7 @@ public class clientDashboardController {
     @javafx.fxml.FXML
     public void handleSendInvitationOnAction(ActionEvent actionEvent) throws IOException {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("sendInvitation.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/sendInvitation.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
         }catch (IOException e) {
@@ -70,7 +70,7 @@ public class clientDashboardController {
     @javafx.fxml.FXML
     public void handleMyBookingsOnAction(ActionEvent actionEvent) throws IOException{
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("myBookings.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/myBookings.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
         } catch (IOException e) {
@@ -81,7 +81,7 @@ public class clientDashboardController {
     @javafx.fxml.FXML
     public void handleBookedVendorsOnAction(ActionEvent actionEvent) throws IOException {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("bookedVendors.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/bookedVendors.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
         } catch (IOException e) {
@@ -93,7 +93,7 @@ public class clientDashboardController {
     @javafx.fxml.FXML
     public void handleViewVenuesOnAction(ActionEvent actionEvent) throws IOException {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("viewVenues.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/viewVenues.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
         } catch (IOException e) {
@@ -105,7 +105,7 @@ public class clientDashboardController {
     @javafx.fxml.FXML
     public void handleLogOutOnAction(ActionEvent actionEvent) throws IOException {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/Login.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
         } catch (IOException e) {
