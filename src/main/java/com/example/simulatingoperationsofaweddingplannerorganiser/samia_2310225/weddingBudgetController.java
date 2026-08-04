@@ -50,7 +50,7 @@ public class weddingBudgetController
     @javafx.fxml.FXML
     public void handleAddExpenseOnAction(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("clientDashboard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/clientDashboard.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
         } catch (IOException e) {
