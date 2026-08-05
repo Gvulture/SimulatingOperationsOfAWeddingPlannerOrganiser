@@ -54,6 +54,11 @@ public class bookVenueController
                 e.printStackTrace();
             }
         }
+
+    @FXML
+    public void handleBookNowOnAction(ActionEvent actionEvent) {
+
     }
+}
 
 
