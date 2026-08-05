@@ -1,6 +1,8 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225;
 
-public class Venue {
+import java.io.Serializable;
+
+public class Venue implements Serializable {
     private final int venueId;
     private int capacity;
     private String venueName, location, Status;
