@@ -49,10 +49,10 @@ public class viewVenuesController {
         pricePerDayTableColumn.setCellValueFactory(new PropertyValueFactory<>("pricePerDay"));
         statusTableColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        // ১. বাইনারি ফাইল থেকে ডাটা পড়া
+
         venueList = BinaryUtils.readObjects(file);
 
-        // ২. ফাইল যদি খালি থাকে তবে আপনার নিজস্ব ডাটা যোগ করে সেভ করা
+
         if (venueList.isEmpty()) {
             venueList.add(new Venue(101, 500, "Grand Palace", "Dhaka", "Available", 50000.0));
             venueList.add(new Venue(102, 300, "Royal Hall", "Dhaka", "Available", 35000.0));
@@ -63,7 +63,7 @@ public class viewVenuesController {
             BinaryUtils.saveList(file, venueList);
         }
 
-        // ৩. টেবিলে দেখানো
+
         viewVenuesTableView.getItems().setAll(venueList);
     }
 
@@ -74,7 +74,7 @@ public class viewVenuesController {
         String minPrice = minPriceTextField.getText().trim();
         String maxPrice = maxPriceTextField.getText().trim();
 
-        // সার্চ করার সময় বাইনারি ফাইল থেকে ডাটা পড়া
+
         venueList = BinaryUtils.readObjects(file);
         ArrayList<Venue> resultList = new ArrayList<>();
 
