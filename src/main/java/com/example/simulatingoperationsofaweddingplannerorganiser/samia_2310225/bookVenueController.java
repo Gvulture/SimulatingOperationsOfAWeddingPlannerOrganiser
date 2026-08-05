@@ -1,5 +1,6 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225;
 
+import com.example.simulatingoperationsofaweddingplannerorganiser.common.BinaryUtils;
 import com.example.simulatingoperationsofaweddingplannerorganiser.common.SceneSwitch;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,6 +13,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class bookVenueController
 {
@@ -34,6 +37,9 @@ public class bookVenueController
     @javafx.fxml.FXML
     private TextField numOfGuestsTextField;
 
+    private final String file = "venues.bin";
+    private ArrayList<Venue> venueList = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void initialize() {
         selectWeddingVenueComboBox.getItems().addAll("Grand Palace Hall", "Rose Garden", "Sunset Banquet", "Royal Convention Center");
@@ -42,6 +48,22 @@ public class bookVenueController
         loactionTableColumn.setCellValueFactory(new PropertyValueFactory<>("location"));
         pricePerDayTableColumn.setCellValueFactory(new PropertyValueFactory<>("pricePerDay"));
         capacityTableColumn.setCellValueFactory(new PropertyValueFactory<>("capacity"));
+
+        venueList = BinaryUtils.readObjects(file);
+
+
+        if (venueList.isEmpty()) {
+            venueList.add(new Venue(101, 500, "Grand Palace", "Dhaka", "Available", 50000.0));
+            venueList.add(new Venue(102, 300, "Royal Hall", "Dhaka", "Available", 35000.0));
+            venueList.add(new Venue(103, 800, "Ocean Breeze", "Chittagong", "Booked", 75000.0));
+            venueList.add(new Venue(104, 400, "Green Garden", "Sylhet", "Available", 40000.0));
+            venueList.add(new Venue(105, 1000, "City Convention", "Dhaka", "Available", 120000.0));
+
+            BinaryUtils.saveList(file, venueList);
+        }
+        bookVenueTableView.getItems().setAll(venueList);
+
+
     }
 
     @javafx.fxml.FXML
@@ -57,6 +79,58 @@ public class bookVenueController
 
     @FXML
     public void handleBookNowOnAction(ActionEvent actionEvent) {
+        String selectedVenueName = selectWeddingVenueComboBox.getValue();
+        LocalDate weddingDate = weddingDateDatePicker.getValue();
+        String guest = numOfGuestsTextField.getText().trim();
+
+        // Event-6 Verification: ফাঁকা ইনপুট চেক
+        if (selectedVenueName == null || weddingDate == null || guest.isEmpty()) {
+            showMessageLabel.setText("Verification Fail");
+            return;
+        }
+
+        int guestCount;
+        try {
+            guestCount = Integer.parseInt(guest);
+        } catch (NumberFormatException e) {
+            showMessageLabel.setText("Verification Fail");
+            return;
+        }
+
+
+        Venue selectedVenue = null;
+        for (Venue v : venueList) {
+            if (v.getVenueName().equalsIgnoreCase(selectedVenueName)) {
+                selectedVenue = v;
+                break;
+            }
+        }
+
+        if (selectedVenue == null) {
+            showMessageLabel.setText("Verification Fail");
+            return;
+        }
+
+
+        if (guestCount <= 0 || guestCount > selectedVenue.getCapacity()) {
+            showMessageLabel.setText("Verification Fail");
+            return;
+        }
+
+        double totalPrice = selectedVenue.getPricePerDay();
+        String summary = "Venue Name: " + selectedVenue.getVenueName() + "\n"
+                + "Wedding Date: " + weddingDate + "\n"
+                + "Number of Guests: " + guestCount + "\n"
+                + "Total Price: " + totalPrice + " BDT";
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Booking Summary");
+        alert.setHeaderText("Booking Summary Details");
+        alert.setContentText(summary);
+        alert.showAndWait();
+
+
+        showMessageLabel.setText("Booking confirmed successfully!");
 
     }
 }
