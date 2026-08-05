@@ -1,8 +1,9 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Booking {
+public class Booking implements Serializable {
     private final int bookingId;
     private int numberOfGuests;
     private String bookingStatus, paymentStatus;
