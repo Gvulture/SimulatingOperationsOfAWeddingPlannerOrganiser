@@ -96,7 +96,7 @@ public class acceptRejectBookingController {
         for (Booking b : bookingList) {
             if (b.getBookingId() == selectedId) {
 
-                b.setBookingStatus("Confirmed");
+                b.setStatus("Confirmed");
 
 
                 BinaryUtils.saveList(file, bookingList);
@@ -125,7 +125,7 @@ public class acceptRejectBookingController {
 
         for (Booking b : bookingList) {
             if (b.getBookingId() == selectedId) {
-                b.setBookingStatus("Confirmed");
+                b.setStatus("Confirmed");
 
                 BinaryUtils.saveList(file, bookingList);
                 acceptRejectTableView.getItems().setAll(bookingList);
