@@ -4,14 +4,12 @@ import com.example.simulatingoperationsofaweddingplannerorganiser.common.SceneSw
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class viewBookingRequestsController
 {
@@ -33,6 +31,7 @@ public class viewBookingRequestsController
     private TableColumn<Booking,String> clientNameTableColumn;
     @javafx.fxml.FXML
     private ComboBox<String> selectBookingComboBox;
+    private ArrayList<Booking> bookingList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -44,6 +43,22 @@ public class viewBookingRequestsController
         numOfGuestsTableColumn.setCellValueFactory(new PropertyValueFactory<>("numOfGuests"));
         totalPriceTableColumn.setCellValueFactory(new PropertyValueFactory<>("totalPrice"));
         statusTableColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+
+        LocalDate date1 = LocalDate.parse("2026-11-15");
+        LocalDate date2 = LocalDate.parse("2026-12-01");
+        LocalDate date3 = LocalDate.parse("2026-12-20");
+
+        bookingList.add(new Booking(101, 350, "Pending", "Samia", 150000.0, date1));
+        bookingList.add(new Booking(102, 500, "Approved", "Tasmim", 220000.0, date2));
+        bookingList.add(new Booking(103, 200, "Pending", "Tithi", 95000.0, date3));
+
+        selectBookingComboBox.getItems().clear();
+        for (Booking b : bookingList) {
+            selectBookingComboBox.getItems().add("B" + b.getBookingId());
+        }
+
+        viewBookingsTableView.getItems().setAll(bookingList);
+        showMessageLabel.setText("");
 
     }
 
@@ -60,5 +75,31 @@ public class viewBookingRequestsController
 
     @javafx.fxml.FXML
     public void handleViewDetailsOnAction(ActionEvent actionEvent) {
+        if (bookingList.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("No booking requests found!");
+            alert.showAndWait();
+            return;
+        }
+
+        String selectedBookingId = selectBookingComboBox.getValue();
+
+        if (selectedBookingId == null) {
+            showMessageLabel.setText("Please select a booking ID first!");
+            return;
+        }
+
+        for (Booking b : bookingList) {
+            String currentId = "B" + b.getBookingId();
+
+            if (currentId.equals(selectedBookingId)) {
+                showMessageLabel.setText("Client: " + b.getClientName() +
+                        "Date: " + b.getWeddingDate() +
+                        "Guests: " + b.getNumberOfGuests() +
+                        "Total: " + b.getTotalPrice() +
+                        "Status: " + b.status());
+                return;
+            }
+        }
     }
 }

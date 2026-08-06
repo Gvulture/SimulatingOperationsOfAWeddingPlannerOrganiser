@@ -6,15 +6,15 @@ import java.time.LocalDate;
 public class Booking implements Serializable {
     private final int bookingId;
     private int numberOfGuests;
-    private String bookingStatus, paymentStatus;
+    private String clientName,status;
     private double totalPrice;
     private LocalDate weddingDate;
 
-    public Booking(int bookingId, int numberOfGuests, String bookingStatus, String paymentStatus, double totalPrice, LocalDate weddingDate) {
+    public Booking(int bookingId, int numberOfGuests, String status, String clientName, double totalPrice, LocalDate weddingDate) {
         this.bookingId = bookingId;
         this.numberOfGuests = numberOfGuests;
-        this.bookingStatus = bookingStatus;
-        this.paymentStatus = paymentStatus;
+        this.status = status;
+        this.clientName = clientName;
         this.totalPrice = totalPrice;
         this.weddingDate = weddingDate;
     }
@@ -27,12 +27,12 @@ public class Booking implements Serializable {
         return numberOfGuests;
     }
 
-    public String getBookingStatus() {
-        return bookingStatus;
+    public String status() {
+        return status;
     }
 
-    public String getPaymentStatus() {
-        return paymentStatus;
+    public String getClientName() {
+        return clientName;
     }
 
     public double getTotalPrice() {
@@ -47,12 +47,12 @@ public class Booking implements Serializable {
         this.numberOfGuests = numberOfGuests;
     }
 
-    public void setBookingStatus(String bookingStatus) {
-        this.bookingStatus = bookingStatus;
+    public void setStatus(String bookingStatus) {
+        this.status = bookingStatus;
     }
 
-    public void setPaymentStatus(String paymentStatus) {
-        this.paymentStatus = paymentStatus;
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
     }
 
     public void setTotalPrice(double totalPrice) {
@@ -68,8 +68,8 @@ public class Booking implements Serializable {
         return "Booking{" +
                 "bookingId=" + bookingId +
                 ", numberOfGuests=" + numberOfGuests +
-                ", bookingStatus='" + bookingStatus + '\'' +
-                ", paymentStatus='" + paymentStatus + '\'' +
+                ", status='" + status + '\'' +
+                ", clientName='" + clientName+ '\'' +
                 ", totalPrice=" + totalPrice +
                 ", weddingDate=" + weddingDate +
                 '}';
