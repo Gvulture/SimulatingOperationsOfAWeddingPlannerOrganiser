@@ -51,7 +51,7 @@ public class clientDashboardController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/bookVenue.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
-        }catch (IOException e) {
+        }catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -62,7 +62,7 @@ public class clientDashboardController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/sendInvitation.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
-        }catch (IOException e) {
+        }catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -73,7 +73,7 @@ public class clientDashboardController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/myBookings.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -84,7 +84,7 @@ public class clientDashboardController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/bookedVendors.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -96,7 +96,7 @@ public class clientDashboardController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/viewVenues.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -108,7 +108,7 @@ public class clientDashboardController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/Login.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

@@ -125,11 +125,8 @@ public class bookVenueController
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Booking Summary");
-        alert.setHeaderText("Booking Summary Details");
         alert.setContentText(summary);
         alert.showAndWait();
-
-
         showMessageLabel.setText("Booking confirmed successfully!");
 
     }

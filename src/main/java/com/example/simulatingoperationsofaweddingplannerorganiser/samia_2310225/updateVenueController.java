@@ -37,12 +37,37 @@ public class updateVenueController
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/venueManagerDashboard.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @javafx.fxml.FXML
     public void handleSaveChangesOnAction(ActionEvent actionEvent) {
+        String selectedVenue = selectVenueComboBox.getValue();
+        String venueName = venueNameTextField.getText().trim();
+        String location = locationComboBox.getValue();
+        String capacityStr = capacityTextField.getText().trim();
+        String priceStr = pricePerDayTextField.getText().trim();
+
+        try {
+            if (selectedVenue == null || venueName.isEmpty() || location == null) {
+                showMessageLabel.setText("Invalid");
+                return;
+            }
+
+            int capacity = Integer.parseInt(capacityStr);
+            double price = Double.parseDouble(priceStr);
+
+            if (capacity <= 0 || price <= 0) {
+                showMessageLabel.setText("Invalid");
+                return;
+            }
+
+            showMessageLabel.setText("Venue updated successfully!");
+
+        } catch (Exception e) {
+            showMessageLabel.setText("Invalid");
+        }
     }
 }

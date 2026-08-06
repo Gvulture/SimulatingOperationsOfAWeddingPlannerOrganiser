@@ -63,7 +63,7 @@ public class venueManagerDashboardController
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/addVenue.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -107,7 +107,7 @@ public class venueManagerDashboardController
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/viewBookingRequests.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

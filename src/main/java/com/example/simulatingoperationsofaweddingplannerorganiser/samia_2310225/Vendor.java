@@ -2,15 +2,13 @@ package com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225
 
 public class Vendor {
     private final int vendorId;
-    private String vendorName, serviceType, contact, bookingStatus;
+    private String vendorName, serviceType;
     private double price;
 
-    public Vendor(int vendorId, String vendorName, String serviceType, String contact, String bookingStatus, double price) {
+    public Vendor(int vendorId, String vendorName, String serviceType, double price) {
         this.vendorId = vendorId;
         this.vendorName = vendorName;
         this.serviceType = serviceType;
-        this.contact = contact;
-        this.bookingStatus = bookingStatus;
         this.price = price;
     }
 
@@ -34,22 +32,6 @@ public class Vendor {
         this.serviceType = serviceType;
     }
 
-    public String getContact() {
-        return contact;
-    }
-
-    public void setContact(String contact) {
-        this.contact = contact;
-    }
-
-    public String getBookingStatus() {
-        return bookingStatus;
-    }
-
-    public void setBookingStatus(String bookingStatus) {
-        this.bookingStatus = bookingStatus;
-    }
-
     public double getPrice() {
         return price;
     }
@@ -64,8 +46,6 @@ public class Vendor {
                 "vendorId=" + vendorId +
                 ", vendorName='" + vendorName + '\'' +
                 ", serviceType='" + serviceType + '\'' +
-                ", contact='" + contact + '\'' +
-                ", bookingStatus='" + bookingStatus + '\'' +
                 ", price=" + price +
                 '}';
     }
