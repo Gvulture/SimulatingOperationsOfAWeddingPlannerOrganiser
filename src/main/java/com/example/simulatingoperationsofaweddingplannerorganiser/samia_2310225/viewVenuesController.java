@@ -114,7 +114,6 @@ public class viewVenuesController {
         if (resultList.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("No Results");
-            alert.setHeaderText(null);
             alert.setContentText("No venues found matching your criteria!");
             alert.showAndWait();
         }
@@ -127,7 +126,7 @@ public class viewVenuesController {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/clientDashboard.fxml"));
                 Scene scene = new Scene(loader.load());
                 SceneSwitch.setScene(actionEvent, scene);
-            } catch (IOException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
