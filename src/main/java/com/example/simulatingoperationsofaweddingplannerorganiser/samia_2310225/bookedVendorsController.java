@@ -11,6 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class bookedVendorsController
 {
@@ -28,6 +29,7 @@ public class bookedVendorsController
     private TableColumn<Venue, String> serviceTypeTableColumn;
     @javafx.fxml.FXML
     private ComboBox<String> selectVendorsComboBox;
+    private ArrayList<Venue> vendorList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -37,6 +39,8 @@ public class bookedVendorsController
         vendorNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("vendorName"));
         serviceTypeTableColumn.setCellValueFactory(new PropertyValueFactory<>("serviceType"));
         priceTableColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+
         
     }
 
