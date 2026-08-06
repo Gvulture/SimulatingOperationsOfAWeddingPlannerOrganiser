@@ -5,13 +5,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class bookedVendorsController {
@@ -29,22 +29,29 @@ public class bookedVendorsController {
 
     @FXML
     public void initialize() {
-        vendorIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("vendorId"));
-        vendorNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("vendorName"));
-        serviceTypeTableColumn.setCellValueFactory(new PropertyValueFactory<>("serviceType"));
-        priceTableColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+        try {
+            vendorIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("vendorId"));
+            vendorNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("vendorName"));
+            serviceTypeTableColumn.setCellValueFactory(new PropertyValueFactory<>("serviceType"));
+            priceTableColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
 
-        vendorList.add(new Vendor(201, "Dream Photography", "Photography", 45000.0));
-        vendorList.add(new Vendor(202, "Royal Catering", "Catering", 120000.0));
-        vendorList.add(new Vendor(203, "Grand Venue Hall", "Venue", 250000.0));
+            vendorList.clear();
+            vendorList.add(new Vendor(201, "Dream Photography", "Photography", 45000.0));
+            vendorList.add(new Vendor(202, "Royal Catering", "Catering", 120000.0));
+            vendorList.add(new Vendor(203, "Grand Venue Hall", "Venue", 250000.0));
 
-        selectVendorsComboBox.getItems().clear();
-        for (Vendor v : vendorList) {
-            selectVendorsComboBox.getItems().add("VND-" + v.getVendorId());
+            selectVendorsComboBox.getItems().clear();
+            for (Vendor v : vendorList) {
+                selectVendorsComboBox.getItems().add("VND-" + v.getVendorId());
+            }
+
+            bookedVendorsTableView.getItems().setAll(vendorList);
+            showMessageLabel.setText("");
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Error loading vendor data!");
+            alert.showAndWait();
         }
-
-        bookedVendorsTableView.getItems().setAll(vendorList);
-        showMessageLabel.setText("");
     }
 
     @FXML
@@ -53,8 +60,10 @@ public class bookedVendorsController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/clientDashboard.fxml"));
             Scene scene = new Scene(loader.load());
             SceneSwitch.setScene(actionEvent, scene);
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Could not load dashboard!");
+            alert.showAndWait();
         }
     }
 
@@ -63,6 +72,10 @@ public class bookedVendorsController {
         try {
             if (vendorList.isEmpty()) {
                 showMessageLabel.setText("No vendors booked yet!");
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText("No vendors booked yet!");
+                alert.showAndWait();
                 return;
             }
 
@@ -70,6 +83,10 @@ public class bookedVendorsController {
 
             if (selectedVendorId == null) {
                 showMessageLabel.setText("Please select a vendor first!");
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText("Please select a vendor first!");
+                alert.showAndWait();
                 return;
             }
 
@@ -77,15 +94,25 @@ public class bookedVendorsController {
                 String currentId = "VND-" + v.getVendorId();
 
                 if (currentId.equals(selectedVendorId)) {
-                    showMessageLabel.setText("ID: " + v.getVendorId() +
+                    String details = "ID: " + v.getVendorId() +
                             " Name: " + v.getVendorName() +
                             " Type: " + v.getServiceType() +
-                            " Price: " + v.getPrice() + " BDT");
+                            " Price: " + v.getPrice();
+
+                    showMessageLabel.setText(details);
+
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setContentText(details);
+                    alert.showAndWait();
                     return;
                 }
             }
         } catch (Exception e) {
             showMessageLabel.setText("No vendors booked yet!");
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("No vendors booked yet!");
+            alert.showAndWait();
         }
     }
 }

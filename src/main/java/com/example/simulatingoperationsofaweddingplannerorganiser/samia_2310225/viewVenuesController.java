@@ -1,81 +1,67 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225;
 
-import com.example.simulatingoperationsofaweddingplannerorganiser.common.BinaryUtils;
 import com.example.simulatingoperationsofaweddingplannerorganiser.common.SceneSwitch;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class viewVenuesController {
 
-    private final String file = "venues.bin";
-
-    @javafx.fxml.FXML
-    private TableColumn<Venue, String> statusTableColumn;
-    @javafx.fxml.FXML
-    private TextField capacityTextField;
-    @javafx.fxml.FXML
-    private TableView<Venue> viewVenuesTableView;
-    @javafx.fxml.FXML
-    private TableColumn<Venue, Double> pricePerDayTableColumn;
-    @javafx.fxml.FXML
-    private TextField minPriceTextField;
-    @javafx.fxml.FXML
-    private TableColumn<Venue, String> venueNameTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<Venue, String> locationTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn<Venue, Integer> capacityTableColumn;
-    @javafx.fxml.FXML
-    private ComboBox<String> locationComboBox;
-    @javafx.fxml.FXML
-    private TextField maxPriceTextField;
+    @FXML private TableColumn<Venue, String> statusTableColumn;
+    @FXML private TextField capacityTextField;
+    @FXML private TableView<Venue> viewVenuesTableView;
+    @FXML private TableColumn<Venue, Double> pricePerDayTableColumn;
+    @FXML private TextField minPriceTextField;
+    @FXML private TableColumn<Venue, String> venueNameTableColumn;
+    @FXML private TableColumn<Venue, String> locationTableColumn;
+    @FXML private TableColumn<Venue, Integer> capacityTableColumn;
+    @FXML private ComboBox<String> locationComboBox;
+    @FXML private TextField maxPriceTextField;
 
     private ArrayList<Venue> venueList = new ArrayList<>();
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
-        locationComboBox.getItems().addAll("All", "Dhaka", "Chittagong", "Sylhet");
-        locationComboBox.setValue("All");
+        try {
+            locationComboBox.getItems().clear();
+            locationComboBox.getItems().addAll("All", "Dhaka", "Chittagong", "Sylhet");
+            locationComboBox.setValue("All");
 
-        venueNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("venueName"));
-        locationTableColumn.setCellValueFactory(new PropertyValueFactory<>("location"));
-        capacityTableColumn.setCellValueFactory(new PropertyValueFactory<>("capacity"));
-        pricePerDayTableColumn.setCellValueFactory(new PropertyValueFactory<>("pricePerDay"));
-        statusTableColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+            venueNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("venueName"));
+            locationTableColumn.setCellValueFactory(new PropertyValueFactory<>("location"));
+            capacityTableColumn.setCellValueFactory(new PropertyValueFactory<>("capacity"));
+            pricePerDayTableColumn.setCellValueFactory(new PropertyValueFactory<>("pricePerDay"));
+            statusTableColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
 
-        venueList = BinaryUtils.readObjects(file);
-
-
-        if (venueList.isEmpty()) {
+            venueList.clear();
             venueList.add(new Venue(101, 500, "Grand Palace", "Dhaka", "Available", 50000.0));
             venueList.add(new Venue(102, 300, "Royal Hall", "Dhaka", "Available", 35000.0));
             venueList.add(new Venue(103, 800, "Ocean Breeze", "Chittagong", "Booked", 75000.0));
             venueList.add(new Venue(104, 400, "Green Garden", "Sylhet", "Available", 40000.0));
             venueList.add(new Venue(105, 1000, "City Convention", "Dhaka", "Available", 120000.0));
 
-            BinaryUtils.saveList(file, venueList);
+            viewVenuesTableView.getItems().setAll(venueList);
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Error loading venue data!");
+            alert.showAndWait();
         }
-
-
-        viewVenuesTableView.getItems().setAll(venueList);
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void handleSearchVenueOnAction(ActionEvent actionEvent) {
         String selectedLocation = locationComboBox.getValue();
         String capacity = capacityTextField.getText().trim();
         String minPrice = minPriceTextField.getText().trim();
         String maxPrice = maxPriceTextField.getText().trim();
 
-
-        venueList = BinaryUtils.readObjects(file);
         ArrayList<Venue> resultList = new ArrayList<>();
 
         for (Venue venue : venueList) {
@@ -97,7 +83,10 @@ public class viewVenuesController {
                     if (venue.getPricePerDay() < Double.parseDouble(minPrice)) {
                         continue;
                     }
-                } catch (Exception e) {}
+
+                } catch (Exception e) {
+
+                }
             }
             if (!maxPrice.isEmpty()) {
                 try {
@@ -113,21 +102,21 @@ public class viewVenuesController {
 
         if (resultList.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("No Results");
             alert.setContentText("No venues found matching your criteria!");
             alert.showAndWait();
         }
     }
 
-
-        @javafx.fxml.FXML
-        public void handleBackToDashboardOnAction (ActionEvent actionEvent){
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/clientDashboard.fxml"));
-                Scene scene = new Scene(loader.load());
-                SceneSwitch.setScene(actionEvent, scene);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+    @FXML
+    public void handleBackToDashboardOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/clientDashboard.fxml"));
+            Scene scene = new Scene(loader.load());
+            SceneSwitch.setScene(actionEvent, scene);
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Could not load dashboard!");
+            alert.showAndWait();
         }
     }
+}
