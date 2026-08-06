@@ -34,7 +34,7 @@ public class bookVenueController {
             pricePerDayTableColumn.setCellValueFactory(new PropertyValueFactory<>("pricePerDay"));
             capacityTableColumn.setCellValueFactory(new PropertyValueFactory<>("capacity"));
 
-            // মেমোরিতে ডামি ডাটা যোগ করা
+
             venueList.clear();
             venueList.add(new Venue(101, 500, "Grand Palace", "Dhaka", "Available", 50000.0));
             venueList.add(new Venue(102, 300, "Royal Hall", "Dhaka", "Available", 35000.0));
@@ -76,7 +76,7 @@ public class bookVenueController {
             LocalDate weddingDate = weddingDateDatePicker.getValue();
             String guest = numOfGuestsTextField.getText().trim();
 
-            // ইনপুট ভ্যালিডেশন
+
             if (selectedVenueName == null || weddingDate == null || guest.isEmpty()) {
                 showMessageLabel.setText("Verification Fail");
                 return;
