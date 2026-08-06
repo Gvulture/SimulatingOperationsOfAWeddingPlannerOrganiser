@@ -44,5 +44,30 @@ public class updateVenueController
 
     @javafx.fxml.FXML
     public void handleSaveChangesOnAction(ActionEvent actionEvent) {
+        String selectedVenue = selectVenueComboBox.getValue();
+        String venueName = venueNameTextField.getText().trim();
+        String location = locationComboBox.getValue();
+        String capacityStr = capacityTextField.getText().trim();
+        String priceStr = pricePerDayTextField.getText().trim();
+
+        try {
+            if (selectedVenue == null || venueName.isEmpty() || location == null) {
+                showMessageLabel.setText("Invalid");
+                return;
+            }
+
+            int capacity = Integer.parseInt(capacityStr);
+            double price = Double.parseDouble(priceStr);
+
+            if (capacity <= 0 || price <= 0) {
+                showMessageLabel.setText("Invalid");
+                return;
+            }
+
+            showMessageLabel.setText("Venue updated successfully!");
+
+        } catch (Exception e) {
+            showMessageLabel.setText("Invalid");
+        }
     }
 }
