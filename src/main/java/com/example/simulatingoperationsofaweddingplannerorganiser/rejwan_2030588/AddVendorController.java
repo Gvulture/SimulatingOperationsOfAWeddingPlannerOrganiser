@@ -1,5 +1,6 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_2030588;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
@@ -19,10 +20,25 @@ public class AddVendorController
     @javafx.fxml.FXML
     private TableColumn ServiceTypeTC;
     @javafx.fxml.FXML
-    private ComboBox ServiceTypeComboBox;
+    private ComboBox<String> ServiceTypeComboBox;
     @javafx.fxml.FXML
     private TextField VendorNameTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+
+        ServiceTypeComboBox.getItems().addAll("Decoration","Photography","Food","Music");
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void restButtonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void saveButtonOA(ActionEvent actionEvent) {
+    }
+}
