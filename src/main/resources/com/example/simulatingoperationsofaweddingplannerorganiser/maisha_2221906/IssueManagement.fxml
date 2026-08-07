@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="625.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <Label layoutX="111.0" layoutY="14.0" prefHeight="30.0" prefWidth="405.0" text="ISSUE MANAGEMENT &amp; ADMIN SUPPORT" textFill="#e61414">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="60.0" text="Issue Information">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="87.0" text="Issue ID           :" />
+      <Label layoutX="67.0" layoutY="120.0" text="Reported By        :" />
+      <Label layoutX="67.0" layoutY="149.0" text="Issue Category     :" />
+      <Label layoutX="67.0" layoutY="183.0" text="Priority           :" />
+      <Label layoutX="67.0" layoutY="222.0" text="Issue Status       :" />
+      <Label layoutX="67.0" layoutY="271.0" text="Issue Description  :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="382.0" text="Issue List">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="463.0" text="Issue Details">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="481.0" text="Selected Issue :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="541.0" text="Notification">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="167.0" layoutY="83.0" />
+      <TextField layoutX="167.0" layoutY="116.0" />
+      <TextArea layoutX="65.0" layoutY="565.0" prefHeight="51.0" prefWidth="503.0" />
+      <ComboBox layoutX="167.0" layoutY="145.0" prefWidth="150.0" />
+      <ComboBox layoutX="167.0" layoutY="179.0" prefWidth="150.0" />
+      <ComboBox layoutX="167.0" layoutY="218.0" prefWidth="150.0" />
+      <TextArea layoutX="65.0" layoutY="298.0" prefHeight="44.0" prefWidth="503.0" />
+      <Button layoutX="67.0" layoutY="350.0" mnemonicParsing="false" text="Report Issue" />
+      <Button layoutX="173.0" layoutY="350.0" mnemonicParsing="false" text="Update Status" />
+      <Button layoutX="274.0" layoutY="350.0" mnemonicParsing="false" text="Search" />
+      <Button layoutX="347.0" layoutY="350.0" mnemonicParsing="false" text="Resolve" />
+      <Button layoutX="424.0" layoutY="350.0" mnemonicParsing="false" text="Reset" />
+      <Button layoutX="491.0" layoutY="350.0" mnemonicParsing="false" text="Refresh" />
+      <TableView layoutX="66.0" layoutY="399.0" prefHeight="62.0" prefWidth="503.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Issue ID" />
+          <TableColumn prefWidth="92.00003051757812" text="Reported By" />
+            <TableColumn prefWidth="77.33338928222656" text="Category " />
+            <TableColumn prefWidth="85.3333740234375" text="Priority " />
+            <TableColumn prefWidth="92.6666259765625" text="Status " />
+            <TableColumn prefWidth="93.99996948242188" text="Date " />
+        </columns>
+      </TableView>
+      <TextArea layoutX="67.0" layoutY="499.0" prefHeight="44.0" prefWidth="503.0" />
+   </children>
+</AnchorPane>
