@@ -1,13 +1,11 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225;
 
-import com.example.simulatingoperationsofaweddingplannerorganiser.common.SceneSwitch;
+import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-
-import java.io.IOException;
 
 public class weddingBudgetController
 {
@@ -49,12 +47,7 @@ public class weddingBudgetController
 
     @javafx.fxml.FXML
     public void handleAddExpenseOnAction(ActionEvent actionEvent) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/clientDashboard.fxml"));
-            Scene scene = new Scene(loader.load());
-            SceneSwitch.setScene(actionEvent, scene);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        SceneSwitcher.switchTo(actionEvent, "/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/clientDashboard.fxml");
+
     }
 }

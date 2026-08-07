@@ -1,114 +1,57 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225;
 
-import com.example.simulatingoperationsofaweddingplannerorganiser.common.SceneSwitch;
+import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
+import javafx.fxml.FXML;
 
-import java.io.IOException;
+public class venueManagerDashboardController {
 
-public class venueManagerDashboardController
-{
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void handleUpdateBookingStatusOnAction(ActionEvent actionEvent) throws IOException  {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/updateBookingStatus.fxml"));
-            Scene scene = new Scene(loader.load());
-            SceneSwitch.setScene(actionEvent, scene);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @FXML
+    public void handleUpdateBookingStatusOnAction(ActionEvent actionEvent) {
+        SceneSwitcher.switchTo(actionEvent, "/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/updateBookingStatus.fxml");
     }
 
-    @javafx.fxml.FXML
-    public void handleViewAllClientsOnAction(ActionEvent actionEvent) throws IOException  {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/viewAllClients.fxml"));
-            Scene scene = new Scene(loader.load());
-            SceneSwitch.setScene(actionEvent, scene);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @FXML
+    public void handleViewAllClientsOnAction(ActionEvent actionEvent) {
+        SceneSwitcher.switchTo(actionEvent, "/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/viewAllClients.fxml");
     }
 
-    @javafx.fxml.FXML
-    public void handleViewScheduleOnAction(ActionEvent actionEvent)  throws IOException {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/venueSchedule.fxml"));
-            Scene scene = new Scene(loader.load());
-            SceneSwitch.setScene(actionEvent, scene);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @FXML
+    public void handleViewScheduleOnAction(ActionEvent actionEvent) {
+        SceneSwitcher.switchTo(actionEvent, "/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/venueSchedule.fxml");
     }
 
-    @javafx.fxml.FXML
-    public void handleUpdateVenueOnAction(ActionEvent actionEvent) throws IOException  {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/updateVenue.fxml"));
-            Scene scene = new Scene(loader.load());
-            SceneSwitch.setScene(actionEvent, scene);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @FXML
+    public void handleUpdateVenueOnAction(ActionEvent actionEvent) {
+        SceneSwitcher.switchTo(actionEvent, "/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/updateVenue.fxml");
     }
 
-    @javafx.fxml.FXML
-    public void handleAddNewVenueOnAction(ActionEvent actionEvent)  throws IOException {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/addVenue.fxml"));
-            Scene scene = new Scene(loader.load());
-            SceneSwitch.setScene(actionEvent, scene);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @FXML
+    public void handleAddNewVenueOnAction(ActionEvent actionEvent) {
+        SceneSwitcher.switchTo(actionEvent, "/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/addVenue.fxml");
     }
 
-    @javafx.fxml.FXML
-    public void handlePaymentStatusOnAction(ActionEvent actionEvent)  throws IOException {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/paymentStatus.fxml"));
-            Scene scene = new Scene(loader.load());
-            SceneSwitch.setScene(actionEvent, scene);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @FXML
+    public void handlePaymentStatusOnAction(ActionEvent actionEvent) {
+        SceneSwitcher.switchTo(actionEvent, "/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/paymentStatus.fxml");
     }
 
-    @javafx.fxml.FXML
-    public void handleAcceptRejectOnAction(ActionEvent actionEvent) throws IOException  {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/acceptRejectBooking.fxml"));
-            Scene scene = new Scene(loader.load());
-            SceneSwitch.setScene(actionEvent, scene);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @FXML
+    public void handleAcceptRejectOnAction(ActionEvent actionEvent) {
+        SceneSwitcher.switchTo(actionEvent, "/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/acceptRejectBooking.fxml");
     }
 
-    @javafx.fxml.FXML
-    public void handleLogOutOnAction(ActionEvent actionEvent)  throws IOException {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/Login.fxml"));
-            Scene scene = new Scene(loader.load());
-            SceneSwitch.setScene(actionEvent, scene);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @FXML
+    public void handleViewBookingRequestOnAction(ActionEvent actionEvent) {
+        SceneSwitcher.switchTo(actionEvent, "/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/viewBookingRequests.fxml");
     }
 
-    @javafx.fxml.FXML
-    public void handleViewBookingRequestOnAction(ActionEvent actionEvent) throws IOException {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/viewBookingRequests.fxml"));
-            Scene scene = new Scene(loader.load());
-            SceneSwitch.setScene(actionEvent, scene);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @FXML
+    public void handleLogOutOnAction(ActionEvent actionEvent) {
+        SceneSwitcher.switchTo(actionEvent, "/com/example/simulatingoperationsofaweddingplannerorganiser/Login.fxml");
     }
 }
