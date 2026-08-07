@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="432.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git">
+<AnchorPane prefHeight="432.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.MyProfileController">
    <children>
       <Label layoutX="227.0" layoutY="14.0" prefHeight="30.0" prefWidth="145.0" text="MY PROFILE" textFill="#e61414">
          <font>
