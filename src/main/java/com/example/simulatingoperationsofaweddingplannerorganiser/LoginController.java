@@ -70,6 +70,14 @@ public class LoginController {
                 SceneSwitcher.switchTo(actionEvent, "/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/venueManagerDashboard.fxml");
                 break;
 
+            case "Accountant":
+                SceneSwitcher.switchTo(actionEvent,"maisha_2221906/AccountantDashboard.fxml");
+                break;
+
+            case "Administrator":
+                SceneSwitcher.switchTo(actionEvent,"maisha_2221906/AdministratorDashboard.fxml");
+                break;
+
             default:
                 displaysErrorLabel.setText("Dashboard not found for this user");
                 displaysErrorLabel.setVisible(true);
