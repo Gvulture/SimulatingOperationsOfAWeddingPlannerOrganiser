@@ -1,6 +1,6 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225;
 
-import com.example.simulatingoperationsofaweddingplannerorganiser.common.SceneSwitch;
+import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -54,13 +54,9 @@ public class paymentStatusController {
 
     @javafx.fxml.FXML
     public void handleBackToDashboardOnAction(ActionEvent actionEvent) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/venueManagerDashboard.fxml"));
-            Scene scene = new Scene(loader.load());
-            SceneSwitch.setScene(actionEvent, scene);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        SceneSwitcher.switchTo(actionEvent, "/com/example/simulatingoperationsofaweddingplannerorganiser/samia_2310225/venueManagerDashboard.fxml");
+
+
     }
 
     @javafx.fxml.FXML
