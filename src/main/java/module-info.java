@@ -14,4 +14,6 @@ module com.example.simulatingoperationsofaweddingplannerorganiser {
     exports com.example.simulatingoperationsofaweddingplannerorganiser.samia_2310225;
     opens com.example.simulatingoperationsofaweddingplannerorganiser.Jhalok_2411777 to javafx.fxml;
     exports com.example.simulatingoperationsofaweddingplannerorganiser.Jhalok_2411777;
+    opens com.example.simulatingoperationsofaweddingplannerorganiser.maisha_2221906 to javafx.fxml;
+    exports com.example.simulatingoperationsofaweddingplannerorganiser.maisha_2221906;
 }
