@@ -24,7 +24,7 @@ public class LoginController
     @javafx.fxml.FXML
     public void initialize() {
         ObservableList<String> roles = FXCollections.observableArrayList(
-                "Wedding Planer" , "Vendor Manager" , " Photographer" , "Guest" , "Client" , "Venue Manager" , "Accountant" , "Administrator"
+                "Wedding Planner" , "Vendor Manager" , " Photographer" , "Guest" , "Client" , "Venue Manager" , "Accountant" , "Administrator"
 
         );
         roleComboBox.setItems(roles);
