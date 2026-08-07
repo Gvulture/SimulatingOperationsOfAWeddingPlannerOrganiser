@@ -18,7 +18,7 @@ public class LoginController
     @javafx.fxml.FXML
     private Label displaysErrorLabel;
     @javafx.fxml.FXML
-    private ComboBox roleComboBox;
+    private ComboBox<String> roleComboBox;
     private ActionEvent event;
 
     @javafx.fxml.FXML
