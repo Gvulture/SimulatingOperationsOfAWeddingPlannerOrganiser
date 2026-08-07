@@ -67,11 +67,19 @@ public class LoginController
                 break;
 
             case "Client":
-                SceneSwitcher.switchTo(event,"saima_2310225/clientDashboard.fxml");
+                SceneSwitcher.switchTo(event,"samia_2310225/clientDashboard.fxml");
                 break;
 
             case "Venue Manager":
-                SceneSwitcher.switchTo(event,"saima_2310225/venueManagerDashboard,fxml");
+                SceneSwitcher.switchTo(event,"samia_2310225/venueManagerDashboard,fxml");
+                break;
+
+            case "Accountant":
+                SceneSwitcher.switchTo(event,"maisha_2221906/AccountDashboard.fxml");
+                break;
+
+            case "Administrator":
+                SceneSwitcher.switchTo(event,"maisha_2221906/AdministrationDashboard");
                 break;
 
 
