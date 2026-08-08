@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="432.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.MyProfileController">
    <children>
       <Label layoutX="227.0" layoutY="14.0" prefHeight="30.0" prefWidth="145.0" text="MY PROFILE" textFill="#e61414">
@@ -17,7 +16,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <ImageView fitHeight="129.0" fitWidth="113.0" layoutX="444.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="profilepictureImageview" fitHeight="129.0" fitWidth="113.0" layoutX="444.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
       <Label layoutX="457.0" layoutY="173.0" text="Profile Picture">
          <font>
             <Font name="System Bold" size="13.0" />
@@ -31,17 +30,17 @@
       <Label layoutX="41.0" layoutY="225.0" prefHeight="17.0" prefWidth="113.0" text="Username             :" />
       <Label layoutX="41.0" layoutY="253.0" prefHeight="17.0" prefWidth="113.0" text="Password              :" />
       <Label layoutX="41.0" layoutY="282.0" text="Confirm Password :" />
-      <PasswordField layoutX="152.0" layoutY="249.0" />
-      <PasswordField layoutX="152.0" layoutY="278.0" />
-      <ComboBox layoutX="152.0" layoutY="196.0" prefHeight="17.0" prefWidth="150.0" />
-      <TextField layoutX="153.0" layoutY="80.0" />
-      <TextField layoutX="152.0" layoutY="111.0" />
-      <TextField layoutX="152.0" layoutY="144.0" />
-      <TextField layoutX="152.0" layoutY="170.0" />
-      <Button layoutX="53.0" layoutY="339.0" mnemonicParsing="false" text="Update Profile" />
-      <Button layoutX="154.0" layoutY="339.0" mnemonicParsing="false" text="Change Password" />
-      <Button layoutX="276.0" layoutY="339.0" mnemonicParsing="false" text="Upload Photo" />
-      <Button layoutX="382.0" layoutY="339.0" mnemonicParsing="false" text="Reset" />
-      <PasswordField layoutX="153.0" layoutY="221.0" />
+      <PasswordField fx:id="passwoerdPasswordField" layoutX="152.0" layoutY="249.0" />
+      <PasswordField fx:id="confirmpasswordPasswordfield" layoutX="152.0" layoutY="278.0" />
+      <ComboBox fx:id="roleCombobox" layoutX="152.0" layoutY="196.0" prefHeight="17.0" prefWidth="150.0" />
+      <TextField fx:id="FullnameTextfield" layoutX="153.0" layoutY="80.0" />
+      <TextField fx:id="EmployeeIdtextfield" layoutX="152.0" layoutY="111.0" />
+      <TextField fx:id="emailTextfield" layoutX="152.0" layoutY="144.0" />
+      <TextField fx:id="PhoneNumberTextfield" layoutX="152.0" layoutY="170.0" />
+      <Button layoutX="53.0" layoutY="339.0" mnemonicParsing="false" onAction="#updateprofileButton" text="Update Profile" />
+      <Button layoutX="154.0" layoutY="339.0" mnemonicParsing="false" onAction="#changepasswordButton" text="Change Password" />
+      <Button layoutX="276.0" layoutY="339.0" mnemonicParsing="false" onAction="#UploadPhotoButton" text="Upload Photo" />
+      <Button layoutX="382.0" layoutY="339.0" mnemonicParsing="false" onAction="#resetButton" text="Reset" />
+      <TextField fx:id="usernameTextfield" layoutX="152.0" layoutY="221.0" />
    </children>
 </AnchorPane>
