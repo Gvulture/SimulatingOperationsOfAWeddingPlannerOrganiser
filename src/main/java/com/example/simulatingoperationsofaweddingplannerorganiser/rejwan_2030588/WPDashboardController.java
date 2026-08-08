@@ -47,7 +47,7 @@ public class WPDashboardController
 
     @FXML
     public void ViewReportOA(ActionEvent actionEvent) {
-        SceneSwitcher.switchTo(actionEvent,"rejwan_2030588/ViewReport.fxml");
+        SceneSwitcher.switchTo(actionEvent,"rejwan_2030588/ViewReports.fxml");
     }
 
     @FXML

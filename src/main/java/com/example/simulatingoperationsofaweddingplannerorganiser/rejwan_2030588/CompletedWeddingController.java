@@ -1,5 +1,6 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_2030588;
 
+import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 
@@ -20,5 +21,6 @@ public class CompletedWeddingController
 
     @javafx.fxml.FXML
     public void BackOA(ActionEvent actionEvent) {
+        SceneSwitcher.switchTo(actionEvent,"rejwan_2030588/WPDashboard.fxml");
     }
 }

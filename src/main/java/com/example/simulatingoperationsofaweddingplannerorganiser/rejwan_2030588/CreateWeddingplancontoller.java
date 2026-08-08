@@ -1,5 +1,6 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_2030588;
 
+import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
@@ -30,5 +31,6 @@ public class CreateWeddingplancontoller
 
     @javafx.fxml.FXML
     public void BacktoWPDashbordOnClick(ActionEvent actionEvent) {
+        SceneSwitcher.switchTo(actionEvent,"rejwan_2030588/WPDashboard.fxml");
     }
 }
