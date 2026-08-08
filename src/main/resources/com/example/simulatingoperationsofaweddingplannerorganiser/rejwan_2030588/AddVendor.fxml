@@ -24,9 +24,9 @@
       <ComboBox fx:id="ServiceTypeComboBox" layoutX="105.0" layoutY="116.0" prefWidth="150.0" />
       <TextField fx:id="PriceTextField" layoutX="106.0" layoutY="200.0" />
       <Label layoutX="60.0" layoutY="204.0" text="Price" />
-      <Button layoutX="34.0" layoutY="278.0" mnemonicParsing="false" onAction="#saveButtonOA" text="Save" />
+      <Button layoutX="195.0" layoutY="278.0" mnemonicParsing="false" onAction="#saveButtonOA" text="Save" />
       <Button layoutX="115.0" layoutY="278.0" mnemonicParsing="false" onAction="#restButtonOA" text="Reset" />
-      <TableView layoutX="277.0" layoutY="70.0" prefHeight="272.0" prefWidth="302.0">
+      <TableView fx:id="AddVendorTV" layoutX="277.0" layoutY="70.0" prefHeight="272.0" prefWidth="302.0">
         <columns>
           <TableColumn fx:id="VendorNameTC" prefWidth="84.79998779296875" text="Vendor Name" />
           <TableColumn fx:id="ServiceTypeTC" prefWidth="78.39996337890625" text="Service Type" />
@@ -35,5 +35,7 @@
         </columns>
       </TableView>
       <Button layoutX="516.0" layoutY="361.0" mnemonicParsing="false" onAction="#backButtonOA" text="Back" />
+      <Label fx:id="MessageLabel" layoutX="92.0" layoutY="238.0" prefHeight="18.0" prefWidth="150.0" text="Label" />
+      <Button layoutX="36.0" layoutY="278.0" mnemonicParsing="false" onAction="#ConformButtonOA" text="Conform" />
    </children>
 </AnchorPane>

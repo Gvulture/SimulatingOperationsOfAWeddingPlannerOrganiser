@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 public class VendorReportController
 {
@@ -20,11 +21,16 @@ public class VendorReportController
     private ComboBox<String> ReportTypeComboBox;
     @javafx.fxml.FXML
     private DatePicker EndDateDatePicker;
+    @javafx.fxml.FXML
+    private TableView VendorReportTV;
+
 
     @javafx.fxml.FXML
     public void initialize() {
         ReportTypeComboBox.getItems().addAll("Budget and Cost Reports","Payment Schedule Reports","Timeline and Delivery Reports","Contact and Detail Directories");
+
     }
+
 
     @javafx.fxml.FXML
     public void BackOA(ActionEvent actionEvent) {

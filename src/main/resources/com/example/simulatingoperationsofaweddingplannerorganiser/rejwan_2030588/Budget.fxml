@@ -24,7 +24,7 @@
       <TextArea fx:id="DescriptionTextArea" layoutX="100.0" layoutY="168.0" prefHeight="200.0" prefWidth="200.0" />
       <Button layoutX="94.0" layoutY="383.0" mnemonicParsing="false" text="Add Expense" />
       <Button layoutX="198.0" layoutY="383.0" mnemonicParsing="false" text="Calculate" />
-      <TableView layoutX="309.0" layoutY="60.0" prefHeight="200.0" prefWidth="227.0">
+      <TableView fx:id="BudgetTV" layoutX="309.0" layoutY="60.0" prefHeight="200.0" prefWidth="227.0">
         <columns>
           <TableColumn fx:id="BudgetTableColumn" prefWidth="75.0" text="Budget" />
           <TableColumn fx:id="ExpenseTableColumn" prefWidth="75.0" text="Expense" />

@@ -3,6 +3,7 @@ package com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_203058
 import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -20,6 +21,8 @@ public class BudgetController
     private TableColumn ExpenseTableColumn;
     @javafx.fxml.FXML
     private TableColumn BudgetTableColumn;
+    @javafx.fxml.FXML
+    private TableView BudgetTV;
 
     @javafx.fxml.FXML
     public void initialize() {

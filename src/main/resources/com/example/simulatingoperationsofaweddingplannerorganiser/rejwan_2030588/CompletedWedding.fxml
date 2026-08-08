@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_2030588.CompletedWeddingController">
    <children>
-      <TableView layoutX="122.0" layoutY="66.0" prefHeight="200.0" prefWidth="304.0">
+      <TableView fx:id="CompletedWeddingTV" layoutX="122.0" layoutY="66.0" prefHeight="200.0" prefWidth="304.0">
         <columns>
           <TableColumn fx:id="WeddingIDTC" prefWidth="75.0" text="Wedding ID" />
           <TableColumn fx:id="ClientTC" prefWidth="75.0" text="Client" />

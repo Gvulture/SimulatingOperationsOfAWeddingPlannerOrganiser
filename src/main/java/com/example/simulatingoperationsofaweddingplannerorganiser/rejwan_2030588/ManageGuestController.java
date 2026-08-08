@@ -2,6 +2,7 @@ package com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_203058
 
 import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 public class ManageGuestController
@@ -10,6 +11,8 @@ public class ManageGuestController
     private TextField PhoneTextField;
     @javafx.fxml.FXML
     private TextField GuestNameTextField;
+    @javafx.fxml.FXML
+    private TableView ManageGuestTV;
 
     @javafx.fxml.FXML
     public void initialize() {

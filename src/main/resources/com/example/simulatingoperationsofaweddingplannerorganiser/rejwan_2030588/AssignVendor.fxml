@@ -24,7 +24,7 @@
       <Button layoutX="67.0" layoutY="285.0" mnemonicParsing="false" text="Assign" />
       <Button layoutX="285.0" layoutY="285.0" mnemonicParsing="false" text="Clear" />
       <Button layoutX="515.0" layoutY="346.0" mnemonicParsing="false" onAction="#BackOA" text="Back" />
-      <TableView layoutX="328.0" layoutY="64.0" prefHeight="200.0" prefWidth="222.0">
+      <TableView fx:id="AssignVendorTV" layoutX="328.0" layoutY="64.0" prefHeight="200.0" prefWidth="222.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Vendor" />
           <TableColumn prefWidth="75.0" text="Service" />

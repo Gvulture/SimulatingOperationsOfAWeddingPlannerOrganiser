@@ -4,6 +4,7 @@ import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 public class VendorPerformanceController
 {
@@ -17,6 +18,8 @@ public class VendorPerformanceController
     private TableColumn IncomeTC;
     @javafx.fxml.FXML
     private ComboBox<String> VendorComboBox;
+    @javafx.fxml.FXML
+    private TableView VendorPerformanceTV;
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -24,7 +24,7 @@
       <ComboBox fx:id="VendorComboBox" layoutX="106.0" layoutY="72.0" prefWidth="150.0" />
       <Button layoutX="80.0" layoutY="241.0" mnemonicParsing="false" text="Update" />
       <Button layoutX="165.0" layoutY="241.0" mnemonicParsing="false" text="Clear" />
-      <TableView layoutX="274.0" layoutY="74.0" prefHeight="272.0" prefWidth="228.0">
+      <TableView fx:id="UpdateVendorTV" layoutX="274.0" layoutY="74.0" prefHeight="272.0" prefWidth="228.0">
         <columns>
           <TableColumn fx:id="VendorTC" prefWidth="75.0" text="Vendor" />
           <TableColumn fx:id="PhoneTC" prefWidth="75.0" text="Phone" />

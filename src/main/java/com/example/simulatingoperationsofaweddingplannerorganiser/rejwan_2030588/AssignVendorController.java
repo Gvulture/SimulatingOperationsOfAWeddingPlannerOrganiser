@@ -3,6 +3,7 @@ package com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_203058
 import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableView;
 
 public class AssignVendorController
 {
@@ -12,6 +13,8 @@ public class AssignVendorController
     private ComboBox<String> ServiceTypeComboBox;
     @javafx.fxml.FXML
     private ComboBox<String> VendorComboBox;
+    @javafx.fxml.FXML
+    private TableView AssignVendorTV;
 
     @javafx.fxml.FXML
     public void initialize() {

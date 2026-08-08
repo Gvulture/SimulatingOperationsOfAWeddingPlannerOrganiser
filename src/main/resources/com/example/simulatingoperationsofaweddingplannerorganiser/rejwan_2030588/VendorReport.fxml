@@ -24,7 +24,7 @@
       <DatePicker fx:id="EndDateDatePicker" layoutX="125.0" layoutY="162.0" />
       <Button layoutX="63.0" layoutY="223.0" mnemonicParsing="false" text="Generate" />
       <Button layoutX="187.0" layoutY="223.0" mnemonicParsing="false" text="Export" />
-      <TableView layoutX="344.0" layoutY="84.0" prefHeight="200.0" prefWidth="227.0">
+      <TableView fx:id="VendorReportTV" layoutX="344.0" layoutY="84.0" prefHeight="200.0" prefWidth="227.0">
         <columns>
           <TableColumn fx:id="ReportTC" prefWidth="75.0" text="Report Type" />
           <TableColumn fx:id="StartDateTC" prefWidth="75.0" text="Start Date" />

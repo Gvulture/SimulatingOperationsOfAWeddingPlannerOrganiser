@@ -19,7 +19,7 @@
       <Label layoutX="58.0" layoutY="81.0" text="Vendor" />
       <Button layoutX="120.0" layoutY="111.0" mnemonicParsing="false" text="Button" />
       <Label layoutX="69.0" layoutY="115.0" text="Search" />
-      <TableView layoutX="227.0" layoutY="124.0" prefHeight="200.0" prefWidth="357.0">
+      <TableView fx:id="VendorPerformanceTV" layoutX="227.0" layoutY="124.0" prefHeight="200.0" prefWidth="357.0">
         <columns>
           <TableColumn fx:id="VendorTC" prefWidth="75.0" text="Vendor" />
           <TableColumn fx:id="RatingTC" prefWidth="75.0" text="Rating" />

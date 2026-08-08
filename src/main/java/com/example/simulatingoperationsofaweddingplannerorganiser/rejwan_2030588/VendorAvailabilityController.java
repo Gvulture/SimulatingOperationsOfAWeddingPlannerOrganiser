@@ -4,6 +4,7 @@ import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 public class VendorAvailabilityController
 {
@@ -15,6 +16,8 @@ public class VendorAvailabilityController
     private DatePicker WeddingDateDatePicker;
     @javafx.fxml.FXML
     private TableColumn UnavailableTC;
+    @javafx.fxml.FXML
+    private TableView VendorAvailabilityTV;
 
     @javafx.fxml.FXML
     public void initialize() {

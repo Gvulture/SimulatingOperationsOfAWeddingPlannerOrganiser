@@ -3,6 +3,7 @@ package com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_203058
 import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 public class CompletedWeddingController
 {
@@ -14,6 +15,8 @@ public class CompletedWeddingController
     private TableColumn WeddingIDTC;
     @javafx.fxml.FXML
     private TableColumn DateTC;
+    @javafx.fxml.FXML
+    private TableView CompletedWeddingTV;
 
     @javafx.fxml.FXML
     public void initialize() {

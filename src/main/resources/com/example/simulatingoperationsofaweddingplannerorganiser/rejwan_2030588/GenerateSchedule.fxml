@@ -24,7 +24,7 @@
       <Button layoutX="223.0" layoutY="366.0" mnemonicParsing="false" onAction="#GenerateOnClick" text="Generate" />
       <TextArea fx:id="ActivitiesTextArea" layoutX="98.0" layoutY="153.0" prefHeight="200.0" prefWidth="200.0" />
       <Label layoutX="42.0" layoutY="161.0" text="Activities" />
-      <TableView layoutX="379.0" layoutY="79.0" prefHeight="200.0" prefWidth="150.0">
+      <TableView fx:id="GenerateSheduleTV" layoutX="379.0" layoutY="79.0" prefHeight="200.0" prefWidth="150.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Time" />
           <TableColumn prefWidth="75.0" text="Activity" />

@@ -3,11 +3,14 @@ package com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_203058
 import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableView;
 
 public class ViewReportsController
 {
     @javafx.fxml.FXML
     private ComboBox<String> ReportTyperComboBox;
+    @javafx.fxml.FXML
+    private TableView ViewReportsTV;
 
     @javafx.fxml.FXML
     public void initialize() {

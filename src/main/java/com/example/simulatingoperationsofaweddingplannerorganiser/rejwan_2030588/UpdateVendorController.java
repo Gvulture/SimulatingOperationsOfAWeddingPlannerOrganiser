@@ -4,6 +4,7 @@ import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 public class UpdateVendorController
@@ -20,6 +21,8 @@ public class UpdateVendorController
     private TextField PhoneTextField;
     @javafx.fxml.FXML
     private ComboBox<String> VendorComboBox;
+    @javafx.fxml.FXML
+    private TableView UpdateVendorTV;
 
     @javafx.fxml.FXML
     public void initialize() {

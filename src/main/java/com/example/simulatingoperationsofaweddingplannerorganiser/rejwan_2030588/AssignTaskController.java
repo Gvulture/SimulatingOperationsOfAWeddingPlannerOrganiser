@@ -2,10 +2,7 @@ package com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_203058
 
 import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class AssignTaskController
 {
@@ -25,6 +22,8 @@ public class AssignTaskController
     private TextField TaskNameTextField;
     @javafx.fxml.FXML
     private TableColumn DeadlineTC;
+    @javafx.fxml.FXML
+    private TableView AssignTaskTV;
 
     @javafx.fxml.FXML
     public void initialize() {

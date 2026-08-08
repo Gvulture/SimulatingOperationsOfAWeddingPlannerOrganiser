@@ -4,6 +4,7 @@ import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 
 public class GenerateScheduleController
@@ -14,6 +15,8 @@ public class GenerateScheduleController
     private TextArea ActivitiesTextArea;
     @javafx.fxml.FXML
     private ComboBox<String> TimeComboBox;
+    @javafx.fxml.FXML
+    private TableView GenerateSheduleTV;
 
     @javafx.fxml.FXML
     public void initialize() {

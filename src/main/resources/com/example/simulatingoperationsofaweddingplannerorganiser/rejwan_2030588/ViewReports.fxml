@@ -18,7 +18,7 @@
       <Label layoutX="33.0" layoutY="88.0" text="Report Type" />
       <ComboBox fx:id="ReportTyperComboBox" layoutX="107.0" layoutY="84.0" prefWidth="150.0" />
       <Button layoutX="204.0" layoutY="129.0" mnemonicParsing="false" text="Load" />
-      <TableView layoutX="274.0" layoutY="84.0" prefHeight="200.0" prefWidth="315.0">
+      <TableView fx:id="ViewReportsTV" layoutX="274.0" layoutY="84.0" prefHeight="200.0" prefWidth="315.0">
         <columns>
           <TableColumn prefWidth="100.79998779296875" text="Total Weddings" />
           <TableColumn prefWidth="108.79998779296875" text="Total Budget" />

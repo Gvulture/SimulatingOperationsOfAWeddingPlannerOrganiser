@@ -26,7 +26,7 @@
       <Button layoutX="34.0" layoutY="200.0" mnemonicParsing="false" text="Add" />
       <Button layoutX="117.0" layoutY="200.0" mnemonicParsing="false" text="Update" />
       <Button layoutX="184.0" layoutY="200.0" mnemonicParsing="false" text="Delete" />
-      <TableView layoutX="300.0" layoutY="83.0" prefHeight="200.0" prefWidth="228.0">
+      <TableView fx:id="ManageGuestTV" layoutX="300.0" layoutY="83.0" prefHeight="200.0" prefWidth="228.0">
         <columns>
           <TableColumn prefWidth="84.00006103515625" text="Guest Name" />
           <TableColumn prefWidth="66.39996337890625" text="Phone" />
