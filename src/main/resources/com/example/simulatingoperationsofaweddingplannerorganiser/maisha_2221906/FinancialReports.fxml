@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.FinancialReportController">
    <children>
       <AnchorPane layoutY="7.0" prefHeight="683.0" prefWidth="620.0">
@@ -39,46 +38,46 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="177.0" layoutY="184.0" />
-            <TextField layoutX="177.0" layoutY="248.0" />
-            <TextField layoutX="177.0" layoutY="155.0" />
-            <DatePicker layoutX="177.0" layoutY="100.0" />
-            <ComboBox layoutX="177.0" layoutY="72.0" prefWidth="150.0" />
-            <Button layoutX="14.0" layoutY="472.0" mnemonicParsing="false" text="Generate Report" />
-            <Button layoutX="234.0" layoutY="472.0" mnemonicParsing="false" text="Export PDF" />
-            <Button layoutX="399.0" layoutY="472.0" mnemonicParsing="false" text="Reset" />
-            <Button layoutX="320.0" layoutY="472.0" mnemonicParsing="false" text="Refresh" />
+            <TextField fx:id="clientIDTextfield" layoutX="177.0" layoutY="184.0" />
+            <TextField fx:id="totalIncomeTextfield" layoutX="177.0" layoutY="248.0" />
+            <TextField fx:id="vendorIdTextfield" layoutX="177.0" layoutY="155.0" />
+            <DatePicker fx:id="datefromDatepicker" layoutX="177.0" layoutY="100.0" />
+            <ComboBox fx:id="reportTypeCombobox" layoutX="177.0" layoutY="72.0" prefWidth="150.0" />
+            <Button layoutX="14.0" layoutY="472.0" mnemonicParsing="false" onAction="#GenerateReportButton" text="Generate Report" />
+            <Button layoutX="234.0" layoutY="472.0" mnemonicParsing="false" onAction="#exportPDFButton" text="Export PDF" />
+            <Button layoutX="399.0" layoutY="472.0" mnemonicParsing="false" onAction="#ResetButton" text="Reset" />
+            <Button layoutX="320.0" layoutY="472.0" mnemonicParsing="false" onAction="#refreshButton" text="Refresh" />
             <Label layoutX="29.0" layoutY="233.0" text="Financial Summary">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <TextField layoutX="177.0" layoutY="282.0" />
+            <TextField fx:id="totalExpensesTextfield" layoutX="177.0" layoutY="282.0" />
             <Label layoutX="33.0" layoutY="343.0" prefHeight="17.0" prefWidth="139.0" text="Outstanding Balance (৳): " />
-            <TextField layoutX="177.0" layoutY="339.0" />
+            <TextField fx:id="outstandingBalanceTextfield" layoutX="177.0" layoutY="339.0" />
             <Label layoutX="35.0" layoutY="403.0" prefHeight="17.0" prefWidth="122.0" text="Tax / Discount (%)      : " />
             <Label layoutX="38.0" layoutY="435.0" prefHeight="17.0" prefWidth="122.0" text="Policy Status              :" />
-            <Button layoutX="126.0" layoutY="472.0" mnemonicParsing="false" text="Verify Records" />
-            <Button layoutX="468.0" layoutY="472.0" mnemonicParsing="false" text="Back " />
-            <TextField layoutX="177.0" layoutY="399.0" />
-            <TextField layoutX="177.0" layoutY="431.0" />
+            <Button layoutX="126.0" layoutY="472.0" mnemonicParsing="false" onAction="#VerifyrecordsButton" text="Verify Records" />
+            <Button layoutX="468.0" layoutY="472.0" mnemonicParsing="false" onAction="#BackButton" text="Back " />
+            <TextField fx:id="taxorDiscountTextfield" layoutX="177.0" layoutY="399.0" />
+            <TextField fx:id="policyStatusTextfield" layoutX="177.0" layoutY="431.0" />
             <Label layoutX="33.0" layoutY="188.0" prefHeight="17.0" prefWidth="115.0" text="Client ID        :" />
             <Label layoutX="33.0" layoutY="216.0" prefHeight="17.0" prefWidth="115.0" text="Invoice No       :" />
-            <DatePicker layoutX="177.0" layoutY="127.0" />
-            <TextField layoutX="177.0" layoutY="212.0" />
-            <TextField layoutX="177.0" layoutY="313.0" />
-            <TextField layoutX="177.0" layoutY="368.0" />
-            <TableView layoutX="23.0" layoutY="522.0" prefHeight="71.0" prefWidth="573.0">
+            <DatePicker fx:id="datetoDatepicker" layoutX="177.0" layoutY="127.0" />
+            <TextField fx:id="InvoiceNOTextfield" layoutX="177.0" layoutY="212.0" />
+            <TextField fx:id="totalpaymentTextfield" layoutX="177.0" layoutY="313.0" />
+            <TextField fx:id="remainigbudgetTextfield" layoutX="177.0" layoutY="368.0" />
+            <TableView fx:id="financialTableview" layoutX="23.0" layoutY="522.0" prefHeight="71.0" prefWidth="573.0">
                <columns>
-                  <TableColumn prefWidth="50.666656494140625" text="Invoice " />
-                  <TableColumn prefWidth="85.99996948242188" text="Client " />
-                  <TableColumn prefWidth="64.6666259765625" text="Vendor " />
-                  <TableColumn prefWidth="69.33331298828125" text="Income " />
-                  <TableColumn prefWidth="62.0" text="Expense " />
-                  <TableColumn prefWidth="62.0" text="Payment " />
-                  <TableColumn prefWidth="59.33331298828125" text="Balance " />
-                  <TableColumn minWidth="9.99993896484375" prefWidth="53.3333740234375" text="Status " />
-                  <TableColumn minWidth="9.99993896484375" prefWidth="64.00002034505212" text="Date " />
+                  <TableColumn fx:id="invoiceTablecolumn" prefWidth="50.666656494140625" text="Invoice " />
+                  <TableColumn fx:id="clientTablecolumn" prefWidth="85.99996948242188" text="Client " />
+                  <TableColumn fx:id="vendorTablecolumn" prefWidth="64.6666259765625" text="Vendor " />
+                  <TableColumn fx:id="incomeTablecolumn" prefWidth="69.33331298828125" text="Income " />
+                  <TableColumn fx:id="expenseTablecolumn" prefWidth="62.0" text="Expense " />
+                  <TableColumn fx:id="paymentTablecolumn" prefWidth="62.0" text="Payment " />
+                  <TableColumn fx:id="balanceTablecolumn" prefWidth="59.33331298828125" text="Balance " />
+                  <TableColumn fx:id="statusTablecolumn" minWidth="9.99993896484375" prefWidth="53.3333740234375" text="Status " />
+                  <TableColumn fx:id="dateTablecolumn" minWidth="9.99993896484375" prefWidth="64.00002034505212" text="Date " />
                </columns>
             </TableView>
             <Label layoutX="24.0" layoutY="600.0" text="Status / Notification">
@@ -86,7 +85,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <TextArea layoutX="25.0" layoutY="623.0" prefHeight="41.0" prefWidth="573.0" />
+            <TextArea fx:id="statusornotificatinTextarea" layoutX="25.0" layoutY="623.0" prefHeight="41.0" prefWidth="573.0" />
          </children>
       </AnchorPane>
    </children>
