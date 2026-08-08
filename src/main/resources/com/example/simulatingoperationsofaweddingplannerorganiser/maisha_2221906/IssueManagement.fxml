@@ -52,29 +52,29 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <TextField layoutX="167.0" layoutY="83.0" />
-      <TextField layoutX="167.0" layoutY="116.0" />
-      <TextArea layoutX="65.0" layoutY="565.0" prefHeight="51.0" prefWidth="503.0" />
-      <ComboBox layoutX="167.0" layoutY="145.0" prefWidth="150.0" />
-      <ComboBox layoutX="167.0" layoutY="179.0" prefWidth="150.0" />
-      <ComboBox layoutX="167.0" layoutY="218.0" prefWidth="150.0" />
-      <TextArea layoutX="65.0" layoutY="298.0" prefHeight="44.0" prefWidth="503.0" />
-      <Button layoutX="67.0" layoutY="350.0" mnemonicParsing="false" text="Report Issue" />
-      <Button layoutX="173.0" layoutY="350.0" mnemonicParsing="false" text="Update Status" />
-      <Button layoutX="274.0" layoutY="350.0" mnemonicParsing="false" text="Search" />
-      <Button layoutX="347.0" layoutY="350.0" mnemonicParsing="false" text="Resolve" />
-      <Button layoutX="424.0" layoutY="350.0" mnemonicParsing="false" text="Reset" />
-      <Button layoutX="491.0" layoutY="350.0" mnemonicParsing="false" text="Refresh" />
-      <TableView layoutX="66.0" layoutY="399.0" prefHeight="62.0" prefWidth="503.0">
+      <TextField fx:id="IssueidTextfield" layoutX="167.0" layoutY="83.0" />
+      <TextField fx:id="ReportedByTextfield" layoutX="167.0" layoutY="116.0" />
+      <TextArea fx:id="notificationTextarea" layoutX="65.0" layoutY="565.0" prefHeight="51.0" prefWidth="503.0" />
+      <ComboBox fx:id="issueCategoryCombobox" layoutX="167.0" layoutY="145.0" prefWidth="150.0" />
+      <ComboBox fx:id="priorityCombobox" layoutX="167.0" layoutY="179.0" prefWidth="150.0" />
+      <ComboBox fx:id="IssueStatusCombobox" layoutX="167.0" layoutY="218.0" prefWidth="150.0" />
+      <TextArea fx:id="issueDescriptionTextarea" layoutX="65.0" layoutY="298.0" prefHeight="44.0" prefWidth="503.0" />
+      <Button layoutX="67.0" layoutY="350.0" mnemonicParsing="false" onAction="#reportIssueButton" text="Report Issue" />
+      <Button layoutX="173.0" layoutY="350.0" mnemonicParsing="false" onAction="#UpdateStatusButton" text="Update Status" />
+      <Button layoutX="274.0" layoutY="350.0" mnemonicParsing="false" onAction="#searchButton" text="Search" />
+      <Button layoutX="347.0" layoutY="350.0" mnemonicParsing="false" onAction="#ResolveButton" text="Resolve" />
+      <Button layoutX="424.0" layoutY="350.0" mnemonicParsing="false" onAction="#resetButton" text="Reset" />
+      <Button layoutX="491.0" layoutY="350.0" mnemonicParsing="false" onAction="#RefreshButton" text="Refresh" />
+      <TableView fx:id="issuelistTableview" layoutX="66.0" layoutY="399.0" prefHeight="62.0" prefWidth="503.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Issue ID" />
-          <TableColumn prefWidth="92.00003051757812" text="Reported By" />
-            <TableColumn prefWidth="77.33338928222656" text="Category " />
-            <TableColumn prefWidth="85.3333740234375" text="Priority " />
-            <TableColumn prefWidth="92.6666259765625" text="Status " />
-            <TableColumn prefWidth="93.99996948242188" text="Date " />
+          <TableColumn fx:id="issueidTableColumn" prefWidth="75.0" text="Issue ID" />
+          <TableColumn fx:id="reportedByTablecolumn" prefWidth="92.00003051757812" text="Reported By" />
+            <TableColumn fx:id="categoryTablecolumn" prefWidth="77.33338928222656" text="Category " />
+            <TableColumn fx:id="priorityTablecolumn" prefWidth="85.3333740234375" text="Priority " />
+            <TableColumn fx:id="statusTablecolumn" prefWidth="92.6666259765625" text="Status " />
+            <TableColumn fx:id="dateTablecolumn" prefWidth="93.99996948242188" text="Date " />
         </columns>
       </TableView>
-      <TextArea layoutX="67.0" layoutY="499.0" prefHeight="44.0" prefWidth="503.0" />
+      <TextArea fx:id="selectIssueTextarea" layoutX="67.0" layoutY="499.0" prefHeight="44.0" prefWidth="503.0" />
    </children>
 </AnchorPane>
