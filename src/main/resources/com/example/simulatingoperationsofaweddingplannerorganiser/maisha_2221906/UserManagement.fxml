@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="697.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.UserManagmentController">>
+<AnchorPane prefHeight="697.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
    <children>
       <Label layoutX="130.0" layoutY="14.0" prefHeight="30.0" prefWidth="456.0" text="USER MANAGEMENT &amp; SYSTEM DATA " textFill="#e61414">
          <font>
@@ -55,43 +55,43 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <TableView layoutX="42.0" layoutY="534.0" prefHeight="61.0" prefWidth="524.0">
+      <TableView fx:id="userlistTableview" layoutX="42.0" layoutY="534.0" prefHeight="61.0" prefWidth="524.0">
         <columns>
-          <TableColumn prefWidth="85.33331298828125" text="User ID" />
-          <TableColumn prefWidth="72.00003051757812" text="Name" />
-            <TableColumn prefWidth="88.66668701171875" text="Username" />
-            <TableColumn prefWidth="76.0" text="Role" />
-            <TableColumn prefWidth="92.0" text="Email" />
-            <TableColumn prefWidth="108.66668701171875" text="Status" />
+          <TableColumn fx:id="UserIDTablecolumn" prefWidth="85.33331298828125" text="User ID" />
+          <TableColumn fx:id="nameTablecolumn" prefWidth="72.00003051757812" text="Name" />
+            <TableColumn fx:id="usernsmeTablecolumn" prefWidth="88.66668701171875" text="Username" />
+            <TableColumn fx:id="roleTablecolumn" prefWidth="76.0" text="Role" />
+            <TableColumn fx:id="EmailTablecolumn" prefWidth="92.0" text="Email" />
+            <TableColumn fx:id="statusTablecolumn" prefWidth="108.66668701171875" text="Status" />
         </columns>
       </TableView>
-      <TableView layoutX="42.0" layoutY="621.0" prefHeight="61.0" prefWidth="524.0">
+      <TableView fx:id="systemdatalistTableview" layoutX="42.0" layoutY="621.0" prefHeight="61.0" prefWidth="524.0">
          <columns>
-            <TableColumn prefWidth="88.6666259765625" text="ID" />
-            <TableColumn prefWidth="97.33331298828125" text="Type" />
-            <TableColumn prefWidth="114.66668701171875" text="Name" />
-            <TableColumn prefWidth="113.3333740234375" text="Description" />
-            <TableColumn prefWidth="110.6666259765625" text="Status" />
+            <TableColumn fx:id="idTablecolumn" prefWidth="88.6666259765625" text="ID" />
+            <TableColumn fx:id="typeTablecolumn" prefWidth="97.33331298828125" text="Type" />
+            <TableColumn fx:id="nametablecolumn" prefWidth="114.66668701171875" text="Name" />
+            <TableColumn fx:id="descriptionTablecolumn" prefWidth="113.3333740234375" text="Description" />
+            <TableColumn fx:id="statusTablecolumn" prefWidth="110.6666259765625" text="Status" />
          </columns>
       </TableView>
-      <TextArea layoutX="40.0" layoutY="460.0" prefHeight="55.0" prefWidth="200.0" />
-      <Button layoutX="274.0" layoutY="454.0" mnemonicParsing="false" text="Add " />
-      <Button layoutX="342.0" layoutY="454.0" mnemonicParsing="false" text="Update " />
-      <Button layoutX="430.0" layoutY="454.0" mnemonicParsing="false" text="Delete " />
-      <Button layoutX="514.0" layoutY="454.0" mnemonicParsing="false" text="Search " />
-      <Button layoutX="304.0" layoutY="491.0" mnemonicParsing="false" text="Assign Role" />
-      <Button layoutX="401.0" layoutY="491.0" mnemonicParsing="false" text="Reset " />
-      <Button layoutX="471.0" layoutY="491.0" mnemonicParsing="false" text="Cancel " />
-      <TextField layoutX="149.0" layoutY="93.0" />
-      <TextField layoutX="149.0" layoutY="122.0" />
-      <TextField layoutX="149.0" layoutY="148.0" />
-      <TextField layoutX="149.0" layoutY="177.0" />
-      <TextField layoutX="149.0" layoutY="206.0" />
-      <ComboBox layoutX="149.0" layoutY="298.0" prefWidth="150.0" />
-      <ComboBox layoutX="149.0" layoutY="328.0" prefWidth="150.0" />
-      <PasswordField layoutX="149.0" layoutY="239.0" />
-      <PasswordField layoutX="149.0" layoutY="266.0" />
-      <ComboBox layoutX="149.0" layoutY="382.0" prefWidth="150.0" />
-      <TextField layoutX="150.0" layoutY="415.0" />
+      <TextArea fx:id="descriptionTextarea" layoutX="40.0" layoutY="460.0" prefHeight="55.0" prefWidth="200.0" />
+      <Button layoutX="274.0" layoutY="454.0" mnemonicParsing="false" onAction="#AddButton" text="Add " />
+      <Button layoutX="342.0" layoutY="454.0" mnemonicParsing="false" onAction="#UpdateButton" text="Update " />
+      <Button layoutX="430.0" layoutY="454.0" mnemonicParsing="false" onAction="#deleteButton" text="Delete " />
+      <Button layoutX="514.0" layoutY="454.0" mnemonicParsing="false" onAction="#searchButton" text="Search " />
+      <Button layoutX="304.0" layoutY="491.0" mnemonicParsing="false" onAction="#assignroleButton" text="Assign Role" />
+      <Button layoutX="401.0" layoutY="491.0" mnemonicParsing="false" onAction="#resetButton" text="Reset " />
+      <Button layoutX="471.0" layoutY="491.0" mnemonicParsing="false" onAction="#cancleButton" text="Cancel " />
+      <TextField fx:id="UserIDTextfield" layoutX="149.0" layoutY="93.0" />
+      <TextField fx:id="FullNameTextfield" layoutX="149.0" layoutY="122.0" />
+      <TextField fx:id="userNameTextfield" layoutX="149.0" layoutY="148.0" />
+      <TextField fx:id="emailTextfield" layoutX="149.0" layoutY="177.0" />
+      <TextField fx:id="phoneTextfield" layoutX="149.0" layoutY="206.0" />
+      <ComboBox fx:id="roleCombobox" layoutX="149.0" layoutY="298.0" prefWidth="150.0" />
+      <ComboBox fx:id="statusCombobox" layoutX="149.0" layoutY="328.0" prefWidth="150.0" />
+      <PasswordField fx:id="passwordPasswordField" layoutX="149.0" layoutY="239.0" />
+      <PasswordField fx:id="confirmPasswordpasswordField" layoutX="149.0" layoutY="266.0" />
+      <ComboBox fx:id="datatypeCombobox" layoutX="149.0" layoutY="382.0" prefWidth="150.0" />
+      <TextField fx:id="vendornameTextfield" layoutX="150.0" layoutY="415.0" />
    </children>
 </AnchorPane>
