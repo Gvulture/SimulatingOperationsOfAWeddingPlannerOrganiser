@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="533.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_2030588.WPDashboardController">
    <children>
       <Label layoutX="197.0" layoutY="14.0" text="Your Wedding plan">
@@ -13,47 +12,47 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button layoutX="67.0" layoutY="104.0" mnemonicParsing="false" text="Create Wedding Plan">
+      <Button layoutX="67.0" layoutY="104.0" mnemonicParsing="false" onAction="#CreateWeddingPlanOA" text="Create Wedding Plan">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="93.0" layoutY="260.0" mnemonicParsing="false" text="Manage Guest">
+      <Button layoutX="93.0" layoutY="260.0" mnemonicParsing="false" onAction="#ManageGuestOA" text="Manage Guest">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="76.0" layoutY="187.0" mnemonicParsing="false" text="Generate Schedule">
+      <Button layoutX="76.0" layoutY="187.0" mnemonicParsing="false" onAction="#GenerateScheduleOA" text="Generate Schedule">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="332.0" layoutY="336.0" mnemonicParsing="false" text="Completed Weddings">
+      <Button layoutX="332.0" layoutY="336.0" mnemonicParsing="false" onAction="#CompletedWeddingOA" text="Completed Weddings">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="104.0" layoutY="336.0" mnemonicParsing="false" text="Assign Task">
+      <Button layoutX="104.0" layoutY="336.0" mnemonicParsing="false" onAction="#AssignTaskOA" text="Assign Task">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="498.0" layoutY="458.0" mnemonicParsing="false" text="Logout">
+      <Button layoutX="498.0" layoutY="458.0" mnemonicParsing="false" onAction="#LogoutOA" text="Logout">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="373.0" layoutY="260.0" mnemonicParsing="false" text="Budget">
+      <Button layoutX="373.0" layoutY="260.0" mnemonicParsing="false" onAction="#BudgetOA" text="Budget">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="364.0" layoutY="187.0" mnemonicParsing="false" text="View Reports">
+      <Button layoutX="364.0" layoutY="187.0" mnemonicParsing="false" onAction="#ViewReportOA" text="View Reports">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="359.0" layoutY="104.0" mnemonicParsing="false" text="Assign Vendor">
+      <Button layoutX="359.0" layoutY="104.0" mnemonicParsing="false" onAction="#AssignVendorOA" text="Assign Vendor">
          <font>
             <Font size="18.0" />
          </font>
