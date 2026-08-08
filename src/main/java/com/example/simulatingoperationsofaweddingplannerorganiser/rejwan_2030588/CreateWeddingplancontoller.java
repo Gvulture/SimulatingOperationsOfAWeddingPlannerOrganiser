@@ -9,7 +9,7 @@ import javafx.scene.control.TextField;
 public class CreateWeddingplancontoller
 {
     @javafx.fxml.FXML
-    private ComboBox ThemeCombobox;
+    private ComboBox<String> ThemeCombobox;
     @javafx.fxml.FXML
     private TextField BudgetTextField;
     @javafx.fxml.FXML
@@ -19,6 +19,8 @@ public class CreateWeddingplancontoller
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        ThemeCombobox.getItems().addAll("Classic","Modern","Royal","Beach","Garden");
     }
 
     @javafx.fxml.FXML

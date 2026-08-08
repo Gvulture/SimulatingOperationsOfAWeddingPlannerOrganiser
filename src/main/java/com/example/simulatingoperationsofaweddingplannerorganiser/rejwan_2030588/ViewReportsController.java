@@ -7,10 +7,11 @@ import javafx.scene.control.ComboBox;
 public class ViewReportsController
 {
     @javafx.fxml.FXML
-    private ComboBox ReportTyperComboBox;
+    private ComboBox<String> ReportTyperComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
+        ReportTyperComboBox.getItems().addAll("Budget","Guest","Vendor","Wedding");
     }
 
     @javafx.fxml.FXML

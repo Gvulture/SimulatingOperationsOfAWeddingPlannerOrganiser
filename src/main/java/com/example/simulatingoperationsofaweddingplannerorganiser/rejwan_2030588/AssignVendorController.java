@@ -7,14 +7,20 @@ import javafx.scene.control.ComboBox;
 public class AssignVendorController
 {
     @javafx.fxml.FXML
-    private ComboBox WeddingPlanComboBox;
+    private ComboBox<String> WeddingPlanComboBox;
     @javafx.fxml.FXML
-    private ComboBox ServiceTypeComboBox;
+    private ComboBox<String> ServiceTypeComboBox;
     @javafx.fxml.FXML
-    private ComboBox VendorComboBox;
+    private ComboBox<String> VendorComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        ServiceTypeComboBox.getItems().addAll("Decoration","Photography","Food","Music","Transportation");
+
+        VendorComboBox.getItems().addAll("Photographers","Videographers","Florists"," DJs or bands","Bakers","Hair and Makeup artists");
+
+        WeddingPlanComboBox.getItems().addAll("Full-Service Planning","Partial Planning"," Custom Plan","Micro Wedding");
     }
 
     @javafx.fxml.FXML

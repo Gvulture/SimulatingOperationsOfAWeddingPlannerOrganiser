@@ -13,6 +13,7 @@ public class PasswordChangeController
 
     @javafx.fxml.FXML
     public void backToLoginOnClick(ActionEvent actionEvent) {
-        SceneSwitcher.switchTo(event,"Login.fxml");
+        SceneSwitcher.switchTo(actionEvent,"Login.fxml");
+
     }
 }

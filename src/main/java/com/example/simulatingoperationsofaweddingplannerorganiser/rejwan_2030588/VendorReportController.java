@@ -17,12 +17,13 @@ public class VendorReportController
     @javafx.fxml.FXML
     private DatePicker StartDateDatePicker;
     @javafx.fxml.FXML
-    private ComboBox ReportTypeComboBox;
+    private ComboBox<String> ReportTypeComboBox;
     @javafx.fxml.FXML
     private DatePicker EndDateDatePicker;
 
     @javafx.fxml.FXML
     public void initialize() {
+        ReportTypeComboBox.getItems().addAll("Budget and Cost Reports","Payment Schedule Reports","Timeline and Delivery Reports","Contact and Detail Directories");
     }
 
     @javafx.fxml.FXML

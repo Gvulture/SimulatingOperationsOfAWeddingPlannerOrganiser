@@ -18,7 +18,7 @@ public class AssignTaskController
     @javafx.fxml.FXML
     private TableColumn EmployeeTC;
     @javafx.fxml.FXML
-    private ComboBox DepartmentComboBox;
+    private ComboBox<String> DepartmentComboBox;
     @javafx.fxml.FXML
     private TextField EmployeeTextField;
     @javafx.fxml.FXML
@@ -28,6 +28,8 @@ public class AssignTaskController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        DepartmentComboBox.getItems().addAll("Decoration","Photography","Food");
     }
 
     @javafx.fxml.FXML

@@ -13,10 +13,11 @@ public class GenerateScheduleController
     @javafx.fxml.FXML
     private TextArea ActivitiesTextArea;
     @javafx.fxml.FXML
-    private ComboBox TimeComboBox;
+    private ComboBox<String> TimeComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
+        TimeComboBox.getItems().addAll("Ceremony Time","Reception Time");
     }
 
     @javafx.fxml.FXML

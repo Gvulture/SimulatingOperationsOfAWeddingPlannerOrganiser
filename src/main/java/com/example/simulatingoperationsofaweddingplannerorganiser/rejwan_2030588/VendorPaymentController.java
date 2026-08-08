@@ -17,12 +17,14 @@ public class VendorPaymentController
     @javafx.fxml.FXML
     private TableColumn AmountTC;
     @javafx.fxml.FXML
-    private ComboBox PaymentMethodComboBox;
+    private ComboBox<String> PaymentMethodComboBox;
     @javafx.fxml.FXML
-    private ComboBox VendorComboBox;
+    private ComboBox<String> VendorComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
+        VendorComboBox.getItems().addAll("Photographers","Videographers","Florists","DJs or bands","Bakers","Hair and Makeup artists");
+        PaymentMethodComboBox.getItems().addAll("Cash","Bank","Bkash");
     }
 
     @javafx.fxml.FXML
