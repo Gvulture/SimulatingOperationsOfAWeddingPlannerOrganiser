@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="565.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.InvoiceController">
    <children>
       <Label layoutX="226.0" layoutY="25.0" prefHeight="28.0" prefWidth="207.0" text="Invoice Management" textFill="#e61414">
@@ -41,30 +40,30 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="127.0" layoutY="85.0" />
-      <TextField layoutX="127.0" layoutY="113.0" />
-      <TextField layoutX="127.0" layoutY="140.0" />
-      <TextField layoutX="127.0" layoutY="168.0" />
-      <DatePicker layoutX="126.0" layoutY="196.0" />
-      <DatePicker layoutX="127.0" layoutY="227.0" />
-      <ComboBox layoutX="127.0" layoutY="261.0" prefWidth="150.0" />
-      <TextArea layoutX="32.0" layoutY="319.0" prefHeight="57.0" prefWidth="524.0" />
-      <TableView layoutX="35.0" layoutY="445.0" prefHeight="93.0" prefWidth="524.0">
+      <TextField fx:id="invoiceIdTextfield" layoutX="127.0" layoutY="85.0" />
+      <TextField fx:id="clientIdTextfield" layoutX="127.0" layoutY="113.0" />
+      <TextField fx:id="clientNameTextfield" layoutX="127.0" layoutY="140.0" />
+      <TextField fx:id="invoiceAmountTextfield" layoutX="127.0" layoutY="168.0" />
+      <DatePicker fx:id="issueDateDatepicker" layoutX="126.0" layoutY="196.0" />
+      <DatePicker fx:id="duedateDatepicker" layoutX="127.0" layoutY="227.0" />
+      <ComboBox fx:id="paymentStatusCombobox" layoutX="127.0" layoutY="261.0" prefWidth="150.0" />
+      <TextArea fx:id="descriptionTextarea" layoutX="32.0" layoutY="319.0" prefHeight="57.0" prefWidth="524.0" />
+      <TableView fx:id="invoicelistTableview" layoutX="35.0" layoutY="445.0" prefHeight="93.0" prefWidth="524.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Invoice ID" />
-          <TableColumn prefWidth="75.0" text="Client ID" />
-            <TableColumn prefWidth="75.0" text="Client Name" />
-            <TableColumn prefWidth="75.0" text="Amount" />
-            <TableColumn prefWidth="75.0" text="Issue Date" />
-            <TableColumn prefWidth="75.0" text="Due Date" />
-            <TableColumn prefWidth="75.0" text="Status" />
+          <TableColumn fx:id="invoiceIDTablecolumn" prefWidth="75.0" text="Invoice ID" />
+          <TableColumn fx:id="clientIdTablecolumn" prefWidth="75.0" text="Client ID" />
+            <TableColumn fx:id="clientNameTablecolumn" prefWidth="75.0" text="Client Name" />
+            <TableColumn fx:id="AmountTablecolumn" prefWidth="75.0" text="Amount" />
+            <TableColumn fx:id="IssueDateTableColumn" prefWidth="75.0" text="Issue Date" />
+            <TableColumn fx:id="duedateTablecolumn" prefWidth="75.0" text="Due Date" />
+            <TableColumn fx:id="statusTablecolumn" prefWidth="75.0" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="80.0" layoutY="385.0" mnemonicParsing="false" text="Create Invoice" />
-      <Button layoutX="200.0" layoutY="385.0" mnemonicParsing="false" text="Update" />
-      <Button layoutX="268.0" layoutY="385.0" mnemonicParsing="false" text="Reset" />
-      <Button layoutX="339.0" layoutY="385.0" mnemonicParsing="false" text="Cancel" />
-      <Button layoutX="294.0" layoutY="113.0" mnemonicParsing="false" text="Verify Client" />
-      <Button layoutX="408.0" layoutY="385.0" mnemonicParsing="false" text="Refresh" />
+      <Button layoutX="80.0" layoutY="385.0" mnemonicParsing="false" onAction="#createinvoiceButton" text="Create Invoice" />
+      <Button layoutX="200.0" layoutY="385.0" mnemonicParsing="false" onAction="#UpdateButton" text="Update" />
+      <Button layoutX="268.0" layoutY="385.0" mnemonicParsing="false" onAction="#ResetButton" text="Reset" />
+      <Button layoutX="339.0" layoutY="385.0" mnemonicParsing="false" onAction="#CancelButton" text="Cancel" />
+      <Button layoutX="294.0" layoutY="113.0" mnemonicParsing="false" onAction="#VerifyClientButton" text="Verify Client" />
+      <Button layoutX="408.0" layoutY="385.0" mnemonicParsing="false" onAction="#RefreshButton" text="Refresh" />
    </children>
 </AnchorPane>
