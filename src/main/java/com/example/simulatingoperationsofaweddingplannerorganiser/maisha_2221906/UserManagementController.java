@@ -63,15 +63,14 @@ public class UserManagementController {
 
 
         btnAdd.setOnAction(event -> handleAddAction());
-        btnReset.setOnAction(event -> handleResetAction());
+        btnReset.setOnAction(event -> ResetAction());
     }
 
     private void handleAddAction() {
         String username = txtUsername.getText();
-        System.out.println("Adding user: " + username);
     }
 
-    private void handleResetAction() {
+    private void ResetAction() {
 
         txtUserId.clear();
         txtFullName.clear();
