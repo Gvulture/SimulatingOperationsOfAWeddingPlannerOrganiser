@@ -3,6 +3,8 @@ module com.example.simulatingoperationsofaweddingplannerorganiser {
     requires javafx.fxml;
     requires javafx.graphics;
 
+
+
     // Common package permissions (TableView Reflection support)
     opens com.example.simulatingoperationsofaweddingplannerorganiser.common to javafx.fxml, javafx.base;
     exports com.example.simulatingoperationsofaweddingplannerorganiser.common;

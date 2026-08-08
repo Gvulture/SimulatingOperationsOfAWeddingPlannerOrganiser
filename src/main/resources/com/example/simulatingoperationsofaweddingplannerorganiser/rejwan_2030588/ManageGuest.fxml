@@ -33,6 +33,6 @@
             <TableColumn prefWidth="75.0" text="RSVP" />
         </columns>
       </TableView>
-      <Button layoutX="517.0" layoutY="349.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="517.0" layoutY="349.0" mnemonicParsing="false" onAction="#BackOA" text="Back" />
    </children>
 </AnchorPane>

@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_2030588.AssignTaskController">
    <children>
       <Label layoutX="238.0" layoutY="14.0" text="Assign Task">
@@ -37,6 +36,6 @@
             <TableColumn fx:id="DeadlineTC" prefWidth="75.0" text="Deadline" />
         </columns>
       </TableView>
-      <Button layoutX="522.0" layoutY="343.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="522.0" layoutY="343.0" mnemonicParsing="false" onAction="#BackOA" text="Back" />
    </children>
 </AnchorPane>

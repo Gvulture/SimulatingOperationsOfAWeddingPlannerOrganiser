@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_2030588.ViewBookingController">
    <children>
       <Label layoutX="222.0" layoutY="14.0" text="View Bookings">
@@ -25,6 +24,6 @@
       </TableView>
       <Button layoutX="189.0" layoutY="288.0" mnemonicParsing="false" text="Refresh" />
       <Button layoutX="325.0" layoutY="288.0" mnemonicParsing="false" text="View Details" />
-      <Button layoutX="506.0" layoutY="349.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="506.0" layoutY="349.0" mnemonicParsing="false" onAction="#BackOA" text="Back" />
    </children>
 </AnchorPane>

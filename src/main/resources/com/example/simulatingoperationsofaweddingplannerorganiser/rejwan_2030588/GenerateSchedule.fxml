@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="434.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_2030588.GenerateScheduleController">
    <children>
       <Label layoutX="180.0" layoutY="14.0" text="Generate Schedule">
@@ -31,6 +30,6 @@
           <TableColumn prefWidth="75.0" text="Activity" />
         </columns>
       </TableView>
-      <Button layoutX="504.0" layoutY="379.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="504.0" layoutY="379.0" mnemonicParsing="false" onAction="#BackOA" text="Back" />
    </children>
 </AnchorPane>

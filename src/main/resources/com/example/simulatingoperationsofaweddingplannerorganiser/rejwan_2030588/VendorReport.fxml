@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_2030588.VendorReportController">
    <children>
       <Label layoutX="213.0" layoutY="14.0" text="Vendor Report">
@@ -32,5 +31,6 @@
             <TableColumn fx:id="EndDateTC" prefWidth="75.0" text="End Date" />
         </columns>
       </TableView>
+      <Button layoutX="500.0" layoutY="345.0" mnemonicParsing="false" onAction="#BackOA" text="Back" />
    </children>
 </AnchorPane>

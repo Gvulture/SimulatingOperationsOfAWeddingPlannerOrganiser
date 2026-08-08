@@ -1,5 +1,6 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_2030588;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 
 public class CompletedWeddingController
@@ -15,4 +16,9 @@ public class CompletedWeddingController
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void BackOA(ActionEvent actionEvent) {
+    }
+}

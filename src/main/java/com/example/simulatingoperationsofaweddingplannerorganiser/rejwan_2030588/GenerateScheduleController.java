@@ -21,4 +21,8 @@ public class GenerateScheduleController
     @javafx.fxml.FXML
     public void GenerateOnClick(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void BackOA(ActionEvent actionEvent) {
+    }
 }
