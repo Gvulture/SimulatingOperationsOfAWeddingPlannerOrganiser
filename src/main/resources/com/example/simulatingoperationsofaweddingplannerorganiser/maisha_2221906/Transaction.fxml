@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="554.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.TransactionController">>
+<AnchorPane prefHeight="554.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
    <children>
       <Label layoutX="162.0" layoutY="25.0" prefHeight="32.0" prefWidth="302.0" text="TRANSACTION MANAGEMENT" textFill="#d90d0d">
          <font>
@@ -24,12 +23,12 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="27.0" layoutY="93.0" text="Transaction ID :" />
-      <Label layoutX="29.0" layoutY="122.0" prefHeight="17.0" prefWidth="74.0" text="Wedding ID :" />
-      <Label layoutX="29.0" layoutY="156.0" prefHeight="17.0" prefWidth="82.0" text="Vendor ID :" />
+      <Label layoutX="27.0" layoutY="93.0" prefHeight="17.0" prefWidth="99.0" text="Transaction ID     :" />
+      <Label layoutX="29.0" layoutY="122.0" prefHeight="17.0" prefWidth="99.0" text="Wedding ID        :" />
+      <Label layoutX="29.0" layoutY="156.0" prefHeight="17.0" prefWidth="99.0" text="Vendor ID           :" />
       <Label layoutX="29.0" layoutY="210.0" text="Payment Method :" />
-      <Label layoutX="29.0" layoutY="183.0" prefHeight="17.0" prefWidth="74.0" text="Amount (৳):" />
-      <Label layoutX="29.0" layoutY="244.0" prefHeight="17.0" prefWidth="97.0" text="Transaction Date:" />
+      <Label layoutX="29.0" layoutY="183.0" prefHeight="17.0" prefWidth="97.0" text="Amount (৳)          :" />
+      <Label layoutX="29.0" layoutY="244.0" prefHeight="17.0" prefWidth="97.0" text="Transaction Date :" />
       <Label layoutX="33.0" layoutY="271.0" text="Description :">
          <font>
             <Font name="System Bold" size="13.0" />
@@ -40,29 +39,29 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="138.0" layoutY="89.0" prefHeight="9.0" prefWidth="149.0" />
-      <TextField layoutX="138.0" layoutY="118.0" prefHeight="17.0" prefWidth="149.0" />
-      <TextField layoutX="138.0" layoutY="179.0" prefHeight="17.0" prefWidth="149.0" />
-      <TextField layoutX="138.0" layoutY="152.0" prefHeight="17.0" prefWidth="149.0" />
-      <DatePicker layoutX="138.0" layoutY="240.0" />
-      <ComboBox layoutX="138.0" layoutY="206.0" prefWidth="150.0" />
-      <TextArea layoutX="82.0" layoutY="292.0" prefHeight="60.0" prefWidth="455.0" />
-      <Button layoutX="300.0" layoutY="118.0" mnemonicParsing="false" text="Verify Wedding" />
-      <Button layoutX="301.0" layoutY="152.0" mnemonicParsing="false" text="Verify Vendor" />
-      <Button layoutX="127.0" layoutY="362.0" mnemonicParsing="false" text="Save Transaction" />
-      <Button layoutX="248.0" layoutY="362.0" mnemonicParsing="false" text="Reset" />
-      <Button layoutX="323.0" layoutY="362.0" mnemonicParsing="false" text="Cancel" />
-      <TableView layoutX="61.0" layoutY="411.0" prefHeight="119.0" prefWidth="530.0">
+      <TextField fx:id="transactionIdTextfield" layoutX="138.0" layoutY="89.0" prefHeight="9.0" prefWidth="149.0" />
+      <TextField fx:id="weddingIdTextfield" layoutX="138.0" layoutY="118.0" prefHeight="17.0" prefWidth="149.0" />
+      <TextField fx:id="amountTextfield" layoutX="138.0" layoutY="179.0" prefHeight="17.0" prefWidth="149.0" />
+      <TextField fx:id="vendorIdtextfield" layoutX="138.0" layoutY="152.0" prefHeight="17.0" prefWidth="149.0" />
+      <DatePicker fx:id="transactiondateDatepicker" layoutX="138.0" layoutY="240.0" />
+      <ComboBox fx:id="paymentmethodCombobox" layoutX="138.0" layoutY="206.0" prefWidth="150.0" />
+      <TextArea fx:id="descriptionTextarea" layoutX="82.0" layoutY="292.0" prefHeight="60.0" prefWidth="455.0" />
+      <Button layoutX="300.0" layoutY="118.0" mnemonicParsing="false" onAction="#verifyweddingButton" text="Verify Wedding" />
+      <Button layoutX="301.0" layoutY="152.0" mnemonicParsing="false" onAction="#verifyVendorButton" text="Verify Vendor" />
+      <Button layoutX="126.0" layoutY="362.0" mnemonicParsing="false" onAction="#SaveTransactionButton" text="Save Transaction" />
+      <Button layoutX="248.0" layoutY="362.0" mnemonicParsing="false" onAction="#resetButton" text="Reset" />
+      <Button layoutX="323.0" layoutY="362.0" mnemonicParsing="false" onAction="#CancelButton" text="Cancel" />
+      <TableView fx:id="TransactionListTableview" layoutX="61.0" layoutY="411.0" prefHeight="119.0" prefWidth="530.0">
         <columns>
-          <TableColumn prefWidth="90.0" text="Transaction ID" />
-          <TableColumn prefWidth="81.33328247070312" text="Wedding ID" />
-            <TableColumn prefWidth="54.66668701171875" text="Vendor" />
-            <TableColumn prefWidth="55.33331298828125" text="Amount" />
-            <TableColumn prefWidth="105.3333740234375" text="Payment Method" />
-            <TableColumn prefWidth="66.0" text="Date" />
-            <TableColumn prefWidth="75.0" text="Status" />
+          <TableColumn fx:id="TransactionIDTablecolumn" prefWidth="90.0" text="Transaction ID" />
+          <TableColumn fx:id="WeddingIDTablecolumn" prefWidth="81.33328247070312" text="Wedding ID" />
+            <TableColumn fx:id="VendorTablecolumn" prefWidth="54.66668701171875" text="Vendor" />
+            <TableColumn fx:id="AmountTablecolumn" prefWidth="55.33331298828125" text="Amount" />
+            <TableColumn fx:id="PaymentMethodTablecolumn" prefWidth="105.3333740234375" text="Payment Method" />
+            <TableColumn fx:id="DateTablecolumn" prefWidth="66.0" text="Date" />
+            <TableColumn fx:id="StatusTablecolumn" prefWidth="75.0" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="390.0" layoutY="362.0" mnemonicParsing="false" text="Refresh" />
+      <Button layoutX="390.0" layoutY="362.0" mnemonicParsing="false" onAction="#RefreshButton" text="Refresh" />
    </children>
 </AnchorPane>
