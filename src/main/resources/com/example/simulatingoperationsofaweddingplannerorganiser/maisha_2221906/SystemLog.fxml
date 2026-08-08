@@ -12,21 +12,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="665.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.SystemLogController">
    <children>
-      <Label layoutX="148.0" layoutY="14.0" prefHeight="30.0" prefWidth="303.0" text="SYSTEM LOG &amp; MONITORING" textFill="#e61414">
+      <Label fx:id="systemlogandmonitoringLabel" layoutX="148.0" layoutY="14.0" prefHeight="30.0" prefWidth="303.0" text="SYSTEM LOG &amp; MONITORING" textFill="#e61414">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="46.0" layoutY="55.0" text="System Status">
+      <Label fx:id="systemStatusLabel" layoutX="46.0" layoutY="55.0" text="System Status">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="46.0" layoutY="88.0" prefHeight="17.0" prefWidth="115.0" text="System Status           :" />
-      <Label layoutX="46.0" layoutY="116.0" prefHeight="17.0" prefWidth="115.0" text="Server Status             :" />
+      <Label fx:id="SystemStatusLabel" layoutX="46.0" layoutY="88.0" prefHeight="17.0" prefWidth="115.0" text="System Status           :" />
+      <Label fx:id="serverStatusLabel" layoutX="46.0" layoutY="116.0" prefHeight="17.0" prefWidth="115.0" text="Server Status             :" />
       <Label layoutX="46.0" layoutY="144.0" text="Maintenance Mode   :" />
       <Label layoutX="46.0" layoutY="174.0" prefHeight="17.0" prefWidth="125.0" text="Last Updated             : " />
       <Label layoutX="46.0" layoutY="217.0" text="Monitoring Filters">
@@ -52,19 +51,19 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="60.0" layoutY="335.0" mnemonicParsing="false" text="Refresh" />
-      <Button layoutX="162.0" layoutY="335.0" mnemonicParsing="false" text="View Logs" />
-      <Button layoutX="251.0" layoutY="335.0" mnemonicParsing="false" text="Maintenance Mode" />
-      <Button layoutX="394.0" layoutY="335.0" mnemonicParsing="false" text="Generate Log Report" />
-      <Button layoutX="531.0" layoutY="335.0" mnemonicParsing="false" text="Clear Logs" />
-      <TableView layoutX="48.0" layoutY="409.0" prefHeight="53.0" prefWidth="552.0">
+      <Button layoutX="60.0" layoutY="335.0" mnemonicParsing="false" onAction="#refreshbutton" text="Refresh" />
+      <Button layoutX="162.0" layoutY="335.0" mnemonicParsing="false" onAction="#viewlogsbutton" text="View Logs" />
+      <Button layoutX="251.0" layoutY="335.0" mnemonicParsing="false" onAction="#maintenancemodebutton" text="Maintenance Mode" />
+      <Button layoutX="394.0" layoutY="335.0" mnemonicParsing="false" onAction="#generatelogreportbutton" text="Generate Log Report" />
+      <Button layoutX="531.0" layoutY="335.0" mnemonicParsing="false" onAction="#clearlogsbutton" text="Clear Logs" />
+      <TableView fx:id="systemactivitylogstableview" layoutX="48.0" layoutY="409.0" prefHeight="53.0" prefWidth="552.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Time " />
-          <TableColumn prefWidth="75.0" text="User " />
-            <TableColumn prefWidth="75.0" text="Role" />
-            <TableColumn prefWidth="95.3333740234375" text="Activity" />
-            <TableColumn prefWidth="110.666748046875" text="Module" />
-            <TableColumn prefWidth="118.6666259765625" text="Status" />
+          <TableColumn fx:id="timetablecolumn" prefWidth="75.0" text="Time " />
+          <TableColumn fx:id="usertablecolumn" prefWidth="75.0" text="User " />
+            <TableColumn fx:id="roletablecolumn" prefWidth="75.0" text="Role" />
+            <TableColumn fx:id="activitytablecolumn" prefWidth="95.3333740234375" text="Activity" />
+            <TableColumn fx:id="moduletablecolumn" prefWidth="110.666748046875" text="Module" />
+            <TableColumn fx:id="statustablecolumn" prefWidth="118.6666259765625" text="Status" />
         </columns>
       </TableView>
       <Label layoutX="52.0" layoutY="603.0" text="Notification">
@@ -72,15 +71,15 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <TextField layoutX="177.0" layoutY="84.0" />
-      <TextField layoutX="177.0" layoutY="112.0" />
-      <TextField layoutX="177.0" layoutY="140.0" />
-      <TextField layoutX="177.0" layoutY="170.0" />
-      <ComboBox layoutX="176.0" layoutY="239.0" prefWidth="150.0" />
-      <ComboBox layoutX="176.0" layoutY="270.0" prefWidth="150.0" />
-      <DatePicker layoutX="176.0" layoutY="303.0" />
-      <ListView layoutX="150.0" layoutY="478.0" prefHeight="42.0" prefWidth="467.0" />
-      <TextArea layoutX="151.0" layoutY="539.0" prefHeight="53.0" prefWidth="467.0" />
-      <TextArea layoutX="59.0" layoutY="620.0" prefHeight="40.0" prefWidth="560.0" />
+      <TextField fx:id="systemstatustextfield" layoutX="177.0" layoutY="84.0" />
+      <TextField fx:id="serverstatustextfield" layoutX="177.0" layoutY="112.0" />
+      <TextField fx:id="maintenancemodetextfield" layoutX="177.0" layoutY="140.0" />
+      <TextField fx:id="lastupdatedtextfield" layoutX="177.0" layoutY="170.0" />
+      <ComboBox fx:id="activitytypecombobox" layoutX="176.0" layoutY="239.0" prefWidth="150.0" />
+      <ComboBox fx:id="userrolecombobox" layoutX="176.0" layoutY="270.0" prefWidth="150.0" />
+      <DatePicker fx:id="datedatepicker" layoutX="176.0" layoutY="303.0" />
+      <ListView fx:id="modulestatuslistview" layoutX="150.0" layoutY="478.0" prefHeight="42.0" prefWidth="467.0" />
+      <TextArea fx:id="errormonitoringtextarea" layoutX="151.0" layoutY="539.0" prefHeight="53.0" prefWidth="467.0" />
+      <TextArea fx:id="notificationtextarea" layoutX="59.0" layoutY="620.0" prefHeight="40.0" prefWidth="560.0" />
    </children>
 </AnchorPane>

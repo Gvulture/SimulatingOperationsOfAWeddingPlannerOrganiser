@@ -5,7 +5,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.AdministratorDashboardController">
    <children>
       <Text layoutX="213.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrator Dashboard" textAlignment="CENTER" wrappingWidth="174.3900146484375">
@@ -13,13 +12,13 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <Button layoutX="36.0" layoutY="61.0" mnemonicParsing="false" text="User Management" />
-      <Button layoutX="36.0" layoutY="103.0" mnemonicParsing="false" text="Service Categories" />
-      <Button layoutX="36.0" layoutY="145.0" mnemonicParsing="false" text="System Reports" />
-      <Button layoutX="36.0" layoutY="188.0" mnemonicParsing="false" text="System Logs" />
-      <Button layoutX="36.0" layoutY="232.0" mnemonicParsing="false" text="Security" />
-      <Button layoutX="36.0" layoutY="273.0" mnemonicParsing="false" text="Issue Management" />
-      <Button layoutX="36.0" layoutY="314.0" mnemonicParsing="false" text="Profile" />
-      <Button layoutX="36.0" layoutY="351.0" mnemonicParsing="false" text="Logout" />
+      <Button layoutX="36.0" layoutY="61.0" mnemonicParsing="false" onAction="#UserMangementButton" text="User Management" />
+      <Button layoutX="36.0" layoutY="103.0" mnemonicParsing="false" onAction="#serviceCategoriesButton" text="Service Categories" />
+      <Button layoutX="36.0" layoutY="145.0" mnemonicParsing="false" onAction="#systemreportButton" text="System Reports" />
+      <Button layoutX="36.0" layoutY="188.0" mnemonicParsing="false" onAction="#systemlogsButton" text="System Logs" />
+      <Button layoutX="36.0" layoutY="232.0" mnemonicParsing="false" onAction="#securityButton" text="Security" />
+      <Button layoutX="36.0" layoutY="273.0" mnemonicParsing="false" onAction="#issueManagementButton" text="Issue Management" />
+      <Button layoutX="36.0" layoutY="314.0" mnemonicParsing="false" onAction="#profileButton" text="Profile" />
+      <Button layoutX="36.0" layoutY="351.0" mnemonicParsing="false" onAction="#logoutButton" text="Logout" />
    </children>
 </AnchorPane>
