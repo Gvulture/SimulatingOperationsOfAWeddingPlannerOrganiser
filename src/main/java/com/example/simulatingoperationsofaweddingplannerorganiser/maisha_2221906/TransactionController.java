@@ -60,7 +60,6 @@ public class TransactionController {
         @FXML
         public void initialize(URL url, ResourceBundle resourceBundle) {
 
-            // Payment Method ComboBox
             paymentMethodComboBox.setItems(
                     FXCollections.observableArrayList(
                             "Cash",
@@ -70,20 +69,19 @@ public class TransactionController {
                     )
             );
 
-            // Default Payment Method
+
             paymentMethodComboBox.setValue("Cash");
 
-            // Transaction Date
+
             transactionDatePicker.setValue(LocalDate.now());
 
-            // Clear input fields
             transactionIdTextField.clear();
             weddingIdTextField.clear();
             vendorIdTextField.clear();
             amountTextField.clear();
             descriptionTextArea.clear();
 
-            // Table initially empty
+
             transactionTableView.setPlaceholder(
                     new Label("No transactions available")
             );
