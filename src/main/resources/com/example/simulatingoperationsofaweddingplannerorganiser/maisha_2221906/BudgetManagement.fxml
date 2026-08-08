@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.BudgetManagementController">
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="615.0" prefWidth="600.0">
@@ -43,42 +42,42 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="155.0" layoutY="72.0" />
-            <TextField layoutX="155.0" layoutY="100.0" />
-            <TextField layoutX="155.0" layoutY="155.0" />
-            <DatePicker layoutX="155.0" layoutY="294.0" />
-            <ComboBox layoutX="155.0" layoutY="127.0" prefWidth="150.0" />
-            <TextArea layoutX="32.0" layoutY="344.0" prefHeight="39.0" prefWidth="524.0" />
-            <TableView layoutX="32.0" layoutY="515.0" prefHeight="93.0" prefWidth="524.0">
+            <TextField fx:id="BudgetidTextfield" layoutX="155.0" layoutY="72.0" />
+            <TextField fx:id="weddingidTextfield" layoutX="155.0" layoutY="100.0" />
+            <TextField fx:id="budgetamounttextfield" layoutX="155.0" layoutY="155.0" />
+            <DatePicker fx:id="expensedateDatepicker" layoutX="155.0" layoutY="294.0" />
+            <ComboBox fx:id="BudgetCategoryCombobox" layoutX="155.0" layoutY="127.0" prefWidth="150.0" />
+            <TextArea fx:id="descriptionTextarea" layoutX="32.0" layoutY="344.0" prefHeight="39.0" prefWidth="524.0" />
+            <TableView fx:id="BudgetSummaryTableView" layoutX="32.0" layoutY="515.0" prefHeight="93.0" prefWidth="524.0">
                <columns>
-                  <TableColumn prefWidth="83.33334732055664" text="Budget ID " />
-                  <TableColumn prefWidth="82.6666488647461" text="Wedding ID" />
-                  <TableColumn prefWidth="78.00001525878906" text="Budget " />
-                  <TableColumn prefWidth="81.99993896484375" text="Expenses " />
-                  <TableColumn prefWidth="107.33331298828125" text="Remaining " />
-                  <TableColumn prefWidth="90.66665649414062" text="Status" />
+                  <TableColumn fx:id="budgetidTablecoulumn" prefWidth="83.33334732055664" text="Budget ID " />
+                  <TableColumn fx:id="WeddingidTableColumn" prefWidth="82.6666488647461" text="Wedding ID" />
+                  <TableColumn fx:id="budgetTablecolumn" prefWidth="78.00001525878906" text="Budget " />
+                  <TableColumn fx:id="expensesTablecoulumn" prefWidth="81.99993896484375" text="Expenses " />
+                  <TableColumn fx:id="remainingTablecolumn" prefWidth="107.33331298828125" text="Remaining " />
+                  <TableColumn fx:id="statusTablecolumn" prefWidth="90.66665649414062" text="Status" />
                </columns>
             </TableView>
-            <Button layoutX="14.0" layoutY="447.0" mnemonicParsing="false" text="Save Budget" />
-            <Button layoutX="196.0" layoutY="447.0" mnemonicParsing="false" text=" Verify Budget" />
-            <Button layoutX="408.0" layoutY="447.0" mnemonicParsing="false" text="Reset" />
-            <Button layoutX="469.0" layoutY="447.0" mnemonicParsing="false" text="Cancel" />
-            <Button layoutX="528.0" layoutY="447.0" mnemonicParsing="false" text="Refresh" />
+            <Button layoutX="14.0" layoutY="447.0" mnemonicParsing="false" onAction="#SavebudgetButton" text="Save Budget" />
+            <Button layoutX="196.0" layoutY="447.0" mnemonicParsing="false" onAction="#VerifiedBudgetButton" text=" Verify Budget" />
+            <Button layoutX="408.0" layoutY="447.0" mnemonicParsing="false" onAction="#resetButton" text="Reset" />
+            <Button layoutX="469.0" layoutY="447.0" mnemonicParsing="false" onAction="#cancelButton" text="Cancel" />
+            <Button layoutX="528.0" layoutY="447.0" mnemonicParsing="false" onAction="#RefreshButton" text="Refresh" />
             <Label layoutX="35.0" layoutY="180.0" text="Expense Information">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <TextField layoutX="155.0" layoutY="196.0" />
+            <TextField fx:id="expenseidtextfield" layoutX="155.0" layoutY="196.0" />
             <Label layoutX="32.0" layoutY="298.0" prefHeight="17.0" prefWidth="110.0" text="Expense Date          :" />
-            <ComboBox layoutX="155.0" layoutY="227.0" prefWidth="150.0" />
-            <TextField layoutX="155.0" layoutY="261.0" />
+            <ComboBox fx:id="expensecategoryCombobox" layoutX="155.0" layoutY="227.0" prefWidth="150.0" />
+            <TextField fx:id="expenseamountTextfield" layoutX="155.0" layoutY="261.0" />
             <Label layoutX="35.0" layoutY="391.0" text="Remaining Budget (৳):" />
             <Label layoutX="35.0" layoutY="415.0" text="Budget Status      : " />
-            <Button layoutX="100.0" layoutY="447.0" mnemonicParsing="false" text="Add Expense" />
-            <Button layoutX="294.0" layoutY="447.0" mnemonicParsing="false" text="Budget Summary" />
-            <TextField layoutX="155.0" layoutY="387.0" />
-            <TextField layoutX="155.0" layoutY="419.0" />
+            <Button layoutX="100.0" layoutY="447.0" mnemonicParsing="false" onAction="#AddExpenseButton" text="Add Expense" />
+            <Button layoutX="294.0" layoutY="447.0" mnemonicParsing="false" onAction="#bUdgetSummaryButton" text="Budget Summary" />
+            <TextField fx:id="remainigBudgetTextfield" layoutX="155.0" layoutY="387.0" />
+            <TextField fx:id="BudgetStatusTextfield" layoutX="155.0" layoutY="419.0" />
          </children>
       </AnchorPane>
    </children>
