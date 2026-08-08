@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="653.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofaweddingplannerorganiser.SystemReportController">>
+<AnchorPane prefHeight="653.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
    <children>
       <Label layoutX="130.0" layoutY="14.0" prefHeight="30.0" prefWidth="456.0" text="SYSTEM REPORT MANAGEMENT" textFill="#e61414">
          <font>
@@ -44,17 +44,17 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="91.0" layoutY="237.0" mnemonicParsing="false" text="Generate Report" />
-      <Button layoutX="222.0" layoutY="237.0" mnemonicParsing="false" text="Reset " />
-      <Button layoutX="300.0" layoutY="237.0" mnemonicParsing="false" text="Refresh " />
-      <TableView layoutX="38.0" layoutY="446.0" prefHeight="73.0" prefWidth="534.0">
+      <Button layoutX="91.0" layoutY="237.0" mnemonicParsing="false" onAction="#generateReportButton" text="Generate Report" />
+      <Button layoutX="222.0" layoutY="237.0" mnemonicParsing="false" onAction="#resetButton" text="Reset " />
+      <Button layoutX="300.0" layoutY="237.0" mnemonicParsing="false" onAction="#refreshButton" text="Refresh " />
+      <TableView fx:id="generatedReportTableview" layoutX="38.0" layoutY="446.0" prefHeight="73.0" prefWidth="534.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="User ID" />
-          <TableColumn prefWidth="75.0" text="Name " />
-            <TableColumn prefWidth="75.0" text="Role " />
-            <TableColumn prefWidth="75.0" text="Status " />
-            <TableColumn prefWidth="100.6666259765625" text="Login Time" />
-            <TableColumn prefWidth="128.66668701171875" text="Last Activity" />
+          <TableColumn fx:id="useridTablecolumn" prefWidth="75.0" text="User ID" />
+          <TableColumn fx:id="NameTablecolumn" prefWidth="75.0" text="Name " />
+            <TableColumn fx:id="roleTablecolumn" prefWidth="75.0" text="Role " />
+            <TableColumn fx:id="statusTablecolumn" prefWidth="75.0" text="Status " />
+            <TableColumn fx:id="LoginTimeTablecolumn" prefWidth="100.6666259765625" text="Login Time" />
+            <TableColumn fx:id="LastactivityTablecolumn" prefWidth="128.66668701171875" text="Last Activity" />
         </columns>
       </TableView>
       <Label layoutX="34.0" layoutY="526.0" text="Status / Notification">
@@ -62,19 +62,19 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <ComboBox layoutX="135.0" layoutY="80.0" prefWidth="150.0" />
-      <ComboBox layoutX="135.0" layoutY="173.0" prefWidth="150.0" />
-      <ComboBox layoutX="135.0" layoutY="204.0" prefWidth="150.0" />
-      <DatePicker layoutX="135.0" layoutY="108.0" />
-      <DatePicker layoutX="135.0" layoutY="141.0" />
-      <TextField layoutX="148.0" layoutY="279.0" />
-      <TextField layoutX="148.0" layoutY="308.0" />
-      <TextField layoutX="148.0" layoutY="335.0" />
-      <TextField layoutX="147.0" layoutY="362.0" />
-      <TextField layoutX="147.0" layoutY="395.0" />
-      <TextArea layoutX="35.0" layoutY="552.0" prefHeight="44.0" prefWidth="534.0" />
-      <Button layoutX="109.0" layoutY="602.0" mnemonicParsing="false" text="Download PDF" />
-      <Button layoutX="222.0" layoutY="602.0" mnemonicParsing="false" text="Export Excel" />
-      <Button layoutX="319.0" layoutY="602.0" mnemonicParsing="false" text="Print " />
+      <ComboBox fx:id="reportTypeCombobox" layoutX="135.0" layoutY="80.0" prefWidth="150.0" />
+      <ComboBox fx:id="userroleCombobox" layoutX="135.0" layoutY="173.0" prefWidth="150.0" />
+      <ComboBox fx:id="reportstatusCombobox" layoutX="135.0" layoutY="204.0" prefWidth="150.0" />
+      <DatePicker fx:id="dateFromDatepicker" layoutX="135.0" layoutY="108.0" />
+      <DatePicker fx:id="datetoDatepicker" layoutX="135.0" layoutY="141.0" />
+      <TextField fx:id="totalUsersTextfield" layoutX="148.0" layoutY="279.0" />
+      <TextField fx:id="activeusersTextfield" layoutX="148.0" layoutY="308.0" />
+      <TextField fx:id="inactiveusersTextfield" layoutX="148.0" layoutY="335.0" />
+      <TextField fx:id="GeneratedByTextfield" layoutX="147.0" layoutY="362.0" />
+      <TextField fx:id="GeneratedDateTextfield" layoutX="147.0" layoutY="395.0" />
+      <TextArea fx:id="statusTextarea" layoutX="35.0" layoutY="552.0" prefHeight="44.0" prefWidth="534.0" />
+      <Button layoutX="109.0" layoutY="602.0" mnemonicParsing="false" onAction="#downloadPDFButton" text="Download PDF" />
+      <Button layoutX="222.0" layoutY="602.0" mnemonicParsing="false" onAction="#exportExcelButton" text="Export Excel" />
+      <Button layoutX="319.0" layoutY="602.0" mnemonicParsing="false" onAction="#printButton" text="Print " />
    </children>
 </AnchorPane>
