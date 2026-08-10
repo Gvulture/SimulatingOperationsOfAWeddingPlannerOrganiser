@@ -11,7 +11,7 @@ import java.util.Properties;
 
 public class CreateWeddingplancontoller
 {
-    ArrayList<CreateWeddingPlan> lst = new ArrayList<>();
+
     @javafx.fxml.FXML
     private ComboBox<String> ThemeCombobox;
     @javafx.fxml.FXML
@@ -32,15 +32,17 @@ public class CreateWeddingplancontoller
     private TableColumn<LocalDate,CreateWeddingPlan> WeddingDateTC;
     @javafx.fxml.FXML
     private Label MessegeLable;
+    private ArrayList<CreateWeddingPlan> CreateWeddingPlanArrayList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
 
         ThemeCombobox.getItems().addAll("Classic","Modern","Royal","Beach","Garden");
 
-        BudgetTC.setCellValueFactory(new PropertyValueFactory<>("Budget"));
-        ClientNameTC.setCellValueFactory(new PropertyValueFactory<>("ClientName"));
-        WeddingDateTC.setCellValueFactory(new PropertyValueFactory<>("WeddingDate"));
+        BudgetTC.setCellValueFactory(new PropertyValueFactory<>("budget"));
+        ClientNameTC.setCellValueFactory(new PropertyValueFactory<>("clientName"));
+        WeddingDateTC.setCellValueFactory(new PropertyValueFactory<>("weddingDate"));
+        ThemeTC.setCellValueFactory(new PropertyValueFactory<>("theme"));
 
     }
 
@@ -49,8 +51,16 @@ public class CreateWeddingplancontoller
     }
 
     @javafx.fxml.FXML
-    public void SaveOnClick(ActionEvent actionEvent) {
-        CreateWeddingPlanTV.getItems().addAll(lst);
+    public void SaveOnClick() {
+        CreateWeddingPlan cwp =new CreateWeddingPlan(
+                BudgetTextField.getText(),
+                ClientNameTextField.getText(),
+                WeddingDateDatePicker.getValue(),
+                ThemeCombobox.getValue()
+        );
+        CreateWeddingPlanArrayList.add(cwp);
+        CreateWeddingPlanTV.getItems().clear();
+        CreateWeddingPlanTV.getItems().addAll(CreateWeddingPlanArrayList);
     }
 
     @javafx.fxml.FXML
@@ -60,11 +70,11 @@ public class CreateWeddingplancontoller
 
     @javafx.fxml.FXML
     public void OkOA(ActionEvent actionEvent) {
-        String ClientName = ClientNameTextField.getText();
-        int Budget = Integer.parseInt(BudgetTextField.getText());
-        String Theme = ThemeCombobox.getValue();
+        String clientName = ClientNameTextField.getText();
+        int budget = Integer.parseInt(BudgetTextField.getText());
+        String theme = ThemeCombobox.getValue();
 
-        CreateWeddingPlan C = new CreateWeddingPlan(ClientName, Budget);
+        CreateWeddingPlan C = new CreateWeddingPlan(clientName, budget);
         MessegeLable.setText("Plan conformed");
 
         ClientNameTextField.clear();

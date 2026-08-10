@@ -21,8 +21,8 @@
       <Label layoutX="67.0" layoutY="143.0" text="Amount" />
       <Label layoutX="20.0" layoutY="200.0" text="Payment Method" />
       <ComboBox fx:id="PaymentMethodComboBox" layoutX="123.0" layoutY="196.0" prefWidth="150.0" />
-      <TextField fx:id="AmountField" layoutX="123.0" layoutY="139.0" />
-      <Button layoutX="221.0" layoutY="246.0" mnemonicParsing="false" text="Pay" />
+      <TextField fx:id="AmountTextField" layoutX="123.0" layoutY="139.0" />
+      <Button layoutX="221.0" layoutY="246.0" mnemonicParsing="false" onAction="#PayOA" text="Pay" />
       <Button layoutX="517.0" layoutY="352.0" mnemonicParsing="false" onAction="#BackOA" text="Back" />
       <TableView fx:id="VendorPaymentTV" layoutX="326.0" layoutY="82.0" prefHeight="200.0" prefWidth="263.0">
         <columns>

@@ -1,50 +1,62 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_2030588;
 
-public class CreateWeddingPlan {
-    @Override
-    public String toString() {
-        return "CreateWeddingPlan{" +
-                "ClientName='" + ClientName + '\'' +
-                ", theme='" + theme + '\'' +
-                ", Budget=" + Budget +
-                '}';
+import java.time.LocalDate;
+
+public class CreateWeddingPlan{
+    private String clientName, theme;
+    private LocalDate weddingDate;
+    private Integer budget;
+
+    public CreateWeddingPlan(String clientName, Integer budget) {
+        this.clientName = clientName;
+        this.theme = theme;
+        this.weddingDate = weddingDate;
+        this.budget = budget;
     }
 
-    String ClientName,theme;
-    int Budget;
+    public CreateWeddingPlan(String text, String clientNameTextFieldText, LocalDate value, String themeComboBoxValue) {
+    }
 
-    public CreateWeddingPlan(String theme) {
-        this.theme = theme;
+    public String getClientName() {
+        return clientName;
+    }
+
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
     }
 
     public String getTheme() {
         return theme;
     }
 
-
     public void setTheme(String theme) {
         this.theme = theme;
     }
 
-    public CreateWeddingPlan(String clientName, int budget) {
-        ClientName = clientName;
-        Budget = budget;
+    public LocalDate getWeddingDate() {
+        return weddingDate;
     }
 
-    public String getClientName() {
-        return ClientName;
+    public void setWeddingDate(LocalDate weddingDate) {
+        this.weddingDate = weddingDate;
     }
 
-    public void setClientName(String clientName) {
-        ClientName = clientName;
+    public Integer getBudget() {
+        return budget;
     }
 
-    public int getBudget() {
-        return Budget;
+    public void setBudget(Integer budget) {
+        this.budget = budget;
     }
 
-    public void setBudget(int budget) {
-        Budget = budget;
+    @Override
+    public String toString() {
+        return "CreateWeddingPlan{" +
+                "clientName='" + clientName + '\'' +
+                ", theme='" + theme + '\'' +
+                ", weddingDate=" + weddingDate +
+                ", budget=" + budget +
+                '}';
     }
-
 }
+

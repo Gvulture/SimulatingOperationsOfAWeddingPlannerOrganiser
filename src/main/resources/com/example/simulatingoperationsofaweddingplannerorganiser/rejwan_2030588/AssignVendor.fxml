@@ -21,15 +21,16 @@
       <ComboBox fx:id="VendorComboBox" layoutX="107.0" layoutY="138.0" prefWidth="150.0" />
       <ComboBox fx:id="ServiceTypeComboBox" layoutX="107.0" layoutY="200.0" prefWidth="150.0" />
       <Label layoutX="27.0" layoutY="204.0" text="Service Type" />
-      <Button layoutX="67.0" layoutY="285.0" mnemonicParsing="false" text="Assign" />
-      <Button layoutX="285.0" layoutY="285.0" mnemonicParsing="false" text="Clear" />
+      <Button layoutX="67.0" layoutY="285.0" mnemonicParsing="false" onAction="#AssignOA" text="Assign" />
+      <Button layoutX="285.0" layoutY="285.0" mnemonicParsing="false" onAction="#ClearOA" text="Clear" />
       <Button layoutX="515.0" layoutY="346.0" mnemonicParsing="false" onAction="#BackOA" text="Back" />
-      <TableView fx:id="AssignVendorTV" layoutX="328.0" layoutY="64.0" prefHeight="200.0" prefWidth="222.0">
+      <TableView fx:id="AssignVendorTV" layoutX="328.0" layoutY="64.0" prefHeight="200.0" prefWidth="255.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Vendor" />
-          <TableColumn prefWidth="75.0" text="Service" />
-            <TableColumn prefWidth="75.0" text="Status" />
+          <TableColumn fx:id="VendorTC" prefWidth="75.0" text="Vendor" />
+          <TableColumn fx:id="ServiceTC" prefWidth="75.0" text="Service" />
+            <TableColumn fx:id="ServiceTypeTC" prefWidth="102.39996337890625" text="Service Type" />
         </columns>
       </TableView>
+      <Label fx:id="ConfermationLabel" layoutX="52.0" layoutY="247.0" prefHeight="18.0" prefWidth="162.0" text="Label" />
    </children>
 </AnchorPane>
