@@ -52,9 +52,6 @@ public class AssignVendorController
 
     @javafx.fxml.FXML
     public void ClearOA() {
-       // validation
-        // create an instance
-        // String weddingPlan, String vendor, String serviceType
         AssignVendor av = new AssignVendor(
                 WeddingPlanComboBox.getValue(),
                 VendorComboBox.getValue(),
