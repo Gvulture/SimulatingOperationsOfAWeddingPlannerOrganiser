@@ -49,7 +49,7 @@ public class VendorPayment {
 
     public void showVendorPayment(){
         Alert a = new Alert(Alert.AlertType.INFORMATION);
-        a.setContentText(toString());
+        a .setContentText(toString());
         a.showAndWait();
     }
 }
