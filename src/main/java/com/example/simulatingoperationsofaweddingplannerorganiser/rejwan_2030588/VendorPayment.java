@@ -1,5 +1,7 @@
 package com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_2030588;
 
+import javafx.scene.control.Alert;
+
 public class VendorPayment {
     private String vendor, amount, paymentMethod;
 
@@ -43,5 +45,11 @@ public class VendorPayment {
                 ", amount='" + amount + '\'' +
                 ", paymentMethod='" + paymentMethod + '\'' +
                 '}';
+    }
+
+    public void showVendorPayment(){
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setContentText(toString());
+        a.showAndWait();
     }
 }

@@ -2,10 +2,7 @@ package com.example.simulatingoperationsofaweddingplannerorganiser.rejwan_203058
 
 import com.example.simulatingoperationsofaweddingplannerorganiser.SceneSwitcher;
 import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.ArrayList;
@@ -35,6 +32,7 @@ public class VendorPaymentController
         PaymentMethodTC.setCellValueFactory( new PropertyValueFactory<>("paymentMethod"));
         VendorTC.setCellValueFactory( new PropertyValueFactory<>("vendor"));
         AmountTC.setCellValueFactory( new PropertyValueFactory<>("amount"));
+
     }
 
     @javafx.fxml.FXML
